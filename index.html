@@ -471,34 +471,63 @@ footer strong {
 </nav>
 
 <script>
+
+function getFavourites() {
+    return JSON.parse(localStorage.getItem("dartmoorFavourites") || "[]");
+}
+
+function toggleFavourite(id) {
+    let favourites = getFavourites();
+
+    if (favourites.includes(id)) {
+        favourites = favourites.filter(item => item !== id);
+    } else {
+        favourites.push(id);
+    }
+
+    localStorage.setItem("dartmoorFavourites", JSON.stringify(favourites));
+
+    if (document.getElementById("attraction")) {
+        openCategory("Places to Visit");
+    } else {
+        openCategory("Favourites");
+    }
+}
+
 function openCategory(category) {
+
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    const favourites = getFavourites();
 
     if (category === "Places to Visit") {
 
-        document.getElementById("attraction")?.remove();
-
-        const page = document.createElement("section");
-        page.id = "attraction";
-        page.style.cssText = `
-            position:fixed;
-            inset:0;
-            z-index:100;
-            background:#f6f4ed;
-            overflow-y:auto;
-            padding:25px;
-        `;
+        const saved = favourites.includes("haytor");
 
         page.innerHTML = `
             <button onclick="document.getElementById('attraction').remove()"
                 style="padding:12px 20px;background:#19382e;
                 color:white;border:0;border-radius:7px;">
-                ← Back to Discover Dartmoor
+                ← Back
             </button>
 
             <div style="max-width:900px;margin:25px auto;">
 
                 <img
                 src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200"
+                alt="Dartmoor landscape"
                 style="width:100%;height:350px;object-fit:cover;border-radius:14px;">
 
                 <p style="color:#987344;font-weight:bold;letter-spacing:2px;">
@@ -509,19 +538,27 @@ function openCategory(category) {
                     Haytor Rocks
                 </h1>
 
+                <button onclick="toggleFavourite('haytor')"
+                    style="padding:14px 20px;border:0;border-radius:8px;
+                    background:#19382e;color:white;font-size:16px;">
+                    ${saved ? "♥ Remove from favourites" : "♡ Add to favourites"}
+                </button>
+
+                <h2>Discover Haytor</h2>
+
                 <p style="font-size:17px;line-height:1.8;">
-                    One of Dartmoor's best-known granite landmarks.
-                    Haytor offers spectacular views across the surrounding
-                    moorland and is a popular destination for visitors,
-                    walkers and photographers.
+                    Haytor Rocks is one of Dartmoor's most recognisable
+                    granite landmarks. Its impressive rock formations
+                    offer spectacular views across the surrounding
+                    countryside.
                 </p>
 
-                <h2>What to discover</h2>
+                <h2>Things to discover</h2>
 
                 <ul style="line-height:2;">
-                    <li>Explore the impressive granite rock formations.</li>
+                    <li>Explore the impressive granite formations.</li>
                     <li>Enjoy panoramic views across Dartmoor.</li>
-                    <li>Discover the surrounding walking routes.</li>
+                    <li>Discover surrounding walking routes.</li>
                     <li>Look out for Dartmoor wildlife and ponies.</li>
                 </ul>
 
@@ -539,16 +576,65 @@ function openCategory(category) {
                    text-decoration:none;">
                     Open Haytor in Maps →
                 </a>
-
             </div>
         `;
 
-        document.body.appendChild(page);
+    } else if (category === "Favourites") {
+
+        page.innerHTML = `
+            <button onclick="document.getElementById('attraction').remove()"
+                style="padding:12px 20px;background:#19382e;
+                color:white;border:0;border-radius:7px;">
+                ← Back
+            </button>
+
+            <div style="max-width:900px;margin:30px auto;">
+                <h1 style="font-family:Georgia;color:#19382e;">
+                    ♥ Your Favourites
+                </h1>
+
+                <p>Your saved Dartmoor discoveries.</p>
+
+                ${favourites.includes("haytor") ? `
+                    <div style="background:white;padding:20px;
+                    border-radius:12px;margin-top:20px;">
+                        <h2 style="color:#19382e;">Haytor Rocks</h2>
+                        <p>One of Dartmoor's most famous landmarks.</p>
+                        <button onclick="openCategory('Places to Visit')"
+                            style="padding:12px;background:#19382e;
+                            color:white;border:0;border-radius:7px;">
+                            View attraction
+                        </button>
+                        <button onclick="toggleFavourite('haytor')"
+                            style="padding:12px;background:#eee;
+                            border:0;border-radius:7px;">
+                            Remove ♥
+                        </button>
+                    </div>
+                ` : `
+                    <p style="margin-top:30px;">
+                        You haven't saved any places yet.
+                        Visit an attraction and tap the heart to save it.
+                    </p>
+                `}
+            </div>
+        `;
 
     } else {
-        alert(category + " section coming soon!");
+        page.innerHTML = `
+            <button onclick="document.getElementById('attraction').remove()"
+                style="padding:12px;background:#19382e;
+                color:white;border:0;border-radius:7px;">
+                ← Back
+            </button>
+            <h2 style="color:#19382e;">${category}</h2>
+            <p>More Dartmoor discoveries coming soon!</p>
+        `;
     }
+
+    document.body.appendChild(page);
 }
+
 function searchPlaces() {
     const value = document.getElementById("search")
         .value.toLowerCase().trim();
