@@ -614,46 +614,67 @@ const postbridgeSaved = favourites.includes("postbridge");
             </div>
         `;
 
-    } else if (category === "Favourites") {
+   
+} else if (category === "Favourites") {
 
-        page.innerHTML = `
-            <button onclick="document.getElementById('attraction').remove()"
-                style="padding:12px 20px;background:#19382e;
-                color:white;border:0;border-radius:7px;">
-                ← Back
-            </button>
+    page.innerHTML = `
+        <button onclick="document.getElementById('attraction').remove()"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back
+        </button>
 
-            <div style="max-width:900px;margin:30px auto;">
-                <h1 style="font-family:Georgia;color:#19382e;">
-                    ♥ Your Favourites
-                </h1>
+        <div style="max-width:900px;margin:30px auto;">
+            <h1 style="font-family:Georgia;color:#19382e;">
+                ♥ Your Favourites
+            </h1>
 
-                <p>Your saved Dartmoor discoveries.</p>
+            <p>Your saved Dartmoor discoveries.</p>
 
-                ${favourites.includes("haytor") ? `
-                    <div style="background:white;padding:20px;
-                    border-radius:12px;margin-top:20px;">
-                        <h2 style="color:#19382e;">Haytor Rocks</h2>
-                        <p>One of Dartmoor's most famous landmarks.</p>
-                        <button onclick="openCategory('Places to Visit')"
-                            style="padding:12px;background:#19382e;
-                            color:white;border:0;border-radius:7px;">
-                            View attraction
-                        </button>
-                        <button onclick="toggleFavourite('haytor')"
-                            style="padding:12px;background:#eee;
-                            border:0;border-radius:7px;">
-                            Remove ♥
-                        </button>
-                    </div>
-                ` : `
-                    <p style="margin-top:30px;">
-                        You haven't saved any places yet.
-                        Visit an attraction and tap the heart to save it.
-                    </p>
-                `}
-            </div>
-        `;
+            ${favourites.includes("haytor") ? `
+                <div style="background:white;padding:20px;
+                border-radius:12px;margin-top:20px;">
+                    <h2 style="color:#19382e;">Haytor Rocks</h2>
+                    <p>One of Dartmoor's most famous landmarks.</p>
+                    <button onclick="openCategory('Places to Visit')"
+                        style="padding:12px;background:#19382e;
+                        color:white;border:0;border-radius:7px;">
+                        View attraction
+                    </button>
+                    <button onclick="toggleFavourite('haytor')"
+                        style="padding:12px;background:#eee;
+                        border:0;border-radius:7px;">
+                        Remove ♥
+                    </button>
+                </div>
+            ` : ""}
+
+            ${favourites.includes("postbridge") ? `
+                <div style="background:white;padding:20px;
+                border-radius:12px;margin-top:20px;">
+                    <h2 style="color:#19382e;">Postbridge Clapper Bridge</h2>
+                    <p>A historic granite bridge crossing the East Dart River.</p>
+                    <button onclick="openCategory('Places to Visit')"
+                        style="padding:12px;background:#19382e;
+                        color:white;border:0;border-radius:7px;">
+                        View attraction
+                    </button>
+                    <button onclick="toggleFavourite('postbridge')"
+                        style="padding:12px;background:#eee;
+                        border:0;border-radius:7px;">
+                        Remove ♥
+                    </button>
+                </div>
+            ` : ""}
+
+            ${favourites.length === 0 ? `
+                <p style="margin-top:30px;">
+                    You haven't saved any places yet.
+                    Visit an attraction and tap the heart to save it.
+                </p>
+            ` : ""}
+        </div>
+    `;
 
     } else {
         page.innerHTML = `
