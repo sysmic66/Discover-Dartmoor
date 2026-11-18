@@ -516,6 +516,7 @@ function openCategory(category) {
 
         const saved = favourites.includes("haytor");
 const postbridgeSaved = favourites.includes("postbridge");
+        const widecombeSaved = favourites.includes("widecombe");
         page.innerHTML = `
             <button onclick="document.getElementById('attraction').remove()"
                 style="padding:12px 20px;background:#19382e;
@@ -611,6 +612,47 @@ const postbridgeSaved = favourites.includes("postbridge");
    text-decoration:none;">
     Open Postbridge in Maps →
 </a>
+<hr style="margin:40px 0;border:0;border-top:1px solid #ddd;">
+
+<h1 style="font-family:Georgia;font-size:32px;color:#19382e;">
+    Widecombe-in-the-Moor
+</h1>
+
+<img
+    src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=1200"
+    alt="Village countryside"
+    style="width:100%;height:300px;object-fit:cover;border-radius:14px;">
+
+<button onclick="toggleFavourite('widecombe')"
+    style="padding:14px 20px;border:0;border-radius:8px;
+    background:#19382e;color:white;font-size:16px;">
+    ${widecombeSaved ? "♥ Remove from favourites" : "♡ Add to favourites"}
+</button>
+
+<h2>Discover Widecombe</h2>
+
+<p style="font-size:17px;line-height:1.8;">
+    Widecombe-in-the-Moor is a traditional Dartmoor village,
+    famous for its beautiful setting and historic Church of St Pancras,
+    often known as the Cathedral of the Moor.
+</p>
+
+<h2>Things to discover</h2>
+
+<ul style="line-height:2;">
+    <li>Visit the historic village church.</li>
+    <li>Explore the traditional village centre.</li>
+    <li>Enjoy the surrounding Dartmoor scenery.</li>
+    <li>Discover nearby walking routes.</li>
+</ul>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Widecombe-in-the-Moor+Dartmoor"
+   target="_blank"
+   style="display:inline-block;background:#19382e;
+   color:white;padding:15px 22px;border-radius:8px;
+   text-decoration:none;">
+    Open Widecombe in Maps →
+</a>
             </div>
         `;
 
@@ -666,6 +708,23 @@ const postbridgeSaved = favourites.includes("postbridge");
                     </button>
                 </div>
             ` : ""}
+            ${favourites.includes("widecombe") ? `
+    <div style="background:white;padding:20px;
+    border-radius:12px;margin-top:20px;">
+        <h2 style="color:#19382e;">Widecombe-in-the-Moor</h2>
+        <p>A traditional Dartmoor village with a historic church.</p>
+        <button onclick="openCategory('Places to Visit')"
+            style="padding:12px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            View attraction
+        </button>
+        <button onclick="toggleFavourite('widecombe')"
+            style="padding:12px;background:#eee;
+            border:0;border-radius:7px;">
+            Remove ♥
+        </button>
+    </div>
+` : ""}
 
             ${favourites.length === 0 ? `
                 <p style="margin-top:30px;">
