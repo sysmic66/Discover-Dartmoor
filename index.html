@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#203d32">
+<meta name="theme-color" content="#19382e">
 <title>Discover Dartmoor</title>
 
 <style>
@@ -12,130 +12,325 @@
     box-sizing: border-box;
 }
 
+:root {
+    --green: #19382e;
+    --green-light: #315a48;
+    --cream: #f6f4ed;
+    --gold: #c9a66b;
+    --text: #25372e;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f3ec;
-    color: #26372f;
+    background: var(--cream);
+    color: var(--text);
+    padding-bottom: 85px;
 }
 
 header {
-    background: #203d32;
+    background: var(--green);
     color: white;
-    padding: 22px;
-    text-align: center;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.logo {
-    font-size: 30px;
+.brand {
+    font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-header p {
-    margin: 8px 0 0;
-    color: #d8e1d9;
+.brand span {
+    color: var(--gold);
+}
+
+.header-label {
+    font-size: 12px;
+    color: #d8dfd8;
+    letter-spacing: 2px;
 }
 
 .hero {
-    min-height: 340px;
+    min-height: 430px;
     background:
-    linear-gradient(#142b2470, #142b2490),
-    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1400");
-    background-size: cover;
+    linear-gradient(90deg, rgba(15,36,28,.82), rgba(15,36,28,.15)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1800");
     background-position: center;
+    background-size: cover;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 50px 8%;
     color: white;
-    padding: 30px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #e3c58e;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
 .hero h1 {
-    font-size: clamp(32px, 6vw, 54px);
-    margin: 0 0 12px;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.08;
+    margin: 18px 0;
 }
 
 .hero p {
-    font-size: 18px;
-    max-width: 550px;
-    line-height: 1.5;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 490px;
+    color: #f0f0e9;
 }
 
-.search {
-    margin-top: 15px;
-    width: 100%;
-    max-width: 430px;
-    padding: 15px;
-    border: none;
+.search-wrap {
+    display: flex;
+    max-width: 480px;
+    margin-top: 28px;
+    background: white;
     border-radius: 8px;
-    font-size: 16px;
+    overflow: hidden;
+}
+
+.search-wrap input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    padding: 16px;
+    font-size: 15px;
+    outline: none;
+}
+
+.search-wrap button {
+    background: var(--gold);
+    border: none;
+    padding: 0 22px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1250px;
     margin: auto;
-    padding: 25px 18px;
+    padding: 42px 5%;
 }
 
-.section-title {
-    font-size: 25px;
-    margin-bottom: 18px;
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 24px;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 31px;
+    margin: 7px 0;
+}
+
+.section-heading p {
+    color: #718076;
+    margin: 0;
+}
+
+.small-label {
+    color: #9a7949;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 17px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
 .card {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 12px #00000012;
+    box-shadow: 0 4px 18px #1c352010;
     cursor: pointer;
-    transition: transform .2s;
+    transition: transform .2s, box-shadow .2s;
 }
 
-.card:active {
-    transform: scale(.98);
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 25px #1c352020;
 }
 
 .card img {
     width: 100%;
-    height: 150px;
+    height: 190px;
     object-fit: cover;
+    display: block;
 }
 
 .card-content {
-    padding: 17px;
+    padding: 20px;
 }
 
 .card h3 {
-    margin: 0 0 8px;
-    color: #254a39;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin: 0 0 9px;
+    color: var(--green);
 }
 
 .card p {
-    color: #68756d;
-    line-height: 1.5;
+    color: #78827a;
+    font-size: 14px;
+    line-height: 1.6;
     margin: 0;
 }
 
-footer {
-    background: #203d32;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 30px;
+.explore-link {
+    display: inline-block;
+    margin-top: 17px;
+    color: #987344;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-@media (min-width: 800px) {
+.feature {
+    background: var(--green);
+    color: white;
+    padding: 38px;
+    border-radius: 13px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.feature h2 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    margin: 10px 0;
+}
+
+.feature p {
+    color: #d4ded6;
+    line-height: 1.6;
+}
+
+.feature button {
+    background: var(--gold);
+    color: #20372d;
+    border: none;
+    padding: 15px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+footer {
+    background: #142d25;
+    color: #d7dfd7;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 13px;
+}
+
+footer strong {
+    font-size: 18px;
+    color: white;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 -3px 15px #00000012;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.nav-item {
+    flex: 1;
+    max-width: 170px;
+    border: none;
+    background: white;
+    padding: 12px 5px 10px;
+    color: #78827a;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.nav-item span {
+    display: block;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.nav-item.active {
+    color: var(--green);
+    font-weight: bold;
+    border-top: 3px solid var(--gold);
+}
+
+.empty-message {
+    display: none;
+    padding: 30px;
+    text-align: center;
+    color: #78827a;
+}
+
+@media(max-width: 750px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .hero {
-        min-height: 430px;
+        min-height: 390px;
+        padding: 35px 6%;
+    }
+
+    .card img {
+        height: 140px;
+    }
+
+    .feature {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 27px;
+    }
+}
+
+@media(max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .header-label {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
     }
 }
 </style>
@@ -144,104 +339,169 @@ footer {
 <body>
 
 <header>
-    <div class="logo">🌿 DISCOVER DARTMOOR</div>
-    <p>Your guide to exploring Dartmoor National Park</p>
+    <div class="brand">🌿 DISCOVER <span>DARTMOOR</span></div>
+    <div class="header-label">DEVON · ENGLAND</div>
 </header>
 
 <section class="hero">
-    <h1>Discover Something Wonderful</h1>
-    <p>Explore beautiful landscapes, hidden places,
-    historic sites and unforgettable adventures.</p>
+    <div class="hero-content">
+        <div class="eyebrow">EXPLORE DARTMOOR NATIONAL PARK</div>
 
-    <input
-        class="search"
-        id="search"
-        type="search"
-        placeholder="Search Dartmoor..."
-        oninput="searchPlaces()"
-    >
+        <h1>Find Your<br>Wild Somewhere.</h1>
+
+        <p>
+            Discover breathtaking landscapes, hidden gems,
+            ancient history and unforgettable experiences
+            across Dartmoor.
+        </p>
+
+        <div class="search-wrap">
+            <input id="search" type="search"
+            placeholder="What would you like to discover?">
+            <button onclick="searchPlaces()">SEARCH</button>
+        </div>
+    </div>
 </section>
 
 <main class="container">
 
-    <h2 class="section-title">Explore Dartmoor</h2>
+    <div class="section-heading">
+        <div>
+            <div class="small-label">YOUR ADVENTURE STARTS HERE</div>
+            <h2>Explore Dartmoor</h2>
+            <p>Discover everything this beautiful landscape has to offer.</p>
+        </div>
+    </div>
 
     <div class="grid" id="places">
 
         <div class="card" onclick="openCategory('Places to Visit')">
-            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700" alt="Scenic landscape">
             <div class="card-content">
-                <h3>📍 Places to Visit</h3>
-                <p>Discover stunning locations and hidden gems.</p>
+                <h3>Places to Visit</h3>
+                <p>Discover spectacular locations, picturesque villages and hidden gems.</p>
+                <span class="explore-link">EXPLORE PLACES →</span>
             </div>
         </div>
 
         <div class="card" onclick="openCategory('Walking Routes')">
-            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=700" alt="Walking trail">
             <div class="card-content">
-                <h3>🥾 Walking Routes</h3>
-                <p>Find walks, trails and breathtaking views.</p>
+                <h3>Walking Routes</h3>
+                <p>Find beautiful walks, challenging trails and unforgettable views.</p>
+                <span class="explore-link">FIND A WALK →</span>
             </div>
         </div>
 
         <div class="card" onclick="openCategory('Wildlife')">
-            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600">
+            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=700" alt="Countryside">
             <div class="card-content">
-                <h3>🐴 Wildlife</h3>
-                <p>Discover Dartmoor ponies and wildlife.</p>
+                <h3>Wildlife</h3>
+                <p>Discover Dartmoor ponies, wildlife and nature.</p>
+                <span class="explore-link">DISCOVER WILDLIFE →</span>
             </div>
         </div>
 
         <div class="card" onclick="openCategory('Food and Drink')">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700" alt="Restaurant">
             <div class="card-content">
-                <h3>🍽️ Food & Drink</h3>
-                <p>Find traditional pubs, cafes and restaurants.</p>
+                <h3>Food & Drink</h3>
+                <p>Explore country pubs, cafes and local food.</p>
+                <span class="explore-link">FIND SOMEWHERE TO EAT →</span>
             </div>
         </div>
 
         <div class="card" onclick="openCategory('History and Heritage')">
-            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700" alt="Historic landscape">
             <div class="card-content">
-                <h3>🏰 History & Heritage</h3>
-                <p>Explore ancient sites and fascinating history.</p>
+                <h3>History & Heritage</h3>
+                <p>Explore ancient monuments, historic sites and local stories.</p>
+                <span class="explore-link">EXPLORE HISTORY →</span>
             </div>
         </div>
 
         <div class="card" onclick="openCategory('Maps and Nearby')">
-            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600">
+            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=700" alt="Woodland">
             <div class="card-content">
-                <h3>🗺️ Maps & Nearby</h3>
-                <p>Find interesting places around Dartmoor.</p>
+                <h3>Maps & Nearby</h3>
+                <p>Find interesting places and plan your next adventure.</p>
+                <span class="explore-link">EXPLORE THE MAP →</span>
             </div>
         </div>
 
     </div>
 
+    <div class="empty-message" id="empty">
+        No matching categories found. Try another search.
+    </div>
+
+    <section class="feature">
+        <div>
+            <div class="small-label">THE GREAT OUTDOORS AWAITS</div>
+            <h2>Your Dartmoor Adventure Starts Here</h2>
+            <p>Explore more, discover more and experience Dartmoor.</p>
+        </div>
+        <button onclick="openCategory('Explore Dartmoor')">
+            START EXPLORING →
+        </button>
+    </section>
+
 </main>
 
 <footer>
-    <strong>Discover Dartmoor</strong>
-    <p>Explore • Discover • Experience</p>
-    <small>Independent visitor guide concept</small>
+    <strong>🌿 Discover Dartmoor</strong>
+    <p>Explore · Discover · Experience</p>
+    <p>Your independent guide to Dartmoor, Devon.</p>
+    <small>© 2026 Discover Dartmoor</small>
 </footer>
+
+<nav class="bottom-nav">
+    <button class="nav-item active" onclick="goHome(this)">
+        <span>⌂</span>Home
+    </button>
+    <button class="nav-item" onclick="openCategory('Explore')">
+        <span>⌕</span>Explore
+    </button>
+    <button class="nav-item" onclick="openCategory('Map')">
+        <span>◎</span>Map
+    </button>
+    <button class="nav-item" onclick="openCategory('Favourites')">
+        <span>♡</span>Favourites
+    </button>
+</nav>
 
 <script>
 function openCategory(category) {
-    alert(category + " - Coming Soon!");
+    alert(category + " section coming soon!");
 }
 
 function searchPlaces() {
-    const search = document
-        .getElementById("search")
-        .value.toLowerCase();
+    const value = document.getElementById("search")
+        .value.toLowerCase().trim();
 
-    document.querySelectorAll(".card").forEach(card => {
-        card.style.display =
-            card.innerText.toLowerCase().includes(search)
-            ? ""
-            : "none";
+    const cards = document.querySelectorAll(".card");
+    let visible = 0;
+
+    cards.forEach(card => {
+        const match = card.innerText.toLowerCase().includes(value);
+        card.style.display = match ? "" : "none";
+        if (match) visible++;
     });
+
+    document.getElementById("empty").style.display =
+        visible === 0 ? "block" : "none";
+}
+
+function goHome(button) {
+    document.getElementById("search").value = "";
+    searchPlaces();
+
+    document.querySelectorAll(".nav-item").forEach(item =>
+        item.classList.remove("active")
+    );
+
+    button.classList.add("active");
+    window.scrollTo({top: 0, behavior: "smooth"});
 }
 </script>
 
