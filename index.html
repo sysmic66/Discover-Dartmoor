@@ -472,9 +472,83 @@ footer strong {
 
 <script>
 function openCategory(category) {
-    alert(category + " section coming soon!");
-}
 
+    if (category === "Places to Visit") {
+
+        document.getElementById("attraction")?.remove();
+
+        const page = document.createElement("section");
+        page.id = "attraction";
+        page.style.cssText = `
+            position:fixed;
+            inset:0;
+            z-index:100;
+            background:#f6f4ed;
+            overflow-y:auto;
+            padding:25px;
+        `;
+
+        page.innerHTML = `
+            <button onclick="document.getElementById('attraction').remove()"
+                style="padding:12px 20px;background:#19382e;
+                color:white;border:0;border-radius:7px;">
+                ← Back to Discover Dartmoor
+            </button>
+
+            <div style="max-width:900px;margin:25px auto;">
+
+                <img
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200"
+                style="width:100%;height:350px;object-fit:cover;border-radius:14px;">
+
+                <p style="color:#987344;font-weight:bold;letter-spacing:2px;">
+                    DARTMOOR NATIONAL PARK
+                </p>
+
+                <h1 style="font-family:Georgia;font-size:38px;color:#19382e;">
+                    Haytor Rocks
+                </h1>
+
+                <p style="font-size:17px;line-height:1.8;">
+                    One of Dartmoor's best-known granite landmarks.
+                    Haytor offers spectacular views across the surrounding
+                    moorland and is a popular destination for visitors,
+                    walkers and photographers.
+                </p>
+
+                <h2>What to discover</h2>
+
+                <ul style="line-height:2;">
+                    <li>Explore the impressive granite rock formations.</li>
+                    <li>Enjoy panoramic views across Dartmoor.</li>
+                    <li>Discover the surrounding walking routes.</li>
+                    <li>Look out for Dartmoor wildlife and ponies.</li>
+                </ul>
+
+                <h2>Visitor information</h2>
+
+                <p>
+                    Check current parking arrangements, access conditions
+                    and weather before travelling.
+                </p>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Haytor+Rocks+Dartmoor"
+                   target="_blank"
+                   style="display:inline-block;background:#19382e;
+                   color:white;padding:15px 22px;border-radius:8px;
+                   text-decoration:none;">
+                    Open Haytor in Maps →
+                </a>
+
+            </div>
+        `;
+
+        document.body.appendChild(page);
+
+    } else {
+        alert(category + " section coming soon!");
+    }
+}
 function searchPlaces() {
     const value = document.getElementById("search")
         .value.toLowerCase().trim();
