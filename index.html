@@ -489,11 +489,159 @@ function toggleFavourite(id) {
 
     if (document.getElementById("attraction")) {
         openCategory("Places to Visit");
+        } else if (category === "Walking Routes") {
+
+        page.innerHTML = `
+            <button onclick="document.getElementById('attraction').remove()"
+                style="padding:12px 20px;background:#19382e;
+                color:white;border:0;border-radius:7px;">
+                ← Back
+            </button>
+
+            <h2 style="color:#19382e;text-align:center;">
+                Dartmoor Walking Routes
+            </h2>
+
+            <p style="text-align:center;color:#666;">
+                Discover beautiful walks across Dartmoor.
+            </p>
+
+            <div style="max-width:900px;margin:25px auto;
+                display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+                gap:20px;">
+
+                <div onclick="openWalk('haytor')"
+                    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Haytor_Rocks_Dartmoor_%2810349503106%29.jpg"
+                        style="width:100%;height:190px;object-fit:cover;">
+                    <div style="padding:15px;">
+                        <h3 style="color:#19382e;">Haytor Circular Walk</h3>
+                        <p style="color:#666;">Explore dramatic granite tors and far-reaching views.</p>
+                        <span style="color:#987344;font-weight:bold;">VIEW WALK →</span>
+                    </div>
+                </div>
+
+                <div onclick="openWalk('bellever')"
+                    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700"
+                        style="width:100%;height:190px;object-fit:cover;">
+                    <div style="padding:15px;">
+                        <h3 style="color:#19382e;">Bellever Forest Walk</h3>
+                        <p style="color:#666;">Enjoy woodland trails and peaceful moorland scenery.</p>
+                        <span style="color:#987344;font-weight:bold;">VIEW WALK →</span>
+                    </div>
+                </div>
+
+                <div onclick="openWalk('postbridge')"
+                    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Clapper_bridge_at_Postbridge_Dartmoor.jpg"
+                        style="width:100%;height:190px;object-fit:cover;">
+                    <div style="padding:15px;">
+                        <h3 style="color:#19382e;">Postbridge Riverside Walk</h3>
+                        <p style="color:#666;">Discover riverside scenery and Dartmoor heritage.</p>
+                        <span style="color:#987344;font-weight:bold;">VIEW WALK →</span>
+                    </div>
+                </div>
+
+            </div>
+        `;
     } else {
         openCategory("Favourites");
     }
 }
-function openAttraction(id) {
+function openWalk(id) {
+    document.getElementById("attraction")?.remove();
+
+    const walks = {
+        haytor: {
+            name: "Haytor Circular Walk",
+            image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Haytor_Rocks_Dartmoor_%2810349503106%29.jpg",
+            difficulty: "Moderate",
+            terrain: "Rocky paths and open moorland",
+            description: "Explore the spectacular granite formations of Haytor and enjoy panoramic views across Dartmoor.",
+            advice: "Wear suitable walking footwear and take care on uneven granite surfaces."
+        },
+        bellever: {
+            name: "Bellever Forest Walk",
+            image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=700",
+            difficulty: "Easy to moderate",
+            terrain: "Woodland tracks and forest paths",
+            description: "Enjoy peaceful woodland scenery, beautiful forest trails and the surrounding Dartmoor landscape.",
+            advice: "Look out for uneven ground and muddy paths, particularly after rain."
+        },
+        postbridge: {
+            name: "Postbridge Riverside Walk",
+            image: "https://upload.wikimedia.org/wikipedia/commons/d/da/Clapper_bridge_at_Postbridge_Dartmoor.jpg",
+            difficulty: "Easy to moderate",
+            terrain: "Riverside paths and moorland tracks",
+            description: "Discover the historic clapper bridge and enjoy the beautiful East Dart River surroundings.",
+            advice: "Take care near the river, especially when water levels are high."
+        }
+    };
+
+    const walk = walks[id];
+    if (!walk) return;
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openCategory('Walking Routes')"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Walks
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;overflow:hidden;">
+
+            <img src="${walk.image}"
+                style="width:100%;height:300px;object-fit:cover;">
+
+            <div style="padding:20px 25px 30px;">
+                <p style="color:#987344;font-weight:bold;">
+                    DARTMOOR WALKING ROUTE
+                </p>
+
+                <h2 style="color:#19382e;">${walk.name}</h2>
+
+                <p>${walk.description}</p>
+
+                <h3 style="color:#315a48;">Route information</h3>
+
+                <p><strong>Difficulty:</strong> ${walk.difficulty}</p>
+                <p><strong>Terrain:</strong> ${walk.terrain}</p>
+
+                <h3 style="color:#315a48;">Before you set off</h3>
+                <p>${walk.advice}</p>
+
+                <p style="color:#777;font-size:13px;">
+                    Route distances and walking times should be checked
+                    against a current map before setting out.
+                </p>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(walk.name + ' Dartmoor')}"
+                    target="_blank"
+                    style="display:inline-block;background:#19382e;
+                    color:white;padding:14px 20px;border-radius:7px;
+                    text-decoration:none;">
+                    Find this walk on Maps →
+                </a>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+    }
+    function openAttraction(id) {
     document.getElementById("attraction")?.remove();
 
     const places = {
