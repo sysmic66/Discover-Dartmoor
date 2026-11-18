@@ -489,62 +489,6 @@ function toggleFavourite(id) {
 
     if (document.getElementById("attraction")) {
         openCategory("Places to Visit");
-        } else if (category === "Walking Routes") {
-
-        page.innerHTML = `
-            <button onclick="document.getElementById('attraction').remove()"
-                style="padding:12px 20px;background:#19382e;
-                color:white;border:0;border-radius:7px;">
-                ← Back
-            </button>
-
-            <h2 style="color:#19382e;text-align:center;">
-                Dartmoor Walking Routes
-            </h2>
-
-            <p style="text-align:center;color:#666;">
-                Discover beautiful walks across Dartmoor.
-            </p>
-
-            <div style="max-width:900px;margin:25px auto;
-                display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-                gap:20px;">
-
-                <div onclick="openWalk('haytor')"
-                    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Haytor_Rocks_Dartmoor_%2810349503106%29.jpg"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <div style="padding:15px;">
-                        <h3 style="color:#19382e;">Haytor Circular Walk</h3>
-                        <p style="color:#666;">Explore dramatic granite tors and far-reaching views.</p>
-                        <span style="color:#987344;font-weight:bold;">VIEW WALK →</span>
-                    </div>
-                </div>
-
-                <div onclick="openWalk('bellever')"
-                    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
-                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <div style="padding:15px;">
-                        <h3 style="color:#19382e;">Bellever Forest Walk</h3>
-                        <p style="color:#666;">Enjoy woodland trails and peaceful moorland scenery.</p>
-                        <span style="color:#987344;font-weight:bold;">VIEW WALK →</span>
-                    </div>
-                </div>
-
-                <div onclick="openWalk('postbridge')"
-                    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Clapper_bridge_at_Postbridge_Dartmoor.jpg"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <div style="padding:15px;">
-                        <h3 style="color:#19382e;">Postbridge Riverside Walk</h3>
-                        <p style="color:#666;">Discover riverside scenery and Dartmoor heritage.</p>
-                        <span style="color:#987344;font-weight:bold;">VIEW WALK →</span>
-                    </div>
-                </div>
-
-            </div>
-        `;
     } else {
         openCategory("Favourites");
     }
@@ -744,6 +688,64 @@ function openCategory(category) {
     `;
 
     const favourites = getFavourites();
+        if (category === "Walking Routes") {
+        page.innerHTML = `
+            <button onclick="document.getElementById('attraction').remove()"
+                style="padding:12px 20px;background:#19382e;
+                color:white;border:0;border-radius:7px;">
+                ← Back
+            </button>
+
+            <h2 style="color:#19382e;text-align:center;">
+                Dartmoor Walking Routes
+            </h2>
+
+            <p style="text-align:center;color:#666;">
+                Discover beautiful walks across Dartmoor.
+            </p>
+
+            <div style="max-width:900px;margin:25px auto;
+                display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+                gap:20px;">
+
+                <div onclick="openWalk('haytor')"
+                    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Haytor_Rocks_Dartmoor_%2810349503106%29.jpg"
+                        style="width:100%;height:190px;object-fit:cover;">
+                    <div style="padding:15px;">
+                        <h3 style="color:#19382e;">Haytor Circular Walk</h3>
+                        <p style="color:#666;">Explore dramatic granite tors and far-reaching views.</p>
+                        <span style="color:#987344;font-weight:bold;">VIEW WALK →</span>
+                    </div>
+                </div>
+
+                <div onclick="openWalk('bellever')"
+                    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700"
+                        style="width:100%;height:190px;object-fit:cover;">
+                    <div style="padding:15px;">
+                        <h3 style="color:#19382e;">Bellever Forest Walk</h3>
+                        <p style="color:#666;">Enjoy woodland trails and peaceful moorland scenery.</p>
+                        <span style="color:#987344;font-weight:bold;">VIEW WALK →</span>
+                    </div>
+                </div>
+
+                <div onclick="openWalk('postbridge')"
+                    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Clapper_bridge_at_Postbridge_Dartmoor.jpg"
+                        style="width:100%;height:190px;object-fit:cover;">
+                    <div style="padding:15px;">
+                        <h3 style="color:#19382e;">Postbridge Riverside Walk</h3>
+                        <p style="color:#666;">Discover riverside scenery and Dartmoor heritage.</p>
+                        <span style="color:#987344;font-weight:bold;">VIEW WALK →</span>
+                    </div>
+                </div>
+
+            </div>
+        `;
+        document.body.appendChild(page);
+        return;
+        }
 
        if (category === "Places to Visit") {
         page.innerHTML = `
