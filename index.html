@@ -515,7 +515,7 @@ function openCategory(category) {
     if (category === "Places to Visit") {
 
         const saved = favourites.includes("haytor");
-
+const postbridgeSaved = favourites.includes("postbridge");
         page.innerHTML = `
             <button onclick="document.getElementById('attraction').remove()"
                 style="padding:12px 20px;background:#19382e;
@@ -576,6 +576,41 @@ function openCategory(category) {
                    text-decoration:none;">
                     Open Haytor in Maps →
                 </a>
+                <hr style="margin:40px 0;border:0;border-top:1px solid #ddd;">
+
+<h1 style="font-family:Georgia;font-size:32px;color:#19382e;">
+    Postbridge Clapper Bridge
+</h1>
+
+<button onclick="toggleFavourite('postbridge')"
+    style="padding:14px 20px;border:0;border-radius:8px;
+    background:#19382e;color:white;font-size:16px;">
+    ${postbridgeSaved ? "♥ Remove from favourites" : "♡ Add to favourites"}
+</button>
+
+<h2>Discover Postbridge</h2>
+
+<p style="font-size:17px;line-height:1.8;">
+    Postbridge Clapper Bridge is a historic granite bridge crossing
+    the East Dart River. It is one of Dartmoor's best-known
+    historic landmarks and a lovely place to explore.
+</p>
+
+<h2>Things to discover</h2>
+
+<ul style="line-height:2;">
+    <li>See the impressive granite bridge.</li>
+    <li>Explore the East Dart River.</li>
+    <li>Enjoy the surrounding Dartmoor countryside.</li>
+</ul>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Postbridge+Clapper+Bridge+Dartmoor"
+   target="_blank"
+   style="display:inline-block;background:#19382e;
+   color:white;padding:15px 22px;border-radius:8px;
+   text-decoration:none;">
+    Open Postbridge in Maps →
+</a>
             </div>
         `;
 
