@@ -584,6 +584,92 @@ function openWalk(id) {
 
     document.body.appendChild(page);
     }
+    function openHaytorWalks() {
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    const walks = [
+        {
+            name: "Haytor Audio Walk",
+            distance: "6.3 miles circular",
+            difficulty: "Moderate",
+            description: "Explore Haytor Rocks, Hound Tor and the historic Granite Tramway.",
+            destination: "Hound Tor, Dartmoor"
+        },
+        {
+            name: "Haytor Quarry Walk",
+            distance: "Short walk",
+            difficulty: "Easy",
+            description: "Discover the historic granite quarry beneath Haytor.",
+            destination: "Haytor Quarry, Dartmoor"
+        },
+        {
+            name: "Haytor to Emsworthy Mire",
+            distance: "Circular walk",
+            difficulty: "Moderate",
+            description: "Explore open moorland and the wildlife-rich Emsworthy Mire.",
+            destination: "Emsworthy Mire, Dartmoor"
+        },
+        {
+            name: "Haytor to Hound Tor",
+            distance: "Around 3 miles one way",
+            difficulty: "Moderate",
+            description: "Walk across the open moorland between two famous Dartmoor tors.",
+            destination: "Hound Tor, Dartmoor"
+        }
+    ];
+
+    page.innerHTML = `
+        <button onclick="openCategory('Walking Routes')"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Walks
+        </button>
+
+        <h2 style="color:#19382e;text-align:center;">
+            Haytor Walking Routes
+        </h2>
+
+        <p style="text-align:center;color:#666;">
+            Choose the walk you'd like to explore.
+        </p>
+
+        <div style="max-width:850px;margin:25px auto;
+            display:grid;gap:18px;">
+
+            ${walks.map(walk => `
+                <div style="background:white;padding:20px;
+                    border-radius:12px;">
+                    <h3 style="color:#19382e;">${walk.name}</h3>
+                    <p style="color:#987344;font-weight:bold;">
+                        ${walk.distance} · ${walk.difficulty}
+                    </p>
+                    <p style="color:#555;">${walk.description}</p>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Haytor+Visitor+Centre,+Dartmoor&destination=${encodeURIComponent(walk.destination)}&travelmode=walking"
+                        target="_blank"
+                        style="display:inline-block;background:#19382e;
+                        color:white;padding:12px 18px;
+                        border-radius:7px;text-decoration:none;">
+                        Open walking route in Maps →
+                    </a>
+                </div>
+            `).join("")}
+
+        </div>
+    `;
+
+    document.body.appendChild(page);
+    }
     function openAttraction(id) {
     document.getElementById("attraction")?.remove();
 
@@ -661,7 +747,7 @@ function openWalk(id) {
                 <p style="margin-top:25px;">
                     <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.name + ' Dartmoor')}"
                         target="_blank" style="color:#315a48;">
-                        View location on Google Maps →
+                        View location on Google Mapsa →
                     </a>
                 </p>
             </div>
@@ -707,7 +793,7 @@ function openCategory(category) {
                 display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
                 gap:20px;">
 
-                <div onclick="openWalk('haytor')"
+                <div onclick="openHaytorWalks()"
                     style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Haytor_Rocks_Dartmoor_%2810349503106%29.jpg"
                         style="width:100%;height:190px;object-fit:cover;">
