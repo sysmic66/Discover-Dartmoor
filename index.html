@@ -670,6 +670,102 @@ function openWalk(id) {
 
     document.body.appendChild(page);
     }
+    function openBelleverWalks() {
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    const walks = [
+        {
+            name: "Bellever Tor Trail",
+            distance: "4 km · 2.5 miles",
+            difficulty: "Moderate",
+            description: "Walk through woodland, pass ancient hut circles and climb to Bellever Tor for beautiful views.",
+            origin: "Bellever Forest Car Park, Dartmoor",
+            destination: "Bellever Tor, Dartmoor"
+        },
+        {
+            name: "River and Forest Trail",
+            distance: "2.6 km · 1.6 miles",
+            difficulty: "Easy to moderate",
+            description: "Explore woodland, open moorland and wildflower meadows before reaching the East Dart River and Postbridge.",
+            origin: "Postbridge Car Park, Dartmoor",
+            destination: "Postbridge Clapper Bridge, Dartmoor"
+        },
+        {
+            name: "Bellever Miles Without Stiles",
+            distance: "4 km · 2.5 miles circular",
+            difficulty: "For most",
+            description: "A waymarked circular forest route around Lakehead Hill, with gravel tracks, woodland and open heathland.",
+            origin: "Postbridge National Park Visitor Centre, Dartmoor",
+            destination: "Postbridge National Park Visitor Centre, Dartmoor",
+            waypoint: "Lakehead Hill, Dartmoor"
+        },
+        {
+            name: "East Dart Riverbank",
+            distance: "0.2 km · 0.15 miles",
+            difficulty: "Easy",
+            description: "A short, level walk from the Bellever car park to the beautiful East Dart riverbank.",
+            origin: "Bellever Forest Car Park, Dartmoor",
+            destination: "East Dart River, Bellever, Dartmoor"
+        }
+    ];
+
+    page.innerHTML = `
+        <button onclick="openCategory('Walking Routes')"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Walks
+        </button>
+
+        <h2 style="color:#19382e;text-align:center;">
+            Bellever Forest Walks
+        </h2>
+
+        <p style="text-align:center;color:#666;">
+            Choose your Bellever walking adventure.
+        </p>
+
+        <div style="max-width:850px;margin:25px auto;
+            display:grid;gap:18px;">
+
+            ${walks.map(walk => `
+                <div style="background:white;padding:20px;
+                    border-radius:12px;">
+                    <h3 style="color:#19382e;">${walk.name}</h3>
+
+                    <p style="color:#987344;font-weight:bold;">
+                        ${walk.distance} · ${walk.difficulty}
+                    </p>
+
+                    <p style="color:#555;">
+                        ${walk.description}
+                    </p>
+
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(walk.origin)}&destination=${encodeURIComponent(walk.destination)}${walk.waypoint ? '&waypoints=' + encodeURIComponent(walk.waypoint) : ''}&travelmode=walking"
+                        target="_blank"
+                        style="display:inline-block;background:#19382e;
+                        color:white;padding:12px 18px;
+                        border-radius:7px;text-decoration:none;">
+                        Open walking route in Maps →
+                    </a>
+                </div>
+            `).join("")}
+
+        </div>
+    `;
+
+    document.body.appendChild(page);
+    }
     function openAttraction(id) {
     document.getElementById("attraction")?.remove();
 
@@ -804,7 +900,7 @@ function openCategory(category) {
                     </div>
                 </div>
 
-                <div onclick="openWalk('bellever')"
+                <div onclick="openBelleverWalks()"
                     style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
                     <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700"
                         style="width:100%;height:190px;object-fit:cover;">
