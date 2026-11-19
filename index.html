@@ -3166,5 +3166,16 @@ function goHome(button) {
 }
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+            .then(() => console.log("Discover Dartmoor is ready"))
+            .catch(error => console.error("Service worker error:", error));
+    });
+}
+</script>
+
 </body>
 </html>
