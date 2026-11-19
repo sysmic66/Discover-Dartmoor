@@ -1826,7 +1826,48 @@ function openAttraction(id) {
 
     document.body.appendChild(page);
 }
+function filterPlaces(category) {
+    document.querySelectorAll(".place-card").forEach(card => {
+        const categories = card.dataset.category.split(" ");
 
+        card.style.display =
+            category === "all" || categories.includes(category)
+                ? ""
+                : "none";
+    });
+}
+    function getPlaceCategory(id) {
+    const categories = {
+        "tors-rocks": [
+            "haytor", "houndtor", "bowermansnose",
+            "bellevertor", "brentor", "belstonetor",
+            "yestor", "rippon"
+        ],
+
+        "water-reservoirs": [
+            "postbridge", "burrator", "fernworthy",
+            "meldon", "venford", "finglebridge",
+            "beckyfalls", "shaughbridge", "spitchwick",
+            "dartmeet"
+        ],
+
+        "history": [
+            "castledrogo", "buckfastabbey",
+            "okehamptoncastle", "grimspound",
+            "merrivale", "scorhill", "greywethers",
+            "higheruppacott"
+        ],
+
+        "nature": [
+            "widecombe", "wistmanswood",
+            "lydfordgorge", "dewerstone"
+        ]
+    };
+
+    return Object.keys(categories)
+        .filter(category => categories[category].includes(id))
+        .join(" ");
+    }
 function openCategory(category) {
 
     document.getElementById("attraction")?.remove();
@@ -2303,14 +2344,49 @@ if (category === "Places to Visit") {
         <p style="text-align:center;color:#666;">
             Discover 30 special places across Dartmoor.
         </p>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;
+    gap:10px;margin:20px auto;">
 
+    <button onclick="filterPlaces('all')"
+        style="padding:10px 16px;background:#19382e;
+        color:white;border:0;border-radius:20px;">
+        All Places
+    </button>
+
+    <button onclick="filterPlaces('tors-rocks')"
+        style="padding:10px 16px;background:#315a48;
+        color:white;border:0;border-radius:20px;">
+        Tors & Rocks
+    </button>
+
+    <button onclick="filterPlaces('water-reservoirs')"
+        style="padding:10px 16px;background:#315a48;
+        color:white;border:0;border-radius:20px;">
+        Water & Reservoirs
+    </button>
+
+    <button onclick="filterPlaces('history')"
+        style="padding:10px 16px;background:#315a48;
+        color:white;border:0;border-radius:20px;">
+        History & Heritage
+    </button>
+
+    <button onclick="filterPlaces('nature')"
+        style="padding:10px 16px;background:#315a48;
+        color:white;border:0;border-radius:20px;">
+        Nature & Woodland
+    </button>
+
+</div>
         <div style="max-width:1100px;margin:25px auto;
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
             gap:20px;">
 
             ${Object.entries(dartmoorPlaces).map(([id, place]) => `
-                <div onclick="openAttraction('${id}')"
+                <div class="place-card"
+    data-category="${getPlaceCategory(id)}"
+    onclick="openAttraction('${id}')"
                     style="background:white;border-radius:12px;
                     overflow:hidden;cursor:pointer;
                     box-shadow:0 2px 8px rgba(0,0,0,0.08);">
