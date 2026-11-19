@@ -1543,10 +1543,14 @@ L.marker([50.586, -3.772])
  // Widecombe-in-the-Moor
 L.marker([50.576, -3.810])
     .addTo(map)
-    .bindPopup('<b>Widecombe-in-the-Moor</b><br>Visit the beautiful village and its famous church.');       
+    .bindPopup('<b>Widecombe-in-the-Moor</b><br>Visit the beautiful village and its famous church.');
+
+    }, 100);
+
     return;
-    }
-        if (category === "Walking Routes") {
+}
+
+if (category === "Walking Routes") {
         page.innerHTML = `
             <button onclick="document.getElementById('attraction').remove()"
                 style="padding:12px 20px;background:#19382e;
