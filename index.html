@@ -2165,7 +2165,16 @@ locationButton.addTo(map);
         // Haytor Rocks
 L.marker([50.578, -3.755])
     .addTo(map)
-    .bindPopup('<b>Haytor Rocks</b><br>Explore the famous granite tor.');
+    .bindPopup(`
+        <b>Haytor Rocks</b>
+        <br>Explore the famous granite tor.
+        <br><br>
+        <button onclick="openAttraction('haytor')"
+            style="background:#19382e;color:white;
+            padding:9px 14px;border:0;border-radius:6px;">
+            View Attraction
+        </button>
+    `);
 // Haytor Car Park
 L.marker([50.578, -3.759])
     .addTo(map)
