@@ -917,6 +917,88 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
 
     document.body.appendChild(page);
     }
+   function openWildlife(id) {
+    document.getElementById("attraction")?.remove();
+
+    const animals = {
+        ponies: {
+            name: "Dartmoor Ponies",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor%20ponies.jpg",
+            credit: "Photo: andrewrendell · Wikimedia Commons · CC BY 2.0",
+            licence: "https://creativecommons.org/licenses/by/2.0/",
+            description: "Dartmoor ponies are one of the most familiar sights on the moor. They are hardy animals, well suited to the open landscape and changing weather.",
+            details: "You may see ponies grazing on open moorland, near tracks and around villages. Although they roam freely, they are owned and cared for by local people. Please admire them from a distance and never feed or approach them."
+        },
+        deer: {
+            name: "Fallow Deer",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Juvenile%20fallow%20deer%20buck.jpg",
+            credit: "Photo: Owain Davies · Wikimedia Commons · CC BY-SA 4.0",
+            licence: "https://creativecommons.org/licenses/by-sa/4.0/",
+            description: "Fallow deer are graceful animals found in parts of Devon, particularly in woodland and quieter countryside.",
+            details: "Look out for deer in sheltered woodland and at the edges of open spaces. They are easily disturbed, so keep your distance and watch quietly."
+        },
+        birds: {
+            name: "Moorland Birds",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common%20Buzzard%20by%20caroline%20legg.jpg",
+            credit: "Photo: Caroline Legg · Wikimedia Commons · CC BY 2.0",
+            licence: "https://creativecommons.org/licenses/by/2.0/",
+            description: "Dartmoor is home to a variety of birds, from birds of prey soaring overhead to smaller birds living among the moorland and woodland.",
+            details: "Keep an eye on the skies for buzzards circling on warm air currents. Listen for birdsong and take care not to disturb nesting birds."
+        }
+    };
+
+    const animal = animals[id];
+    if (!animal) return;
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openCategory('Wildlife')"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Wildlife
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;background:white;
+            border-radius:14px;overflow:hidden;">
+
+            <img src="${animal.image}"
+                style="width:100%;height:300px;object-fit:cover;">
+
+            <p style="padding:0 20px;color:#777;font-size:12px;">
+                ${animal.credit} ·
+                <a href="${animal.licence}" target="_blank">Licence</a>
+            </p>
+
+            <div style="padding:10px 25px 30px;">
+                <h2 style="color:#19382e;">${animal.name}</h2>
+
+                <p>${animal.description}</p>
+
+                <h3 style="color:#315a48;">Where to look</h3>
+                <p>${animal.details}</p>
+
+                <p style="margin-top:25px;">
+                    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(animal.name + ' Dartmoor')}"
+                        target="_blank" style="color:#315a48;">
+                        Explore Dartmoor on Google Maps →
+                    </a>
+                </p>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+   }
     function openAttraction(id) {
     document.getElementById("attraction")?.remove();
 
