@@ -1476,9 +1476,20 @@ function openCategory(category) {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        L.marker([50.57, -3.9])
-            .addTo(map)
-            .bindPopup('Dartmoor National Park');
+        // Haytor Rocks
+L.marker([50.578, -3.755])
+    .addTo(map)
+    .bindPopup('<b>Haytor Rocks</b><br>Explore the famous granite tor.');
+
+// Postbridge Clapper Bridge
+L.marker([50.561, -3.862])
+    .addTo(map)
+    .bindPopup('<b>Postbridge Clapper Bridge</b><br>Visit the historic granite bridge.');
+
+// Bellever Forest
+L.marker([50.562, -3.879])
+    .addTo(map)
+    .bindPopup('<b>Bellever Forest</b><br>Explore the woodland and walking trails.');
     }, 100);
 
     return;
