@@ -917,6 +917,75 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
 
     document.body.appendChild(page);
     }
+    function openFoodDrink(id) {
+    document.getElementById("attraction")?.remove();
+
+    const categories = {
+        pubs: {
+            name: "Dartmoor Pubs",
+            description: "Dartmoor is home to traditional country pubs, many with centuries of history. They offer a warm welcome to walkers, visitors and local communities.",
+            details: "Look out for historic village inns, traditional pub food, local ales and welcoming places to relax after exploring the moors.",
+            search: "traditional pubs Dartmoor"
+        },
+        cafes: {
+            name: "Cafés & Tearooms",
+            description: "Take a break from exploring Dartmoor at one of its welcoming cafés or tearooms.",
+            details: "Discover homemade cakes, cream teas, coffee, light lunches and cosy places to sit and enjoy the surroundings.",
+            search: "cafes and tearooms Dartmoor"
+        },
+        producers: {
+            name: "Local Food Producers",
+            description: "Discover the food and drink produced in and around Dartmoor, from local farms to independent makers.",
+            details: "Look for farm shops, local meat, cheese, preserves, baked goods and other Devon specialities.",
+            search: "local food producers farm shops Dartmoor"
+        }
+    };
+
+    const item = categories[id];
+    if (!item) return;
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openCategory('Food and Drink')"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Food & Drink
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;background:white;
+            border-radius:14px;overflow:hidden;">
+
+            <div style="padding:25px;">
+                <h2 style="color:#19382e;">${item.name}</h2>
+
+                <p>${item.description}</p>
+
+                <h3 style="color:#315a48;">What to discover</h3>
+
+                <p>${item.details}</p>
+
+                <p style="margin-top:25px;">
+                    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.search)}"
+                        target="_blank" style="color:#315a48;">
+                        Find places on Google Maps →
+                    </a>
+                </p>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+    }
    function openWildlife(id) {
     document.getElementById("attraction")?.remove();
 
