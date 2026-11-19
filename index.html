@@ -1302,6 +1302,79 @@ function openCategory(category) {
     document.body.appendChild(page);
     return;
     }
+    if (category === "History and Heritage") {
+    page.innerHTML = `
+        <button onclick="document.getElementById('attraction').remove()"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back
+        </button>
+
+        <h2 style="color:#19382e;text-align:center;">
+            Dartmoor History & Heritage
+        </h2>
+
+        <p style="text-align:center;color:#666;">
+            Explore ancient monuments, historic settlements and Dartmoor's past.
+        </p>
+
+        <div style="max-width:900px;margin:25px auto;
+            display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;">
+
+            <div onclick="openHistory('stonecircles')"
+                style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Merrivale%20Stone%20Rows%20-%20geograph.org.uk%20-%201229616.jpg"
+                    style="width:100%;height:190px;object-fit:cover;">
+                <div style="padding:15px;">
+                    <p style="color:#777;font-size:11px;">
+                        Photo: Tony Whitman · Wikimedia Commons · CC BY-SA 2.0
+                        · <a href="https://creativecommons.org/licenses/by-sa/2.0/"
+                        target="_blank">Licence</a>
+                    </p>
+                    <h3 style="color:#19382e;">Ancient Stone Rows</h3>
+                    <p style="color:#666;">Discover the mysterious prehistoric stone rows of Merrivale.</p>
+                    <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+                </div>
+            </div>
+
+            <div onclick="openHistory('grimspound')"
+                style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Grimspound%20Bronze%20age%20settlement%20on%20Dartmoor.jpg"
+                    style="width:100%;height:190px;object-fit:cover;">
+                <div style="padding:15px;">
+                    <p style="color:#777;font-size:11px;">
+                        Photo: Vince Hogg · Wikimedia Commons · CC BY-SA 3.0
+                        · <a href="https://creativecommons.org/licenses/by-sa/3.0/"
+                        target="_blank">Licence</a>
+                    </p>
+                    <h3 style="color:#19382e;">Grimspound</h3>
+                    <p style="color:#666;">Explore the remains of a Bronze Age settlement.</p>
+                    <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+                </div>
+            </div>
+
+            <div onclick="openHistory('bridges')"
+                style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Clapper%20Bridge%20at%20Postbridge.jpg"
+                    style="width:100%;height:190px;object-fit:cover;">
+                <div style="padding:15px;">
+                    <p style="color:#777;font-size:11px;">
+                        Photo: Ethan Doyle White · Wikimedia Commons · CC BY-SA 4.0
+                        · <a href="https://creativecommons.org/licenses/by-sa/4.0/"
+                        target="_blank">Licence</a>
+                    </p>
+                    <h3 style="color:#19382e;">Historic Clapper Bridges</h3>
+                    <p style="color:#666;">Discover Dartmoor's remarkable granite bridges.</p>
+                    <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+                </div>
+            </div>
+
+        </div>
+    `;
+    document.body.appendChild(page);
+    return;
+    }
         if (category === "Walking Routes") {
         page.innerHTML = `
             <button onclick="document.getElementById('attraction').remove()"
