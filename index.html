@@ -917,6 +917,75 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
 
     document.body.appendChild(page);
     }
+    function openHistory(id) {
+    document.getElementById("attraction")?.remove();
+
+    const places = {
+        stonecircles: {
+            name: "Ancient Stone Rows",
+            description: "Merrivale is one of Dartmoor's most fascinating prehistoric landscapes. Its stone rows, standing stones and burial monuments date back thousands of years.",
+            details: "Explore the ancient stone rows and imagine the people who created these monuments during the Bronze Age. Please avoid climbing on or moving the stones.",
+            search: "Merrivale stone rows Dartmoor"
+        },
+        grimspound: {
+            name: "Grimspound",
+            description: "Grimspound is a remarkable Bronze Age settlement high on Dartmoor, surrounded by a large stone wall.",
+            details: "Inside the enclosure are the remains of around two dozen roundhouses, offering a glimpse into life on Dartmoor thousands of years ago. The terrain is rough and uneven, so take care when exploring.",
+            search: "Grimspound Dartmoor"
+        },
+        bridges: {
+            name: "Historic Clapper Bridges",
+            description: "Dartmoor's historic clapper bridges are built from large granite slabs resting on stone supports. They are a distinctive part of the moor's heritage.",
+            details: "Postbridge Clapper Bridge is one of the best-known examples. It crosses the East Dart River and has been used by travellers for centuries.",
+            search: "Postbridge Clapper Bridge Dartmoor"
+        }
+    };
+
+    const place = places[id];
+    if (!place) return;
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openCategory('History and Heritage')"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to History & Heritage
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;background:white;
+            border-radius:14px;overflow:hidden;">
+
+            <div style="padding:25px;">
+                <h2 style="color:#19382e;">${place.name}</h2>
+
+                <p>${place.description}</p>
+
+                <h3 style="color:#315a48;">What to discover</h3>
+
+                <p>${place.details}</p>
+
+                <p style="margin-top:25px;">
+                    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.search)}"
+                        target="_blank" style="color:#315a48;">
+                        Find location on Google Maps →
+                    </a>
+                </p>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+    }
     function openFoodDrink(id) {
     document.getElementById("attraction")?.remove();
 
