@@ -703,6 +703,9 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
     const walks = [
         {
             name: "Bellever Tor Trail",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Bellever_Tor,_Dartmoor_-_geograph.org.uk_-_4908412.jpg",
+            credit: "Photo: Alan Hunt · Wikimedia Commons · CC BY-SA 2.0",
+licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             distance: "4 km · 2.5 miles",
             difficulty: "Moderate",
             description: "Walk through woodland, pass ancient hut circles and climb to Bellever Tor for beautiful views.",
@@ -711,6 +714,9 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
         },
         {
             name: "River and Forest Trail",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/East_Dart_river_at_Bellever_-_geograph.org.uk_-_117842.jpg",
+            credit: "Photo: Sophie Hansen · Wikimedia Commons · CC BY-SA 2.0",
+licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             distance: "2.6 km · 1.6 miles",
             difficulty: "Easy to moderate",
             description: "Explore woodland, open moorland and wildflower meadows before reaching the East Dart River and Postbridge.",
@@ -719,6 +725,9 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
         },
         {
             name: "Bellever Miles Without Stiles",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Bellever_Forest_on_Dartmoor_-_geograph.org.uk_-_7501977.jpg",
+            credit: "Photo: David Smith · Wikimedia Commons · CC BY-SA 2.0",
+licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             distance: "4 km · 2.5 miles circular",
             difficulty: "For most",
             description: "A waymarked circular forest route around Lakehead Hill, with gravel tracks, woodland and open heathland.",
@@ -728,6 +737,9 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
         },
         {
             name: "East Dart Riverbank",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/East_Dart_River_-_geograph.org.uk_-_5417397.jpg",
+            credit: "Photo: Derek Harper · Wikimedia Commons · CC BY-SA 2.0",
+licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             distance: "0.2 km · 0.15 miles",
             difficulty: "Easy",
             description: "A short, level walk from the Bellever car park to the beautiful East Dart riverbank.",
@@ -757,6 +769,11 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
             ${walks.map(walk => `
                 <div style="background:white;padding:20px;
                     border-radius:12px;">
+                   ${walk.image ? `<img src="${walk.image}"
+    style="width:100%;height:190px;object-fit:cover;
+    border-radius:10px;margin-bottom:8px;">` : ''}
+
+${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credit} · <a href="${walk.licenseUrl || 'https://creativecommons.org/licenses/by/2.0/'}" target="_blank">Licence</a></p>` : ''}
                     <h3 style="color:#19382e;">${walk.name}</h3>
 
                     <p style="color:#987344;font-weight:bold;">
