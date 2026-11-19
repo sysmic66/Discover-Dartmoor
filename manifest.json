@@ -1,6 +1,6 @@
 {
   "name": "Discover Dartmoor",
-  "short_name": "Dartmoor",
+  "short_name": "Discover Dartmoor",
   "description": "Discover places to visit, walking routes, wildlife and hidden gems across Dartmoor.",
   "start_url": "./",
   "scope": "./",
