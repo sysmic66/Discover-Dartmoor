@@ -1020,6 +1020,79 @@ function openCategory(category) {
     `;
 
     const favourites = getFavourites();
+    if (category === "Wildlife") {
+    page.innerHTML = `
+        <button onclick="document.getElementById('attraction').remove()"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back
+        </button>
+
+        <h2 style="color:#19382e;text-align:center;">
+            Dartmoor Wildlife
+        </h2>
+
+        <p style="text-align:center;color:#666;">
+            Discover the wildlife that makes Dartmoor special.
+        </p>
+
+        <div style="max-width:900px;margin:25px auto;
+            display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;">
+
+            <div onclick="openWildlife('ponies')"
+                style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor%20ponies.jpg"
+                    style="width:100%;height:190px;object-fit:cover;">
+                <div style="padding:15px;">
+                    <p style="color:#777;font-size:11px;">
+                        Photo: andrewrendell · Wikimedia Commons · CC BY 2.0
+                        · <a href="https://creativecommons.org/licenses/by/2.0/"
+                        target="_blank">Licence</a>
+                    </p>
+                    <h3 style="color:#19382e;">Dartmoor Ponies</h3>
+                    <p style="color:#666;">Meet the famous free-roaming ponies of the moors.</p>
+                    <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+                </div>
+            </div>
+
+            <div onclick="openWildlife('deer')"
+                style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Juvenile%20fallow%20deer%20buck.jpg"
+                    style="width:100%;height:190px;object-fit:cover;">
+                <div style="padding:15px;">
+                    <p style="color:#777;font-size:11px;">
+                        Photo: Owain Davies · Wikimedia Commons · CC BY-SA 4.0
+                        · <a href="https://creativecommons.org/licenses/by-sa/4.0/"
+                        target="_blank">Licence</a>
+                    </p>
+                    <h3 style="color:#19382e;">Fallow Deer</h3>
+                    <p style="color:#666;">Discover these graceful woodland and moorland visitors.</p>
+                    <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+                </div>
+            </div>
+
+            <div onclick="openWildlife('birds')"
+                style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20Buzzard%20by%20caroline%20legg.jpg"
+                    style="width:100%;height:190px;object-fit:cover;">
+                <div style="padding:15px;">
+                    <p style="color:#777;font-size:11px;">
+                        Photo: Caroline Legg · Wikimedia Commons · CC BY 2.0
+                        · <a href="https://creativecommons.org/licenses/by/2.0/"
+                        target="_blank">Licence</a>
+                    </p>
+                    <h3 style="color:#19382e;">Moorland Birds</h3>
+                    <p style="color:#666;">Look out for buzzards and other birds of prey.</p>
+                    <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+                </div>
+            </div>
+
+        </div>
+    `;
+    document.body.appendChild(page);
+    return;
+    }
         if (category === "Walking Routes") {
         page.innerHTML = `
             <button onclick="document.getElementById('attraction').remove()"
