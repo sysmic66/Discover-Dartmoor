@@ -1977,6 +1977,7 @@ if (category === "Walking Routes") {
         }
 
     
+
 if (category === "Places to Visit") {
     page.innerHTML = `
         <button onclick="document.getElementById('attraction').remove()"
@@ -2008,6 +2009,26 @@ if (category === "Places to Visit") {
                         <img src="${place.image}"
                             style="width:100%;height:190px;
                             object-fit:cover;">
+
+                        ${place.credit ? `
+                            <p style="padding:6px 12px 0;
+                                margin:0;color:#777;
+                                font-size:11px;">
+                                ${place.credit}
+                            </p>
+                        ` : ''}
+
+                        ${place.licenseUrl ? `
+                            <p style="padding:3px 12px 8px;
+                                margin:0;font-size:11px;">
+                                <a href="${place.licenseUrl}"
+                                    target="_blank"
+                                    onclick="event.stopPropagation()"
+                                    style="color:#315a48;">
+                                    View photo licence
+                                </a>
+                            </p>
+                        ` : ''}
                     ` : `
                         <div style="height:190px;background:#e7e9df;
                             display:flex;align-items:center;
@@ -2035,6 +2056,7 @@ if (category === "Places to Visit") {
     document.body.appendChild(page);
     return;
 }
+
 
     if (category === "Places to Visit") {
 
