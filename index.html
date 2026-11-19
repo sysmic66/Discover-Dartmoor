@@ -357,9 +357,15 @@ footer strong {
         </p>
 
         <div class="search-wrap">
-            <input id="search" type="search"
-            placeholder="What would you like to discover?">
-            <button onclick="searchPlaces()">SEARCH</button>
+    <input id="search" type="search"
+    placeholder="What would you like to discover?">
+
+    <button onclick="searchPlaces()">SEARCH</button>
+
+    <button onclick="clearSearch()"
+        style="background:#777;">
+        CLEAR
+    </button>
         </div>
     </div>
 </section>
@@ -2680,6 +2686,10 @@ function searchPlaces() {
 
     document.body.appendChild(page);
 }
+    function clearSearch() {
+    document.getElementById("search").value = "";
+    document.getElementById("attraction")?.remove();
+    }
 function goHome(button) {
     document.getElementById("search").value = "";
     searchPlaces();
