@@ -1471,7 +1471,49 @@ function openCategory(category) {
 
     setTimeout(() => {
         const map = L.map('dartmoorMap').setView([50.57, -3.9], 10);
+// My Location button
+const locationButton = L.control({ position: 'topright' });
 
+locationButton.onAdd = function() {
+    const button = L.DomUtil.create('button');
+
+    button.innerHTML = '📍 My Location';
+    button.style.background = 'white';
+    button.style.padding = '10px';
+    button.style.border = '2px solid #19382e';
+    button.style.borderRadius = '8px';
+    button.style.cursor = 'pointer';
+
+    L.DomEvent.disableClickPropagation(button);
+
+    button.onclick = function() {
+        if (!navigator.geolocation) {
+            alert('Location is not supported on this device.');
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+
+                map.setView([lat, lng], 14);
+
+                L.marker([lat, lng])
+                    .addTo(map)
+                    .bindPopup('You are here')
+                    .openPopup();
+            },
+            function() {
+                alert('Unable to get your location. Please allow location access.');
+            }
+        );
+    };
+
+    return button;
+};
+
+locationButton.addTo(map);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
