@@ -1138,34 +1138,203 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
 
     document.body.appendChild(page);
    }
-    function openAttraction(id) {
+
+const dartmoorPlaces = {
+    haytor: {
+        name: "Haytor Rocks",
+        summary: "Explore Dartmoor's famous granite landmark.",
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Haytor_Rocks_Dartmoor_%2810349503106%29.jpg",
+        credit: "Photo: Andrew Bone, Wikimedia Commons, CC BY 2.0",
+        licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+        description: "Haytor Rocks is one of Dartmoor's most recognisable landmarks. These impressive granite tors offer wonderful views across the surrounding countryside.",
+        details: "Enjoy the rocky landscape, explore the surrounding moorland and take in the panoramic views."
+    },
+    postbridge: {
+        name: "Postbridge Clapper Bridge",
+        summary: "Visit this historic medieval bridge.",
+        image: "https://upload.wikimedia.org/wikipedia/commons/d/da/Clapper_bridge_at_Postbridge_Dartmoor.jpg",
+        credit: "Photo: Kernow Skies, Wikimedia Commons, CC BY-SA 3.0",
+        licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+        description: "Postbridge is famous for its historic granite clapper bridge, which crosses the East Dart River.",
+        details: "Explore the bridge, enjoy the riverside setting and discover a fascinating piece of Dartmoor history."
+    },
+    widecombe: {
+        name: "Widecombe-in-the-Moor",
+        summary: "Discover a beautiful Dartmoor village.",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Widecombe-In-The-Moor_Church.JPG",
+        credit: "Photo: Samhay7, Wikimedia Commons, CC BY-SA 3.0",
+        licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+        description: "Widecombe-in-the-Moor is a beautiful Dartmoor village known for its historic church and traditional moorland character.",
+        details: "Explore the village, visit the Church of St Pancras and enjoy the surrounding countryside."
+    },
+    houndtor: {
+        name: "Hound Tor",
+        summary: "Discover dramatic granite rocks and ancient ruins.",
+        description: "Hound Tor is a striking granite outcrop on eastern Dartmoor, surrounded by open moorland and fascinating history.",
+        details: "Explore the rocky summit and nearby remains of a deserted medieval village. Take care on uneven ground."
+    },
+    bowermansnose: {
+        name: "Bowerman's Nose",
+        summary: "See one of Dartmoor's most unusual rock formations.",
+        description: "Bowerman's Nose is a distinctive granite rock formation on Dartmoor, famous for its unusual shape and local legends.",
+        details: "Enjoy the views across the surrounding moorland and discover the folklore associated with this remarkable landmark."
+    },
+    bellevertor: {
+        name: "Bellever Tor",
+        summary: "Enjoy woodland, open moorland and panoramic views.",
+        description: "Bellever Tor rises above Bellever Forest and offers wonderful views across the central Dartmoor landscape.",
+        details: "Explore the woodland paths, discover nearby Bronze Age remains and climb to the rocky summit."
+    },
+    brentor: {
+        name: "Brentor and St Michael's Church",
+        summary: "Visit a church perched dramatically on a rocky hill.",
+        description: "Brentor is a distinctive hill topped by the tiny Church of St Michael, standing high above the surrounding countryside.",
+        details: "Enjoy the views from the hill and explore the historic church. The final approach is steep and rocky."
+    },
+    burrator: {
+        name: "Burrator Reservoir",
+        summary: "Discover beautiful water, woodland and moorland scenery.",
+        description: "Burrator Reservoir is surrounded by woodland and open moorland on the southern side of Dartmoor.",
+        details: "Enjoy the reservoir views, explore nearby paths and discover the surrounding countryside. Check local access information before setting out."
+    },
+    fernworthy: {
+        name: "Fernworthy Reservoir",
+        summary: "Explore peaceful woodland and waterside scenery.",
+        description: "Fernworthy Reservoir sits among woodland and open moorland in the north-east of Dartmoor.",
+        details: "Enjoy the waterside setting, explore woodland trails and discover nearby prehistoric remains."
+    },
+    meldon: {
+        name: "Meldon Reservoir",
+        summary: "Discover a dramatic reservoir in northern Dartmoor.",
+        description: "Meldon Reservoir lies in a beautiful landscape of granite hills, woodland and open moorland near Okehampton.",
+        details: "Explore the reservoir surroundings, admire the dam and enjoy views towards the high moor."
+    },
+    venford: {
+        name: "Venford Reservoir",
+        summary: "Enjoy a peaceful reservoir surrounded by Dartmoor scenery.",
+        description: "Venford Reservoir is tucked into the south-eastern side of Dartmoor, surrounded by wooded slopes and open countryside.",
+        details: "Enjoy the reservoir views and nearby walking opportunities. Check access and parking arrangements before visiting."
+    },
+    wistmanswood: {
+        name: "Wistman's Wood",
+        summary: "Discover an ancient oak woodland with an atmospheric character.",
+        description: "Wistman's Wood is a remarkable ancient oak woodland among granite boulders on Dartmoor.",
+        details: "Experience this special landscape respectfully. The ground and vegetation are fragile, so keep to established paths and follow conservation guidance."
+    },
+    lydfordgorge: {
+        name: "Lydford Gorge",
+        summary: "Explore a dramatic wooded gorge and waterfall.",
+        description: "Lydford Gorge is a spectacular wooded river gorge on the western edge of Dartmoor, famous for its waterfall and dramatic rocky scenery.",
+        details: "Discover woodland trails, rushing water and the famous White Lady Waterfall. Check National Trust opening information and access conditions before visiting."
+    },
+    castledrogo: {
+        name: "Castle Drogo",
+        summary: "Explore an impressive castle above the Teign Valley.",
+        description: "Castle Drogo is a striking early twentieth-century castle overlooking the Teign Gorge near Drewsteignton.",
+        details: "Explore the castle, gardens and surrounding estate. Check National Trust opening times and admission information."
+    },
+    buckfastabbey: {
+        name: "Buckfast Abbey",
+        summary: "Discover a peaceful abbey with beautiful grounds.",
+        description: "Buckfast Abbey is a historic Benedictine monastery on the southern edge of Dartmoor, set within peaceful grounds.",
+        details: "Visit the abbey church, explore the gardens and discover the history of the monastic community. Check visitor information before travelling."
+    },
+    okehamptoncastle: {
+        name: "Okehampton Castle",
+        summary: "Explore the ruins of a medieval castle.",
+        description: "Okehampton Castle is a historic medieval ruin set above the town of Okehampton, surrounded by woodland and countryside.",
+        details: "Discover the castle remains, learn about its history and enjoy the views from the surrounding grounds. Check English Heritage opening information."
+    },
+    grimspound: {
+        name: "Grimspound",
+        summary: "Discover an ancient Bronze Age settlement.",
+        description: "Grimspound is a remarkable prehistoric settlement on Dartmoor, enclosed by a large stone wall and containing the remains of ancient roundhouses.",
+        details: "Explore the historic landscape and imagine life here thousands of years ago. The site is on open moorland with uneven ground."
+    },
+    merrivale: {
+        name: "Merrivale Stone Rows",
+        summary: "Discover Dartmoor's prehistoric stone monuments.",
+        description: "Merrivale is one of Dartmoor's most important prehistoric landscapes, with stone rows, standing stones and other ancient remains.",
+        details: "Explore the archaeological landscape respectfully and avoid disturbing stones or other historic features."
+    },
+    scorhill: {
+        name: "Scorhill Stone Circle",
+        summary: "Visit one of Dartmoor's impressive prehistoric circles.",
+        description: "Scorhill Stone Circle is a striking prehistoric monument in the north-east of Dartmoor, set in open moorland.",
+        details: "Discover the ancient granite stones and enjoy the surrounding landscape. Access involves walking across uneven open moorland."
+    },
+    greywethers: {
+        name: "Grey Wethers Stone Circles",
+        summary: "Explore two remarkable prehistoric stone circles.",
+        description: "Grey Wethers consists of two prehistoric stone circles set high on Dartmoor among open moorland.",
+        details: "Discover the unusual paired circles and enjoy the remote landscape. Plan your walk carefully and carry suitable navigation."
+    },
+    higheruppacott: {
+        name: "Higher Uppacott",
+        summary: "Discover a traditional medieval Dartmoor longhouse.",
+        description: "Higher Uppacott is an important historic Dartmoor longhouse, offering a glimpse into traditional rural life.",
+        details: "Learn about the building's historic layout and construction. Visits and guided access may be limited, so check arrangements before travelling."
+    },
+    finglebridge: {
+        name: "Fingle Bridge",
+        summary: "Enjoy a beautiful riverside setting in the Teign Valley.",
+        description: "Fingle Bridge is a historic stone bridge crossing the River Teign in a wooded valley on the north-eastern edge of Dartmoor.",
+        details: "Enjoy riverside scenery and woodland walking routes. Take care near the water and check local access information."
+    },
+    beckyfalls: {
+        name: "Becky Falls",
+        summary: "Discover waterfalls and woodland trails.",
+        description: "Becky Falls is a woodland attraction on the eastern side of Dartmoor, known for its cascading waterfall and rocky scenery.",
+        details: "Explore the woodland trails and waterfall viewpoints. Check admission, opening times and trail suitability before visiting."
+    },
+    shaughbridge: {
+        name: "Shaugh Bridge",
+        summary: "Explore rivers, woodland and granite scenery.",
+        description: "Shaugh Bridge is a scenic meeting point of rivers and woodland on the southern edge of Dartmoor.",
+        details: "Enjoy the riverside landscape, moss-covered rocks and nearby woodland paths. Take care on slippery rocks and beside fast-flowing water."
+    },
+    dewerstone: {
+        name: "The Dewerstone",
+        summary: "Discover dramatic granite cliffs above the River Plym.",
+        description: "The Dewerstone is a striking granite outcrop overlooking the wooded Plym Valley.",
+        details: "Enjoy the views and surrounding woodland. Some approaches are steep and rocky, so suitable footwear and care are essential."
+    },
+    spitchwick: {
+        name: "Spitchwick",
+        summary: "Enjoy a beautiful stretch of the River Dart.",
+        description: "Spitchwick is a popular riverside area on the eastern side of Dartmoor, known for its open landscape and river views.",
+        details: "Enjoy the riverside setting and surrounding countryside. Check local parking, access and swimming safety information before visiting."
+    },
+    dartmeet: {
+        name: "Dartmeet",
+        summary: "Visit the meeting point of the East and West Dart.",
+        description: "Dartmeet is a beautiful spot where the East and West Dart rivers meet, with a historic stone bridge and surrounding moorland.",
+        details: "Explore the riverside scenery and nearby walking routes. Water levels and currents can be dangerous, so take care near the river."
+    },
+    belstonetor: {
+        name: "Belstone Tor",
+        summary: "Enjoy far-reaching views over northern Dartmoor.",
+        description: "Belstone Tor is a rocky hill above the village of Belstone, offering impressive views across northern Dartmoor.",
+        details: "Explore the granite outcrops and open moorland. Check weather and navigation before setting out."
+    },
+    yestor: {
+        name: "Yes Tor",
+        summary: "Climb one of Dartmoor's highest peaks.",
+        description: "Yes Tor is one of the highest summits on Dartmoor, close to the northern edge of the high moor.",
+        details: "Enjoy far-reaching views across the surrounding landscape. The walk is exposed and can be challenging in poor weather."
+    },
+    rippon: {
+        name: "Rippon Tor",
+        summary: "Discover a high tor with expansive views.",
+        description: "Rippon Tor is a prominent eastern Dartmoor summit with extensive views across the surrounding countryside.",
+        details: "Explore the open moorland and rocky summit. Check weather and access conditions before setting out."
+    }
+};
+
+function openAttraction(id) {
     document.getElementById("attraction")?.remove();
 
-    const places = {
-        haytor: {
-            name: "Haytor Rocks",
-            image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Haytor_Rocks_Dartmoor_%2810349503106%29.jpg",
-            credit: "Photo: Andrew Bone, Wikimedia Commons, CC BY 2.0",
-            description: "Haytor Rocks is one of Dartmoor's most recognisable landmarks. These impressive granite tors offer wonderful views across the surrounding countryside.",
-            details: "Enjoy the rocky landscape, explore the surrounding moorland and take in the panoramic views."
-        },
-        postbridge: {
-            name: "Postbridge Clapper Bridge",
-            image: "https://upload.wikimedia.org/wikipedia/commons/d/da/Clapper_bridge_at_Postbridge_Dartmoor.jpg",
-            credit: "Photo: Kernow Skies, Wikimedia Commons, CC BY-SA 3.0",
-            description: "Postbridge is famous for its historic granite clapper bridge, which crosses the East Dart River.",
-            details: "Explore the bridge, enjoy the riverside setting and discover a fascinating piece of Dartmoor history."
-        },
-        widecombe: {
-            name: "Widecombe-in-the-Moor",
-            image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Widecombe-In-The-Moor_Church.JPG",
-            credit: "Photo: Samhay7, Wikimedia Commons, CC BY-SA 3.0",
-            description: "Widecombe-in-the-Moor is a beautiful Dartmoor village known for its historic church and traditional moorland character.",
-            details: "Explore the village, visit the church and enjoy the surrounding countryside."
-        }
-    };
-
-    const place = places[id];
+    const place = dartmoorPlaces[id];
     if (!place) return;
 
     const saved = getFavourites().includes(id);
@@ -1191,12 +1360,27 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
         <div style="max-width:850px;margin:25px auto;background:white;
             border-radius:14px;overflow:hidden;">
 
-            <img src="${place.image}"
-                style="width:100%;height:300px;object-fit:cover;">
+            ${place.image ? `
+                <img src="${place.image}"
+                    style="width:100%;height:300px;object-fit:cover;">
+            ` : `
+                <div style="height:190px;background:#e7e9df;
+                    display:flex;align-items:center;justify-content:center;
+                    color:#526b59;font-size:17px;">
+                    📷 Photograph coming soon
+                </div>
+            `}
 
-            <p style="padding:0 20px;color:#777;font-size:12px;">
-                ${place.credit}
-            </p>
+            ${place.credit ? `
+                <p style="padding:0 20px;color:#777;font-size:12px;">
+                    ${place.credit}
+                    ${place.licenseUrl ? `
+                        · <a href="${place.licenseUrl}" target="_blank">
+                            Licence
+                        </a>
+                    ` : ""}
+                </p>
+            ` : ""}
 
             <div style="padding:10px 25px 30px;">
                 <h2 style="color:#19382e;">${place.name}</h2>
@@ -1224,6 +1408,7 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
 
     document.body.appendChild(page);
 }
+
 function openCategory(category) {
 
     document.getElementById("attraction")?.remove();
@@ -1683,64 +1868,66 @@ if (category === "Walking Routes") {
         return;
         }
 
-       if (category === "Places to Visit") {
-        page.innerHTML = `
-            <button onclick="document.getElementById('attraction').remove()"
-                style="padding:12px 20px;background:#19382e;
-                color:white;border:0;border-radius:7px;">
-                ← Back
-            </button>
+    
+if (category === "Places to Visit") {
+    page.innerHTML = `
+        <button onclick="document.getElementById('attraction').remove()"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back
+        </button>
 
-            <h2 style="color:#19382e;text-align:center;">
-                Places to Visit
-            </h2>
+        <h2 style="color:#19382e;text-align:center;">
+            Places to Visit
+        </h2>
 
-            <p style="text-align:center;color:#666;">
-                Discover some of Dartmoor's most special places.
-            </p>
+        <p style="text-align:center;color:#666;">
+            Discover 30 special places across Dartmoor.
+        </p>
 
-            <div style="max-width:900px;margin:25px auto;
-                display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-                gap:20px;">
+        <div style="max-width:1100px;margin:25px auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;">
 
-                <div onclick="openAttraction('haytor')"
-                    style="background:white;border-radius:12px;overflow:hidden;
-                    cursor:pointer;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Haytor_Rocks_Dartmoor_%2810349503106%29.jpg"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <h3 style="padding:0 15px;">Haytor Rocks</h3>
-                    <p style="padding:0 15px 15px;color:#666;">
-                        Explore Dartmoor's famous granite landmark.
+            ${Object.entries(dartmoorPlaces).map(([id, place]) => `
+                <div onclick="openAttraction('${id}')"
+                    style="background:white;border-radius:12px;
+                    overflow:hidden;cursor:pointer;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+
+                    ${place.image ? `
+                        <img src="${place.image}"
+                            style="width:100%;height:190px;
+                            object-fit:cover;">
+                    ` : `
+                        <div style="height:190px;background:#e7e9df;
+                            display:flex;align-items:center;
+                            justify-content:center;
+                            color:#526b59;font-size:15px;">
+                            📷 Photograph coming soon
+                        </div>
+                    `}
+
+                    <h3 style="padding:0 15px 0;
+                        color:#19382e;">
+                        ${place.name}
+                    </h3>
+
+                    <p style="padding:0 15px 15px;
+                        color:#666;">
+                        ${place.summary}
                     </p>
                 </div>
+            `).join("")}
 
-                <div onclick="openAttraction('postbridge')"
-                    style="background:white;border-radius:12px;overflow:hidden;
-                    cursor:pointer;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Clapper_bridge_at_Postbridge_Dartmoor.jpg"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <h3 style="padding:0 15px;">Postbridge Clapper Bridge</h3>
-                    <p style="padding:0 15px 15px;color:#666;">
-                        Visit this historic medieval bridge.
-                    </p>
-                </div>
+        </div>
+    `;
 
-                <div onclick="openAttraction('widecombe')"
-                    style="background:white;border-radius:12px;overflow:hidden;
-                    cursor:pointer;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Widecombe-In-The-Moor_Church.JPG"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <h3 style="padding:0 15px;">Widecombe-in-the-Moor</h3>
-                    <p style="padding:0 15px 15px;color:#666;">
-                        Discover a beautiful Dartmoor village.
-                    </p>
-                </div>
+    document.body.appendChild(page);
+    return;
+}
 
-            </div>
-        `;
-        document.body.appendChild(page);
-        return;
-    }
     if (category === "Places to Visit") {
 
         const saved = favourites.includes("haytor");
