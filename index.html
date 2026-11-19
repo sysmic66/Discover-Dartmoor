@@ -816,6 +816,9 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
     const walks = [
         {
             name: "Postbridge Audio Walk",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Clapper_Bridge,_Postbridge_-_geograph.org.uk_-_7432848.jpg",
+            credit: "Photo: Richard Rogerson · Wikimedia Commons · CC BY-SA 2.0",
+licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             distance: "6 miles · 10 km circular",
             difficulty: "Moderate",
             description: "Explore Hartland Tor, ancient archaeological remains, the Beehive Hut and a beautiful waterfall.",
@@ -830,6 +833,9 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
         },
         {
             name: "Postbridge Trail",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Postbridge,_bridleway_-_geograph.org.uk_-_1249100.jpg",
+            credit: "Photo: Glen Denny · Wikimedia Commons · CC BY-SA 2.0",
+licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             distance: "3 miles · 4.5 km circular",
             difficulty: "Easy to moderate",
             description: "Follow forestry tracks through beautiful woodland with stunning views across the open moorland. There is an opportunity to detour up Bellever Tor.",
@@ -841,6 +847,9 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
         },
         {
             name: "East Dart Waterfall Walk",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/East_Dart_Waterfall_-_geograph.org.uk_-_778023.jpg",
+            credit: "Photo: Chris Carlson · Wikimedia Commons · CC BY-SA 2.0",
+licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             distance: "5 miles · 8 km circular",
             difficulty: "Moderate",
             description: "Enjoy riverside scenery, waterfalls and open moorland around the beautiful East Dart Valley.",
@@ -876,6 +885,11 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
                 <div style="background:white;padding:20px;
                     border-radius:12px;">
 
+                   ${walk.image ? `<img src="${walk.image}"
+    style="width:100%;height:190px;object-fit:cover;
+    border-radius:10px;margin-bottom:8px;">` : ''}
+
+${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credit} · <a href="${walk.licenseUrl || 'https://creativecommons.org/licenses/by/2.0/'}" target="_blank">Licence</a></p>` : ''}
                     <h3 style="color:#19382e;">
                         ${walk.name}
                     </h3>
