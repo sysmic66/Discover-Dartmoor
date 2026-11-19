@@ -2617,19 +2617,69 @@ function searchPlaces() {
     const value = document.getElementById("search")
         .value.toLowerCase().trim();
 
-    const cards = document.querySelectorAll(".card");
-    let visible = 0;
+    if (!value) return;
 
-    cards.forEach(card => {
-        const match = card.innerText.toLowerCase().includes(value);
-        card.style.display = match ? "" : "none";
-        if (match) visible++;
-    });
+    const matches = Object.entries(dartmoorPlaces)
+        .filter(([id, place]) => {
+            const searchable = (
+                id + " " + JSON.stringify(place)
+            ).toLowerCase();
 
-    document.getElementById("empty").style.display =
-        visible === 0 ? "block" : "none";
+            return searchable.includes(value);
+        });
+
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="document.getElementById('attraction').remove()"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Home
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;">
+            <h2 style="color:#19382e;">Search Results</h2>
+
+            <p>Results for: <strong>${value}</strong></p>
+
+            <p>${matches.length} attractions found</p>
+
+            ${matches.length ? matches.map(([id, place]) => `
+                <button onclick="openAttraction('${id}')"
+                    style="display:block;width:100%;text-align:left;
+                    padding:18px;margin:12px 0;background:white;
+                    border:0;border-radius:12px;color:#19382e;
+                    cursor:pointer;">
+
+                    <strong style="font-size:17px;">
+                        ${place.name}
+                    </strong>
+
+                    <p style="margin-bottom:0;color:#555;">
+                        ${place.summary}
+                    </p>
+                </button>
+            `).join("") : `
+                <p>No matching attractions found.
+                Try another search.</p>
+            `}
+        </div>
+    `;
+
+    document.body.appendChild(page);
 }
-
 function goHome(button) {
     document.getElementById("search").value = "";
     searchPlaces();
