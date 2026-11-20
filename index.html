@@ -719,6 +719,13 @@ function openWalk(id) {
         <p style="color:#987344;font-weight:bold;">
             ${walk.distance} · ${walk.difficulty}
         </p>
+        ${walk.start ? `
+    <p><strong>Starting point:</strong> ${walk.start}</p>
+` : ""}
+
+${walk.terrain ? `
+    <p><strong>Terrain:</strong> ${walk.terrain}</p>
+` : ""}
 
         <h3 style="color:#19382e;">About this walk</h3>
 
@@ -775,16 +782,18 @@ function openWalk(id) {
             destination: "Hound Tor, Dartmoor"
         },
         {
-            id: "haytor-quarry",
-            name: "Haytor Quarry Walk",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Haytor_Quarry_-_geograph.org.uk_-_1053973.jpg",
-            credit: "Photo: Paul Hutchinson · Wikimedia Commons · CC BY-SA 2.0",
-licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-            distance: "Short walk",
-            difficulty: "Easy",
-            description: "Discover the historic granite quarry beneath Haytor.",
-            destination: "Haytor Quarry, Dartmoor"
-        },
+    id: "haytor-quarry",
+    name: "Haytor Quarry Walk",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Haytor_Quarry_-_geograph.org.uk_-_1053973.jpg",
+    credit: "Photo: Paul Hutchinson · Wikimedia Commons · CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    distance: "2 km return",
+    difficulty: "Short walk",
+    start: "Haytor Middle Car Park",
+    terrain: "Gentle uphill track, road crossing and narrower, steeper sections inside the quarry",
+    description: "Explore the historic granite quarry beneath Haytor. Discover the remains of Dartmoor's granite industry, including old quarry workings and machinery.",
+    destination: "Haytor Quarry, Dartmoor"
+        }
         {
             id: "haytor-emsworthy",
             name: "Haytor to Emsworthy Mire",
