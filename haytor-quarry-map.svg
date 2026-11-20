@@ -1,0 +1,82 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900">
+  <rect width="800" height="900" fill="#f3f0e5"/>
+
+  <text x="400" y="60" text-anchor="middle"
+    font-size="34" font-weight="bold" fill="#19382e">
+    HAYTOR QUARRY WALK
+  </text>
+  <text x="400" y="100" text-anchor="middle"
+    font-size="20" fill="#987344">
+    2 km return · Dartmoor
+  </text>
+
+  <rect x="45" y="140" width="710" height="620"
+    rx="20" fill="#e3ead9" stroke="#c4d1b9" stroke-width="3"/>
+
+  <!-- Illustrative walking route -->
+  <path d="M180 650 Q240 580 320 510
+    T430 390 T590 260"
+    fill="none" stroke="#987344" stroke-width="9"
+    stroke-linecap="round" stroke-dasharray="15 11"/>
+
+  <path d="M590 260 Q480 350 430 390
+    T320 510 T180 650"
+    fill="none" stroke="#987344" stroke-width="6"
+    stroke-linecap="round" stroke-dasharray="10 10"/>
+
+  <!-- Quarry pond -->
+  <ellipse cx="420" cy="400" rx="85" ry="45"
+    fill="#8caeb6" stroke="#668b9b" stroke-width="4"/>
+  <text x="420" y="406" text-anchor="middle"
+    font-size="17" fill="#19382e">Quarry Pond</text>
+
+  <!-- Granite outcrops -->
+  <g fill="#8b8980">
+    <path d="M330 340 L360 275 L390 340Z"/>
+    <path d="M460 320 L495 250 L530 320Z"/>
+    <path d="M520 465 L550 410 L580 465Z"/>
+  </g>
+
+  <!-- Stops -->
+  <g fill="#19382e" stroke="white" stroke-width="4">
+    <circle cx="180" cy="650" r="22"/>
+    <circle cx="320" cy="510" r="22"/>
+    <circle cx="430" cy="390" r="22"/>
+    <circle cx="590" cy="260" r="22"/>
+  </g>
+
+  <g fill="white" font-size="19"
+    font-weight="bold" text-anchor="middle">
+    <text x="180" y="657">1</text>
+    <text x="320" y="517">2</text>
+    <text x="430" y="397">3</text>
+    <text x="590" y="267">4</text>
+  </g>
+
+  <g fill="#19382e" font-size="20" font-weight="bold">
+    <text x="75" y="700">Middle Car Park</text>
+    <text x="210" y="475">Quarry Entrance</text>
+    <text x="350" y="350">Historic Quarry</text>
+    <text x="500" y="215">Tramway Viewpoint</text>
+  </g>
+
+  <!-- Legend -->
+  <rect x="70" y="700" width="660" height="45"
+    rx="10" fill="#f8f6ef"/>
+  <text x="400" y="729" text-anchor="middle"
+    font-size="16" fill="#19382e">
+    Numbered landmarks · Approximate route illustration
+  </text>
+
+  <rect x="55" y="790" width="690" height="75"
+    rx="14" fill="#19382e"/>
+  <text x="400" y="820" text-anchor="middle"
+    font-size="20" font-weight="bold" fill="white">
+    Original illustrative map · Not to scale
+  </text>
+  <text x="400" y="847" text-anchor="middle"
+    font-size="16" fill="white">
+    Not suitable for navigation or measuring distances
+  </text>
+</svg>
