@@ -2116,6 +2116,11 @@ function openCategory(category) {
     document.body.appendChild(page);
 
     setTimeout(() => {
+        if (!navigator.onLine) {
+    document.getElementById('dartmoorMap').innerHTML =
+        '<img src="./offline-map.svg" style="width:100%;height:100%;object-fit:contain;border-radius:12px;">';
+    return;
+        }
         const map = L.map('dartmoorMap').setView([50.57, -3.9], 10);
 // My Location button
 const locationButton = L.control({ position: 'topright' });
