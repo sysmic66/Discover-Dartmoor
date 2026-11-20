@@ -1,0 +1,64 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f4f1e8"/>
+
+  <path d="M0 420 Q150 350 300 410 T600 390 T800 420 L800 600 L0 600Z"
+        fill="#dce6d1"/>
+
+  <path d="M0 180 Q180 130 350 190 T800 160"
+        fill="none" stroke="#c7d6bd" stroke-width="3"/>
+
+  <text x="400" y="45" text-anchor="middle"
+        font-size="28" font-weight="bold" fill="#19382e">
+    Haytor to Hound Tor
+  </text>
+  <text x="400" y="75" text-anchor="middle"
+        font-size="16" fill="#526b57">
+    Illustrated walking route · Not to scale
+  </text>
+
+  <path d="M120 450 Q190 390 250 350
+           Q320 310 370 340
+           Q430 370 470 290
+           Q530 220 610 250
+           Q670 280 700 170"
+        fill="none" stroke="#a16b3c" stroke-width="9"
+        stroke-linecap="round" stroke-dasharray="2 15"/>
+
+  <path d="M250 350 Q290 390 330 420"
+        fill="none" stroke="#78a9bb" stroke-width="8"
+        stroke-linecap="round"/>
+
+  <g fill="#19382e" font-size="17" font-weight="bold">
+    <circle cx="120" cy="450" r="13" fill="#477a52"/>
+    <text x="120" y="485" text-anchor="middle">Haytor</text>
+
+    <circle cx="250" cy="350" r="12" fill="#477a52"/>
+    <text x="250" y="325" text-anchor="middle">Quarry</text>
+
+    <circle cx="370" cy="340" r="12" fill="#477a52"/>
+    <text x="370" y="310" text-anchor="middle">Smallacombe</text>
+    <text x="370" y="330" text-anchor="middle">Rocks</text>
+
+    <circle cx="330" cy="420" r="10" fill="#4b91aa"/>
+    <text x="330" y="455" text-anchor="middle">Becka Brook</text>
+
+    <circle cx="610" cy="250" r="12" fill="#477a52"/>
+    <text x="610" y="225" text-anchor="middle">Holwell Lawn</text>
+
+    <circle cx="700" cy="170" r="14" fill="#477a52"/>
+    <text x="700" y="140" text-anchor="middle">Hound Tor</text>
+  </g>
+
+  <g fill="#829b75" opacity="0.8">
+    <path d="M80 170 l25 -55 25 55Z"/>
+    <path d="M150 200 l30 -65 30 65Z"/>
+    <path d="M570 440 l25 -55 25 55Z"/>
+    <path d="M680 390 l30 -65 30 65Z"/>
+  </g>
+
+  <text x="400" y="555" text-anchor="middle"
+        font-size="15" fill="#526b57">
+    Follow marked paths and local signs. Carry a map and check conditions.
+  </text>
+</svg>
