@@ -628,6 +628,16 @@ function openWalk(id) {
         <img src="${walk.image}"
             style="width:100%;max-height:240px;
             object-fit:cover;border-radius:12px;">
+            ${walk.id === "haytor-audio" ? `
+    <h3 style="color:#19382e;margin-top:25px;">
+        Route Map
+    </h3>
+
+    <img src="./haytor-audio-map.svg"
+        alt="Illustrative Haytor Audio Walk route map"
+        style="width:100%;border-radius:12px;
+        border:1px solid #ddd;">
+` : ""}
 
         <p style="color:#987344;font-weight:bold;">
             ${walk.distance} · ${walk.difficulty}
