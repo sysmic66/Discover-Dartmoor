@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "discover-dartmoor-v2";
+const CACHE_NAME = "discover-dartmoor-v3";
 
 const FILES_TO_CACHE = [
     "./",
@@ -34,9 +34,23 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
     if (event.request.method !== "GET") return;
 
-    event.respondWith(
-        caches.match(event.request).then(cached => {
-            return cached || fetch(event.request);
-        })
-    );
+    if (event.request.destination === "image") {
+        event.respondWith(
+            caches.match(event.request).then(cached => {
+                if (cached) return cached;
+
+                return fetch(event.request).then(response => {
+                    if (response.ok || response.type === "opaque") {
+                        const responseToCache = response.clone();
+
+                        caches.open(CACHE_NAME).then(cache => {
+                            cache.put(event.request, responseToCache);
+                        });
+                    }
+
+                    return response;
+                });
+            })
+        );
+    }
 });
