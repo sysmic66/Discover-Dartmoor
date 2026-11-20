@@ -1,0 +1,58 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <rect width="900" height="700" fill="#e9e8d8"/>
+
+  <path d="M180 110 L340 65 L530 100 L710 190 L760 350 L680 530 L510 625 L300 590 L150 450 L100 270 Z"
+        fill="#c7d5b6" stroke="#71876b" stroke-width="5"/>
+
+  <path d="M180 180 Q300 220 390 160 T650 220
+           M150 370 Q300 310 420 390 T690 410
+           M300 570 Q390 460 500 500 T700 310"
+        fill="none" stroke="#8bb9c0" stroke-width="7"/>
+
+  <path d="M130 300 Q300 250 450 300 T730 350
+           M250 100 Q300 260 450 350 T600 590"
+        fill="none" stroke="#fff8e8" stroke-width="9"/>
+
+  <g fill="#19382e" font-family="Arial" font-weight="bold">
+    <text x="450" y="35" font-size="27" text-anchor="middle">DISCOVER DARTMOOR</text>
+    <text x="450" y="675" font-size="15" text-anchor="middle">Offline overview · Schematic map · Not to scale</text>
+  </g>
+
+  <g fill="#19382e" font-family="Arial" font-size="17">
+    <circle cx="430" cy="220" r="10"/>
+    <text x="445" y="215">Haytor</text>
+
+    <circle cx="510" cy="330" r="10"/>
+    <text x="525" y="325">Widecombe</text>
+
+    <circle cx="350" cy="420" r="10"/>
+    <text x="365" y="415">Postbridge</text>
+
+    <circle cx="270" cy="510" r="10"/>
+    <text x="285" y="505">Bellever</text>
+
+    <circle cx="580" cy="450" r="10"/>
+    <text x="595" y="445">Dartmeet</text>
+
+    <circle cx="220" cy="250" r="10"/>
+    <text x="235" y="245">Meldon</text>
+
+    <circle cx="620" cy="250" r="10"/>
+    <text x="635" y="245">Fernworthy</text>
+
+    <circle cx="450" cy="520" r="10"/>
+    <text x="465" y="515">Venford</text>
+
+    <circle cx="350" cy="150" r="10"/>
+    <text x="365" y="145">Hound Tor</text>
+
+    <circle cx="550" cy="150" r="10"/>
+    <text x="565" y="145">Grimspound</text>
+  </g>
+
+  <g fill="#71876b" font-family="Arial" font-size="14" font-style="italic">
+    <text x="300" y="300">Dartmoor National Park</text>
+    <text x="300" y="320">Open moorland</text>
+  </g>
+</svg>
