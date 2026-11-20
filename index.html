@@ -813,6 +813,8 @@ function openBelleverTorDetails() {
         <img src="${walk.image}"
             style="width:100%;max-height:240px;
             object-fit:cover;border-radius:12px;">
+           
+            ${walk.id === "haytor-audio" ? `
             <h3 style="color:#315a48;">Route Information</h3>
 
 <div style="background:#e5eadf;padding:15px;
@@ -825,7 +827,6 @@ function openBelleverTorDetails() {
     <p><strong>Route Type:</strong> Circular</p>
 
 </div>
-            ${walk.id === "haytor-audio" ? `
         Route Map
     </h3>
 
