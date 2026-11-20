@@ -1,0 +1,80 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f4f1e8"/>
+
+  <path d="M0 300 Q180 230 350 300 T800 260 L800 600 L0 600Z"
+        fill="#dce6d1"/>
+
+  <text x="400" y="45" text-anchor="middle"
+        font-size="28" font-weight="bold" fill="#19382e">
+    Bellever Tor Trail
+  </text>
+  <text x="400" y="75" text-anchor="middle"
+        font-size="16" fill="#526b57">
+    2.5 miles circular · Illustrated route · Not to scale
+  </text>
+
+  <path d="M140 450 Q200 370 280 340
+           Q360 300 430 250
+           Q520 200 620 260
+           Q700 320 650 420
+           Q520 490 400 440
+           Q260 500 140 450"
+        fill="none" stroke="#a16b3c" stroke-width="9"
+        stroke-linecap="round" stroke-dasharray="2 15"/>
+
+  <g fill="#829b75" opacity="0.8">
+    <path d="M80 170 l25 -55 25 55Z"/>
+    <path d="M150 200 l30 -65 30 65Z"/>
+    <path d="M230 160 l25 -55 25 55Z"/>
+    <path d="M550 130 l30 -65 30 65Z"/>
+    <path d="M680 190 l25 -55 25 55Z"/>
+  </g>
+
+  <g font-family="Arial" font-size="15" font-weight="bold"
+     text-anchor="middle" fill="#ffffff">
+    <g>
+      <circle cx="140" cy="450" r="18" fill="#19382e"/>
+      <text x="140" y="455">1</text>
+    </g>
+    <g>
+      <circle cx="220" cy="365" r="18" fill="#19382e"/>
+      <text x="220" y="370">2</text>
+    </g>
+    <g>
+      <circle cx="320" cy="320" r="18" fill="#19382e"/>
+      <text x="320" y="325">3</text>
+    </g>
+    <g>
+      <circle cx="430" cy="250" r="18" fill="#19382e"/>
+      <text x="430" y="255">4</text>
+    </g>
+    <g>
+      <circle cx="530" cy="220" r="18" fill="#19382e"/>
+      <text x="530" y="225">5</text>
+    </g>
+    <g>
+      <circle cx="620" cy="260" r="18" fill="#19382e"/>
+      <text x="620" y="265">6</text>
+    </g>
+    <g>
+      <circle cx="650" cy="420" r="18" fill="#19382e"/>
+      <text x="650" y="425">7</text>
+    </g>
+    <g>
+      <circle cx="400" cy="440" r="18" fill="#19382e"/>
+      <text x="400" y="445">8</text>
+    </g>
+  </g>
+
+  <text x="140" y="490" text-anchor="middle"
+        font-size="15" fill="#19382e">Car park</text>
+  <text x="320" y="285" text-anchor="middle"
+        font-size="15" fill="#19382e">Forest</text>
+  <text x="530" y="185" text-anchor="middle"
+        font-size="15" fill="#19382e">Bellever Tor</text>
+  <text x="400" y="555" text-anchor="middle"
+        font-size="15" fill="#526b57">
+    Follow marked paths and local signs. Not for navigation.
+  </text>
+</svg>
