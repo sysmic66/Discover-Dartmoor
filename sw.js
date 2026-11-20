@@ -1,9 +1,9 @@
 
-const CACHE_NAME = "discover-dartmoor-v8";
+const CACHE_NAME = "discover-dartmoor-v9";
 
 const FILES_TO_CACHE = [
     "./offline-map.svg",
-    "./haytor-audio-map.svg",
+    "./haytor-audio-map-v2.svg",
     "./",
     "./index.html",
     "./manifest.json",
