@@ -1,0 +1,51 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#f3f0e5"/>
+  <text x="400" y="65" text-anchor="middle" font-size="34" font-weight="bold" fill="#19382e">HAYTOR AUDIO WALK</text>
+  <text x="400" y="105" text-anchor="middle" font-size="20" fill="#987344">Dartmoor National Park · Circular route</text>
+
+  <path d="M100 180 Q220 120 350 190 T700 170 L730 850 Q550 930 400 850 T80 850Z" fill="#dce5d2"/>
+
+  <path d="M160 730 Q250 640 280 540 T430 390 T620 250"
+        fill="none" stroke="#987344" stroke-width="9"
+        stroke-linecap="round" stroke-dasharray="15 12"/>
+
+  <path d="M620 250 Q680 380 600 500 T430 650 T160 730"
+        fill="none" stroke="#987344" stroke-width="9"
+        stroke-linecap="round" stroke-dasharray="15 12"/>
+
+  <g fill="#19382e">
+    <circle cx="160" cy="730" r="17"/>
+    <circle cx="280" cy="540" r="17"/>
+    <circle cx="430" cy="390" r="17"/>
+    <circle cx="620" cy="250" r="17"/>
+    <circle cx="600" cy="500" r="17"/>
+    <circle cx="430" cy="650" r="17"/>
+  </g>
+
+  <g fill="white" font-size="18" text-anchor="middle" font-weight="bold">
+    <text x="160" y="737">1</text>
+    <text x="280" y="547">2</text>
+    <text x="430" y="397">3</text>
+    <text x="620" y="257">4</text>
+    <text x="600" y="507">5</text>
+    <text x="430" y="657">6</text>
+  </g>
+
+  <g fill="#19382e" font-size="22" font-weight="bold">
+    <text x="95" y="785">Haytor</text>
+    <text x="190" y="505">Granite Tramway</text>
+    <text x="390" y="345">Hound Tor</text>
+    <text x="570" y="205">Open Moorland</text>
+    <text x="610" y="545">Return Route</text>
+    <text x="340" y="700">Haytor Rocks</text>
+  </g>
+
+  <path d="M120 250 L160 300 L200 250 L240 300"
+        fill="none" stroke="#8ca5b1" stroke-width="8" opacity="0.7"/>
+  <text x="120" y="225" font-size="18" fill="#526f7c">Streams</text>
+
+  <rect x="55" y="875" width="690" height="75" rx="14" fill="#19382e"/>
+  <text x="400" y="908" text-anchor="middle" font-size="21" fill="white" font-weight="bold">Illustrative route overview · Not to scale</text>
+  <text x="400" y="934" text-anchor="middle" font-size="16" fill="white">Not suitable for navigation or measuring distances</text>
+</svg>
