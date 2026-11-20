@@ -715,7 +715,20 @@ function openWalk(id) {
 </div>
 
 ` : ""}
+${walk.id === "haytor-quarry" ? `
+    <h3 style="color:#19382e;margin-top:25px;">
+        Route Map
+    </h3>
 
+    <img src="./haytor-quarry-map.svg"
+        alt="Illustrative Haytor Quarry Walk map"
+        style="width:100%;border-radius:12px;
+        border:1px solid #ddd;">
+
+    <p style="font-size:13px;color:#777;">
+        Illustrative overview only. Not to scale and not suitable for navigation.
+    </p>
+` : ""}
 
         <p style="color:#987344;font-weight:bold;">
             ${walk.distance} · ${walk.difficulty}
