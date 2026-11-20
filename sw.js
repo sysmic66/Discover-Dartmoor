@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "discover-dartmoor-v3";
+const CACHE_NAME = "discover-dartmoor-v4";
 
 const FILES_TO_CACHE = [
     "./",
@@ -34,7 +34,16 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
     if (event.request.method !== "GET") return;
 
-    if (event.request.destination === "image") {
+    if (event.request.mode === "navigate") {
+    event.respondWith(
+        caches.match("./index.html").then(cached => {
+            return cached || fetch(event.request);
+        })
+    );
+    return;
+}
+
+if (event.request.destination === "image") {
         event.respondWith(
             caches.match(event.request).then(cached => {
                 if (cached) return cached;
