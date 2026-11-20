@@ -6,6 +6,7 @@ const FILES_TO_CACHE = [
     "./haytor-audio-map-v2.svg",
     "./haytor-quarry-map.svg",
     "./haytor-houndtor-map.svg",
+    "./bellever-tor-map.svg",
     "./haytor-emsworthy-map.svg"
 
     "./",
