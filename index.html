@@ -592,6 +592,76 @@ function openWalk(id) {
 
     document.body.appendChild(page);
     }
+    function openHaytorWalkDetails(id) {
+    const walk = (window.haytorWalks || []).find(
+        item => item.id === id
+    );
+
+    if (!walk) return;
+
+    document.getElementById("walkGuide")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "walkGuide";
+
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:1000;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:20px;
+        box-sizing:border-box;
+    `;
+
+    page.innerHTML = `
+        <button onclick="document.getElementById('walkGuide').remove()"
+            style="background:#19382e;color:white;
+            padding:12px 20px;border:0;border-radius:7px;">
+            ← Back to Walks
+        </button>
+
+        <h2 style="color:#19382e;margin-top:25px;">
+            ${walk.name}
+        </h2>
+
+        <img src="${walk.image}"
+            style="width:100%;max-height:240px;
+            object-fit:cover;border-radius:12px;">
+
+        <p style="color:#987344;font-weight:bold;">
+            ${walk.distance} · ${walk.difficulty}
+        </p>
+
+        <h3 style="color:#19382e;">About this walk</h3>
+
+        <p style="color:#444;line-height:1.7;">
+            ${walk.description}
+        </p>
+
+        <h3 style="color:#19382e;">Destination</h3>
+
+        <p>${walk.destination}</p>
+
+        <p style="background:#e5eadf;padding:15px;
+            border-radius:8px;color:#19382e;">
+            This guide is available offline. 
+            External map directions require an internet connection.
+        </p>
+
+        ${navigator.onLine ? `
+            <a href="https://www.google.com/maps/dir/?api=1&origin=Haytor+Visitor+Centre,+Dartmoor&destination=${encodeURIComponent(walk.destination)}&travelmode=walking"
+                target="_blank"
+                style="display:inline-block;background:#19382e;
+                color:white;padding:12px 18px;
+                border-radius:7px;text-decoration:none;">
+                Open Directions in Maps →
+            </a>
+        ` : ""}
+    `;
+
+    document.body.appendChild(page);
+    }
     function openHaytorWalks() {
     document.getElementById("attraction")?.remove();
 
@@ -608,6 +678,7 @@ function openWalk(id) {
 
     const walks = [
         {
+            id: "haytor-audio",
             name: "Haytor Audio Walk",
             image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Haytor_Rocks_Dartmoor_%2810349503106%29.jpg",
             credit: "Photo: Andrew Bone · Wikimedia Commons · CC BY 2.0",
@@ -617,6 +688,7 @@ function openWalk(id) {
             destination: "Hound Tor, Dartmoor"
         },
         {
+            id: "haytor-quarry",
             name: "Haytor Quarry Walk",
             image: "https://commons.wikimedia.org/wiki/Special:FilePath/Haytor_Quarry_-_geograph.org.uk_-_1053973.jpg",
             credit: "Photo: Paul Hutchinson · Wikimedia Commons · CC BY-SA 2.0",
@@ -627,6 +699,7 @@ licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             destination: "Haytor Quarry, Dartmoor"
         },
         {
+            id: "haytor-emsworthy",
             name: "Haytor to Emsworthy Mire",
             image: "https://commons.wikimedia.org/wiki/Special:FilePath/Emsworthy_Mire_Nature_Reserve_-_geograph.org.uk_-_6501267.jpg",
             credit: "Photo: Derek Harper · Wikimedia Commons · CC BY-SA 2.0",
@@ -637,6 +710,7 @@ licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             destination: "Emsworthy Mire, Dartmoor"
         },
         {
+            id: "haytor-houndtor",
             name: "Haytor to Hound Tor",
             image: "https://commons.wikimedia.org/wiki/Special:FilePath/Hound_Tor_-_geograph.org.uk_-_6377196.jpg",
             credit: "Photo: Derek Harper · Wikimedia Commons · CC BY-SA 2.0",
@@ -647,6 +721,7 @@ licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             destination: "Hound Tor, Dartmoor"
         }
     ];
+        window.haytorWalks = walks;
 
     page.innerHTML = `
         <button onclick="openCategory('Walking Routes')"
@@ -667,7 +742,7 @@ licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
             display:grid;gap:18px;">
 
             ${walks.map(walk => `
-                <div onclick="openWalk('haytor')"
+                <div
     style="background:white;padding:20px;
     border-radius:12px;cursor:pointer;">
                                     <img src="${walk.image || ''}"
@@ -680,6 +755,12 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
                         ${walk.distance} · ${walk.difficulty}
                     </p>
                     <p style="color:#555;">${walk.description}</p>
+                    <button onclick="openHaytorWalkDetails('${walk.id}')"
+    style="display:inline-block;background:#987344;
+    color:white;padding:12px 18px;border:0;
+    border-radius:7px;margin:8px 8px 8px 0;">
+    View Walk Guide
+</button>
                     <a href="https://www.google.com/maps/dir/?api=1&origin=Haytor+Visitor+Centre,+Dartmoor&destination=${encodeURIComponent(walk.destination)}&travelmode=walking"
                         target="_blank"
                         style="display:inline-block;background:#19382e;
