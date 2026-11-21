@@ -1123,6 +1123,177 @@ function openMilesWithoutStilesDetails() {
     document.body.appendChild(page);
 }
 
+function openEastDartRiverbankDetails() {
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openBelleverWalks()"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Bellever Walks
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;overflow:hidden;">
+
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/East_Dart_river_at_Bellever_-_geograph.org.uk_-_117842.jpg"
+                style="width:100%;height:300px;object-fit:cover;">
+
+            <div style="padding:20px 25px 30px;">
+
+                <p style="color:#987344;font-weight:bold;">
+                    DARTMOOR EASY ACCESS WALK
+                </p>
+
+                <h2 style="color:#19382e;">
+                    East Dart Riverbank
+                </h2>
+
+                <p>
+                    Enjoy a peaceful visit to the beautiful East Dart
+                    River at Bellever Forest. This short, accessible
+                    route follows a wide, level surfaced path from
+                    the car park down to the riverbank, where you
+                    can relax, enjoy the scenery and take in the
+                    tranquil sounds of the flowing water.
+                </p>
+
+                <h3 style="color:#315a48;">Route Information</h3>
+
+                <p><strong>Distance:</strong> 0.2 km / 0.15 miles</p>
+                <p><strong>Difficulty:</strong> Easy access</p>
+                <p><strong>Terrain:</strong> Fully surfaced, wide and level track</p>
+                <p><strong>Starting Point:</strong> Bellever Village Car Park</p>
+                <p><strong>Destination:</strong> East Dart Riverbank</p>
+                <p><strong>Route Type:</strong> Out and back</p>
+                <p><strong>Accessibility:</strong> Suitable for a range of visitors, including wheelchair and mobility scooter users</p>
+
+                <h3 style="color:#19382e;margin-top:25px;">
+                    Route Map
+                </h3>
+
+                <img src="./east-dart-riverbank-map.svg"
+                    alt="Illustrative East Dart Riverbank route map"
+                    style="width:100%;border-radius:12px;
+                    border:1px solid #ddd;">
+
+                <p style="font-size:12px;color:#777;">
+                    Illustrative map only. Not to scale and
+                    not suitable for navigation. Follow official
+                    waymarkers and use a current walking map.
+                </p>
+
+                <div style="background:#e5eadf;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Guided Stops
+                    </h3>
+
+                    <h4 style="color:#19382e;">1. Bellever Village Car Park</h4>
+                    <p>Begin your visit at Bellever Village Car Park. Take a moment to prepare before following the easy access path towards the river.</p>
+
+                    <h4 style="color:#19382e;">2. The Easy Access Path</h4>
+                    <p>Follow the wide, surfaced and level track leading away from the car park. The path is designed to make the riverside accessible to a wider range of visitors.</p>
+
+                    <h4 style="color:#19382e;">3. Woodland Surroundings</h4>
+                    <p>Enjoy the peaceful woodland scenery as you make your way towards the river. Take time to appreciate the trees and wildlife around you.</p>
+
+                    <h4 style="color:#19382e;">4. Reaching the East Dart</h4>
+                    <p>Arrive at the beautiful East Dart riverbank. Listen to the flowing water and enjoy the peaceful atmosphere of this lovely corner of Bellever Forest.</p>
+
+                    <h4 style="color:#19382e;">5. Riverside Benches</h4>
+                    <p>Take a break on one of the benches along the route or beside the river. This is a lovely place to relax and enjoy the surrounding landscape.</p>
+
+                    <h4 style="color:#19382e;">6. Picnic by the River</h4>
+                    <p>The riverbank provides a wonderful setting for a picnic. Enjoy the views and the natural surroundings before making your way back.</p>
+
+                    <h4 style="color:#19382e;">7. Return to the Car Park</h4>
+                    <p>When you are ready, retrace your steps along the same surfaced path to Bellever Village Car Park, completing your visit.</p>
+
+                </div>
+
+                <div style="background:#f4f1e8;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Walking Instructions
+                    </h3>
+
+                    <h4 style="color:#19382e;">1. Starting at Bellever Car Park</h4>
+                    <p>Park at Bellever Village Car Park and locate the easy access path leading towards the East Dart River.</p>
+
+                    <h4 style="color:#19382e;">2. Following the Surfaced Path</h4>
+                    <p>Follow the wide, level surfaced track towards the riverbank. Take your time and enjoy the woodland surroundings.</p>
+
+                    <h4 style="color:#19382e;">3. Reaching the Riverbank</h4>
+                    <p>Continue along the path until you reach the East Dart. There are benches along the route and beside the river where you can stop and rest.</p>
+
+                    <h4 style="color:#19382e;">4. Returning to the Start</h4>
+                    <p>When you are ready to leave, follow the same path back to Bellever Village Car Park.</p>
+
+                </div>
+
+                <h3 style="color:#19382e;margin-top:25px;">
+                    Walking Safety
+                </h3>
+
+                <div style="background:#fce9df;padding:15px;
+                    border-radius:10px;margin-bottom:12px;">
+
+                    <p><strong>Take care near the water.</strong> Riverbanks can be slippery and uneven. Keep a safe distance from the water's edge.</p>
+
+                    <p><strong>Watch the weather.</strong> Heavy rainfall can cause river levels to rise and conditions to change quickly.</p>
+
+                    <p><strong>Check the path.</strong> Although the route is surfaced and level, wet weather can make surfaces slippery.</p>
+
+                    <p><strong>Supervise children.</strong> Keep children close to you when visiting the riverbank.</p>
+
+                    <p><strong>Respect wildlife.</strong> Avoid disturbing wildlife and keep your distance from ponies and livestock.</p>
+
+                    <p><strong>Enjoy the surroundings responsibly.</strong> Take all litter home and leave the riverside as you found it.</p>
+
+                </div>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Bellever+Village+Car+Park+Dartmoor"
+                    target="_blank"
+                    style="display:inline-block;background:#19382e;
+                    color:white;padding:14px 20px;border-radius:7px;
+                    text-decoration:none;">
+                    Find Starting Point in Maps →
+                </a>
+
+                <p style="font-size:12px;color:#777;margin-top:20px;">
+                    Always check current access information before
+                    setting off and follow any local notices.
+                </p>
+
+                <p style="font-size:12px;color:#777;">
+                    Trail information:
+                    <a href="https://www.forestryengland.uk/bellever-forest/easy-access-bellever-forest"
+                    target="_blank">Forestry England</a>
+                </p>
+
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
+
     function openHaytorWalkDetails(id) {
     const walk = (window.haytorWalks || []).find(
         item => item.id === id
