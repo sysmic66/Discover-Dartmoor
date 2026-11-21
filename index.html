@@ -938,6 +938,191 @@ function openRiverForestDetails() {
     document.body.appendChild(page);
 }
 
+function openMilesWithoutStilesDetails() {
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openBelleverWalks()"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Bellever Walks
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;overflow:hidden;">
+
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bellever_Tor,_Dartmoor_-_geograph.org.uk_-_4908412.jpg"
+                style="width:100%;height:300px;object-fit:cover;">
+
+            <div style="padding:20px 25px 30px;">
+
+                <p style="color:#987344;font-weight:bold;">
+                    DARTMOOR ACCESSIBLE WALKING ROUTE
+                </p>
+
+                <h2 style="color:#19382e;">
+                    Bellever Miles Without Stiles
+                </h2>
+
+                <p>
+                    Explore the beautiful woodland and open landscapes
+                    of Bellever Forest on this waymarked circular route.
+                    Designed to provide access for a wider range of
+                    visitors, the trail follows forest tracks around
+                    Lakehead Hill, passing through old conifers and
+                    across open heathland with wonderful views towards
+                    Bellever Tor.
+                </p>
+
+                <h3 style="color:#315a48;">Route Information</h3>
+
+                <p><strong>Distance:</strong> 4 km / 2.5 miles</p>
+                <p><strong>Difficulty:</strong> For Most</p>
+                <p><strong>Terrain:</strong> Mainly gravel tracks, with some rough grass and unsurfaced sections</p>
+                <p><strong>Starting Point:</strong> Postbridge National Park Visitor Centre Car Park</p>
+                <p><strong>Route Type:</strong> Circular</p>
+                <p><strong>Accessibility:</strong> Disabled Ramblers Category 2/3</p>
+
+                <h3 style="color:#19382e;margin-top:25px;">
+                    Route Map
+                </h3>
+
+                <img src="./miles-without-stiles-map.svg"
+                    alt="Illustrative Bellever Miles Without Stiles route map"
+                    style="width:100%;border-radius:12px;
+                    border:1px solid #ddd;">
+
+                <p style="font-size:12px;color:#777;">
+                    Illustrative map only. Not to scale and
+                    not suitable for navigation. Follow official
+                    waymarkers and use a current walking map.
+                </p>
+
+                <div style="background:#e5eadf;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Guided Stops
+                    </h3>
+
+                    <h4 style="color:#19382e;">1. Postbridge Visitor Centre</h4>
+                    <p>Begin at the National Park Visitor Centre car park. This is the official starting point for the circular route. Take time to prepare and check the route information before setting off.</p>
+
+                    <h4 style="color:#19382e;">2. Entering Bellever Forest</h4>
+                    <p>Leave the visitor centre car park and follow the route towards the Forestry England car park. The trail begins along established gravel tracks.</p>
+
+                    <h4 style="color:#19382e;">3. The Forest Track</h4>
+                    <p>Continue uphill along the main forest track, looking out for the timber fingerposts displaying the mobility scooter symbol. These mark the Miles Without Stiles route.</p>
+
+                    <h4 style="color:#19382e;">4. Old Conifer Woodland</h4>
+                    <p>After following the initial forest track, the route branches away through a wonderful stand of old conifers. Enjoy the peaceful woodland surroundings as you continue along the waymarked path.</p>
+
+                    <h4 style="color:#19382e;">5. The Lych Way</h4>
+                    <p>The route joins the historic Lych Way, an ancient trackway across Dartmoor. This path offers a fascinating connection with the history of the moor and its communities.</p>
+
+                    <h4 style="color:#19382e;">6. Ancient Stone Row and Open Heathland</h4>
+                    <p>Continue east across open heathland, following the route alongside an ancient stone row. Enjoy the wider views and notice the contrast between the open landscape and the surrounding forest.</p>
+
+                    <h4 style="color:#19382e;">7. Views Towards Bellever Tor</h4>
+                    <p>As the route crosses open grassland, enjoy views towards Bellever Tor. This is a lovely place to pause and appreciate the surrounding Dartmoor landscape.</p>
+
+                    <h4 style="color:#19382e;">8. Returning Through the Forest</h4>
+                    <p>At the main track junction, follow the waymarked route left onto the wide forest track. This leads back towards the starting point at Postbridge Visitor Centre car park, completing the circular walk.</p>
+
+                </div>
+
+                <div style="background:#f4f1e8;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Walking Instructions
+                    </h3>
+
+                    <h4 style="color:#19382e;">1. Leaving the Visitor Centre</h4>
+                    <p>Exit the visitor centre car park from the top left-hand corner, on the left side of the main building. Turn left onto the gravel path and follow it towards the main road.</p>
+
+                    <h4 style="color:#19382e;">2. Entering the Forest Car Park</h4>
+                    <p>Cross the main road with care, pass through the gate beside the cattle grid and turn right into the Forestry England car park.</p>
+
+                    <h4 style="color:#19382e;">3. Following the Main Track</h4>
+                    <p>Follow the main entrance track and bear left uphill towards the gate. Pass through the gate and continue along the main trail.</p>
+
+                    <h4 style="color:#19382e;">4. Following the Waymarked Route</h4>
+                    <p>After approximately 200 metres, take the first track on the right. Follow the timber fingerposts displaying the mobility scooter symbol.</p>
+
+                    <h4 style="color:#19382e;">5. Through the Conifers</h4>
+                    <p>After approximately 1.3 km, turn left off the main track where indicated by the waymarkers and Public Bridleway. Continue for around 300 metres before turning left again onto the waymarked path.</p>
+
+                    <h4 style="color:#19382e;">6. Across the Open Ground</h4>
+                    <p>Continue across the open grassland, passing through woodland and enjoying views towards Bellever Tor. At the next major track junction near the top of the hill, turn left.</p>
+
+                    <h4 style="color:#19382e;">7. Back to the Starting Point</h4>
+                    <p>Follow the wide main forest track for approximately 1.5 km. This leads directly back towards the Postbridge Visitor Centre car park, completing the circular route.</p>
+
+                </div>
+
+                <h3 style="color:#19382e;margin-top:25px;">
+                    Walking Safety
+                </h3>
+
+                <div style="background:#fce9df;padding:15px;
+                    border-radius:10px;margin-bottom:12px;">
+
+                    <p><strong>Understand the grading.</strong> The official grading is For Most, but the route still includes some rough grass and unsurfaced sections. It may not be suitable for every wheelchair or mobility scooter.</p>
+
+                    <p><strong>Check the surface.</strong> Gravel tracks can become uneven, particularly after heavy rain. Take extra care on rougher sections.</p>
+
+                    <p><strong>Follow the correct markers.</strong> Look for the timber fingerposts displaying the mobility scooter symbol to stay on the official route.</p>
+
+                    <p><strong>Take care on slopes.</strong> Some sections climb uphill and the surface can vary throughout the walk.</p>
+
+                    <p><strong>Check the weather.</strong> Dartmoor conditions can change quickly. Wear suitable clothing and be prepared for wet and windy conditions.</p>
+
+                    <p><strong>Respect wildlife.</strong> Keep your distance from ponies and livestock. Never feed or approach them.</p>
+
+                    <p><strong>Plan ahead.</strong> Check current access information and carry any supplies you need for the walk.</p>
+
+                </div>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Postbridge+National+Park+Visitor+Centre+Dartmoor"
+                    target="_blank"
+                    style="display:inline-block;background:#19382e;
+                    color:white;padding:14px 20px;border-radius:7px;
+                    text-decoration:none;">
+                    Find Starting Point in Maps →
+                </a>
+
+                <p style="font-size:12px;color:#777;margin-top:20px;">
+                    Always follow official waymarkers and check
+                    current route information before setting off.
+                </p>
+
+                <p style="font-size:12px;color:#777;">
+                    Trail information:
+                    <a href="https://www.dartmoor.gov.uk/enjoy-dartmoor/outdoor-activities/accessible-dartmoor/miles-without-stiles-bellever-forest"
+                    target="_blank">Dartmoor National Park Authority</a>
+                </p>
+
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
+
     function openHaytorWalkDetails(id) {
     const walk = (window.haytorWalks || []).find(
         item => item.id === id
