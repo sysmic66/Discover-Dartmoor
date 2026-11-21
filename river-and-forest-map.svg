@@ -1,0 +1,128 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+
+  <rect width="800" height="600" fill="#f4f1e8"/>
+
+  <!-- Woodland -->
+  <path d="M0 0 H800 V230
+           Q650 190 520 230
+           T250 220
+           T0 250 Z"
+        fill="#dce6d1"/>
+
+  <path d="M0 250 Q180 210 340 270
+           T800 245 V600 H0 Z"
+        fill="#e8e5d6"/>
+
+  <!-- Forest trees -->
+  <g fill="#789477" opacity="0.8">
+    <circle cx="100" cy="100" r="35"/>
+    <circle cx="170" cy="65" r="28"/>
+    <circle cx="240" cy="125" r="38"/>
+    <circle cx="330" cy="75" r="32"/>
+    <circle cx="430" cy="125" r="35"/>
+    <circle cx="540" cy="65" r="30"/>
+    <circle cx="650" cy="115" r="38"/>
+    <circle cx="735" cy="65" r="30"/>
+  </g>
+
+  <!-- River Dart -->
+  <path d="M800 390
+           Q700 350 650 395
+           T500 420
+           T350 390
+           T180 440
+           T0 405"
+        fill="none"
+        stroke="#83b8c5"
+        stroke-width="34"
+        stroke-linecap="round"/>
+
+  <path d="M800 390
+           Q700 350 650 395
+           T500 420
+           T350 390
+           T180 440
+           T0 405"
+        fill="none"
+        stroke="#c5e1e5"
+        stroke-width="5"
+        stroke-linecap="round"/>
+
+  <!-- Illustrative walking route -->
+  <path d="M100 150
+           Q190 210 270 250
+           T390 310
+           T510 350
+           T650 395"
+        fill="none"
+        stroke="#987344"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-dasharray="14 12"/>
+
+  <!-- Start marker -->
+  <circle cx="100" cy="150" r="17" fill="#19382e"/>
+  <text x="100" y="156" font-size="17"
+        fill="white" text-anchor="middle"
+        font-weight="bold">S</text>
+
+  <!-- Finish marker -->
+  <circle cx="650" cy="395" r="17" fill="#19382e"/>
+  <text x="650" y="401" font-size="17"
+        fill="white" text-anchor="middle"
+        font-weight="bold">F</text>
+
+  <!-- Labels -->
+  <g font-family="Arial, sans-serif"
+     fill="#19382e">
+
+    <text x="100" y="115" font-size="21"
+          font-weight="bold" text-anchor="middle">
+      Postbridge
+    </text>
+
+    <text x="100" y="135" font-size="15"
+          text-anchor="middle">
+      Car Park
+    </text>
+
+    <text x="370" y="55" font-size="25"
+          font-weight="bold" text-anchor="middle">
+      Bellever Forest
+    </text>
+
+    <text x="390" y="285" font-size="20"
+          font-weight="bold" text-anchor="middle">
+      Open Moorland
+    </text>
+
+    <text x="520" y="475" font-size="22"
+          font-weight="bold" text-anchor="middle">
+      River Dart
+    </text>
+
+    <text x="650" y="445" font-size="17"
+          font-weight="bold" text-anchor="middle">
+      Postbridge
+    </text>
+
+    <text x="650" y="465" font-size="17"
+          font-weight="bold" text-anchor="middle">
+      Clapper Bridge
+    </text>
+
+  </g>
+
+  <!-- Map title -->
+  <rect x="180" y="520" width="440" height="48"
+        rx="10" fill="#19382e"/>
+
+  <text x="400" y="551"
+        font-family="Arial, sans-serif"
+        font-size="22" font-weight="bold"
+        fill="white" text-anchor="middle">
+    River and Forest Trail
+  </text>
+
+</svg>
