@@ -1,0 +1,107 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+
+  <rect width="800" height="600" fill="#f4f1e8"/>
+
+  <!-- Forest background -->
+  <path d="M0 0 H800 V390
+           Q650 340 500 380
+           T200 350 T0 390 Z"
+        fill="#dce6d1"/>
+
+  <!-- Open heathland -->
+  <path d="M0 390 Q180 350 350 400
+           T800 380 V600 H0 Z"
+        fill="#e8e5d6"/>
+
+  <!-- Woodland trees -->
+  <g fill="#789477" opacity="0.85">
+    <circle cx="80" cy="85" r="35"/>
+    <circle cx="155" cy="125" r="30"/>
+    <circle cx="235" cy="65" r="38"/>
+    <circle cx="330" cy="115" r="32"/>
+    <circle cx="425" cy="65" r="36"/>
+    <circle cx="525" cy="125" r="34"/>
+    <circle cx="625" cy="70" r="38"/>
+    <circle cx="725" cy="125" r="34"/>
+    <circle cx="110" cy="270" r="34"/>
+    <circle cx="225" cy="300" r="28"/>
+    <circle cx="650" cy="285" r="35"/>
+    <circle cx="745" cy="330" r="30"/>
+  </g>
+
+  <!-- Circular walking route -->
+  <path d="M150 185
+           Q250 100 370 145
+           Q510 170 590 270
+           Q650 360 540 430
+           Q420 500 300 445
+           Q180 395 130 300
+           Q100 235 150 185 Z"
+        fill="none"
+        stroke="#987344"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-dasharray="14 12"/>
+
+  <!-- Start and finish -->
+  <circle cx="150" cy="185" r="18" fill="#19382e"/>
+  <text x="150" y="192" font-size="18"
+        fill="white" text-anchor="middle"
+        font-weight="bold">S</text>
+
+  <!-- Visitor centre -->
+  <rect x="65" y="125" width="170" height="42"
+        rx="8" fill="#19382e"/>
+
+  <text x="150" y="152"
+        font-family="Arial, sans-serif"
+        font-size="16" font-weight="bold"
+        fill="white" text-anchor="middle">
+    Visitor Centre
+  </text>
+
+  <!-- Lakehead Hill -->
+  <text x="390" y="235"
+        font-family="Arial, sans-serif"
+        font-size="23" font-weight="bold"
+        fill="#19382e" text-anchor="middle">
+    Lakehead Hill
+  </text>
+
+  <!-- Lych Way -->
+  <text x="535" y="330"
+        font-family="Arial, sans-serif"
+        font-size="19" font-weight="bold"
+        fill="#19382e" text-anchor="middle">
+    Lych Way
+  </text>
+
+  <!-- Open heathland label -->
+  <text x="380" y="535"
+        font-family="Arial, sans-serif"
+        font-size="22" font-weight="bold"
+        fill="#19382e" text-anchor="middle">
+    Open Heathland
+  </text>
+
+  <!-- Bellever Tor -->
+  <text x="690" y="455"
+        font-family="Arial, sans-serif"
+        font-size="19" font-weight="bold"
+        fill="#19382e" text-anchor="middle">
+    Bellever Tor
+  </text>
+
+  <!-- Map title -->
+  <rect x="155" y="550" width="490" height="40"
+        rx="9" fill="#19382e"/>
+
+  <text x="400" y="577"
+        font-family="Arial, sans-serif"
+        font-size="21" font-weight="bold"
+        fill="white" text-anchor="middle">
+    Miles Without Stiles
+  </text>
+
+</svg>
