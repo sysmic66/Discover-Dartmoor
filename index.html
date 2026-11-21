@@ -1867,17 +1867,17 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
                         ${walk.description}
                     </p>
 
-                ${walk.name === "Bellever Tor Trail" ? `
-                    <button onclick="openBelleverTorDetails()"
+${walk.name === "Bellever Tor Trail" ? `
+     <button onclick="openBelleverTorDetails()"
                         style="display:inline-block;
                         background:#987344;color:white;
                         padding:12px 18px;border:0;
                         border-radius:7px;margin-top:10px;">
                         View Walk Guide →
                     </button>
-                ` : ""}
-                                ${walk.name === "River and Forest Trail" ? `
-                    <button onclick="openRiverForestDetails()"
+                ` : ""}                
+${walk.name === "River and Forest Trail" ? `
+     <button onclick="openRiverForestDetails()"
                         style="display:inline-block;
                         background:#987344;color:white;
                         padding:12px 18px;border:0;
@@ -1887,6 +1887,15 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
                 ` : ""}
 ${walk.name === "Bellever Miles Without Stiles" ? `
     <button onclick="openMilesWithoutStilesDetails()"
+        style="display:inline-block;
+        background:#987344;color:white;
+        padding:12px 18px;border:0;
+        border-radius:7px;margin-top:10px;">
+        View Walk Guide →
+    </button>
+` : ""}
+${walk.name === "East Dart Riverbank" ? `
+    <button onclick="openEastDartRiverbankDetails()"
         style="display:inline-block;
         background:#987344;color:white;
         padding:12px 18px;border:0;
