@@ -761,6 +761,183 @@ function openBelleverTorDetails() {
 }
 
 
+function openRiverForestDetails() {
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openBelleverWalks()"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Bellever Walks
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;overflow:hidden;">
+
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/East_Dart_river_at_Bellever_-_geograph.org.uk_-_117842.jpg"
+                style="width:100%;height:300px;object-fit:cover;">
+
+            <div style="padding:20px 25px 30px;">
+
+                <p style="color:#987344;font-weight:bold;">
+                    DARTMOOR WALKING ROUTE
+                </p>
+
+                <h2 style="color:#19382e;">
+                    River and Forest Trail
+                </h2>
+
+                <p>
+                    Enjoy a peaceful walk through the varied landscapes
+                    of Bellever Forest. Follow the trail through woodland,
+                    open moorland and wildflower meadows before reaching
+                    the banks of the River Dart and the picturesque
+                    Postbridge Clapper Bridge.
+                </p>
+
+                <h3 style="color:#315a48;">Route Information</h3>
+
+                <p><strong>Distance:</strong> 2.6 km / 1.6 miles</p>
+                <p><strong>Difficulty:</strong> Easy to moderate</p>
+                <p><strong>Terrain:</strong> Surfaced forest roads, unsurfaced moorland paths and moderate slopes</p>
+                <p><strong>Starting Point:</strong> Postbridge Car Park</p>
+                <p><strong>Destination:</strong> Postbridge Clapper Bridge</p>
+                <p><strong>Route Type:</strong> One-way walk</p>
+
+                <h3 style="color:#19382e;margin-top:25px;">
+                    Route Map
+                </h3>
+
+                <img src="./river-and-forest-map.svg"
+                    alt="Illustrative River and Forest Trail route map"
+                    style="width:100%;border-radius:12px;
+                    border:1px solid #ddd;">
+
+                <p style="font-size:12px;color:#777;">
+                    Illustrative map only. Not to scale and
+                    not suitable for navigation. Follow official
+                    waymarkers and use a current walking map.
+                </p>
+
+                <div style="background:#e5eadf;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Guided Stops
+                    </h3>
+
+                    <h4 style="color:#19382e;">1. Postbridge Car Park</h4>
+                    <p>Begin your walk at Postbridge Car Park. Take a moment to prepare before setting off and make sure you have suitable footwear and clothing for Dartmoor's changing conditions.</p>
+
+                    <h4 style="color:#19382e;">2. Into Bellever Forest</h4>
+                    <p>Follow the trail towards the woodland. Enjoy the peaceful surroundings beneath the trees and look out for birds and other wildlife along the way.</p>
+
+                    <h4 style="color:#19382e;">3. Woodland Tracks</h4>
+                    <p>Continue through the forest along the established tracks. Notice the changing woodland scenery and the mixture of trees and open spaces.</p>
+
+                    <h4 style="color:#19382e;">4. Open Moorland</h4>
+                    <p>As the trail leaves the woodland, the landscape opens out across Dartmoor's moorland. Enjoy the wider views and look out for ponies grazing in the surrounding countryside.</p>
+
+                    <h4 style="color:#19382e;">5. Wildflower Meadows</h4>
+                    <p>Pass through areas of open grassland and wildflower meadows. Depending on the season, you may see a variety of flowers and insects among the grasses.</p>
+
+                    <h4 style="color:#19382e;">6. The River Dart</h4>
+                    <p>Reach the banks of the River Dart and enjoy the peaceful riverside scenery. Take care near the water, particularly where the banks are uneven or slippery.</p>
+
+                    <h4 style="color:#19382e;">7. Postbridge Clapper Bridge</h4>
+                    <p>Finish your walk at the picturesque Postbridge Clapper Bridge. This historic crossing is one of Dartmoor's best-known landmarks and makes a wonderful place to stop, take photographs and enjoy the surroundings.</p>
+
+                </div>
+
+                <div style="background:#f4f1e8;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Walking Instructions
+                    </h3>
+
+                    <h4 style="color:#19382e;">1. Leaving Postbridge Car Park</h4>
+                    <p>Start at Postbridge Car Park and follow the official River and Forest Trail waymarkers. Check the route information before setting off.</p>
+
+                    <h4 style="color:#19382e;">2. Through the Woodland</h4>
+                    <p>Continue along the established forest tracks. Follow the waymarkers and remain on the designated paths as you make your way through the woodland.</p>
+
+                    <h4 style="color:#19382e;">3. Across the Open Moorland</h4>
+                    <p>Follow the marked trail as it moves out of the trees and across the open landscape. Some sections are unsurfaced and may become wet or uneven underfoot.</p>
+
+                    <h4 style="color:#19382e;">4. Through the Meadows</h4>
+                    <p>Continue along the established path through the open grassland and wildflower meadows. Take care on any slopes and avoid disturbing wildlife.</p>
+
+                    <h4 style="color:#19382e;">5. Reaching the River Dart</h4>
+                    <p>Follow the waymarked trail towards the river. Take care on the approach to the riverbank, especially after wet weather when the ground may be slippery.</p>
+
+                    <h4 style="color:#19382e;">6. Finishing at Postbridge</h4>
+                    <p>Continue towards Postbridge Clapper Bridge, where the walk finishes. If you need to return to your vehicle at the starting point, arrange transport or check your return options before setting off.</p>
+
+                </div>
+
+                <h3 style="color:#19382e;margin-top:25px;">
+                    Walking Safety
+                </h3>
+
+                <div style="background:#fce9df;padding:15px;
+                    border-radius:10px;margin-bottom:12px;">
+
+                    <p><strong>Watch your footing.</strong> The route includes surfaced tracks, uneven moorland paths and moderate slopes.</p>
+
+                    <p><strong>Take care near the river.</strong> Riverbanks and stones can be slippery, particularly after rainfall. Keep a safe distance from the water.</p>
+
+                    <p><strong>Check the weather.</strong> Dartmoor conditions can change quickly. Be prepared for wind, rain and changing temperatures.</p>
+
+                    <p><strong>Wear suitable footwear.</strong> Sturdy walking shoes or boots are recommended, especially on unsurfaced sections.</p>
+
+                    <p><strong>Respect wildlife.</strong> Keep your distance from ponies and livestock. Never feed or approach them.</p>
+
+                    <p><strong>Plan your return.</strong> This is a one-way walk. Make arrangements to return to your starting point if necessary.</p>
+
+                    <p><strong>Stay on the route.</strong> Follow official waymarkers and carry a current walking map.</p>
+
+                </div>
+
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Postbridge+Car+Park%2C+Dartmoor&destination=Postbridge+Clapper+Bridge%2C+Dartmoor&travelmode=walking"
+                    target="_blank"
+                    style="display:inline-block;background:#19382e;
+                    color:white;padding:14px 20px;border-radius:7px;
+                    text-decoration:none;">
+                    Open Walking Route in Maps →
+                </a>
+
+                <p style="font-size:12px;color:#777;margin-top:20px;">
+                    Always follow official waymarkers and check
+                    current route information before setting off.
+                </p>
+
+                <p style="font-size:12px;color:#777;">
+                    Trail information:
+                    <a href="https://www.forestryengland.uk/bellever-forest/river-and-forest-trail-bellever-forest"
+                    target="_blank">Forestry England</a>
+                </p>
+
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
+
     function openHaytorWalkDetails(id) {
     const walk = (window.haytorWalks || []).find(
         item => item.id === id
@@ -1507,6 +1684,15 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
 
                 ${walk.name === "Bellever Tor Trail" ? `
                     <button onclick="openBelleverTorDetails()"
+                        style="display:inline-block;
+                        background:#987344;color:white;
+                        padding:12px 18px;border:0;
+                        border-radius:7px;margin-top:10px;">
+                        View Walk Guide →
+                    </button>
+                ` : ""}
+                                ${walk.name === "River and Forest Trail" ? `
+                    <button onclick="openRiverForestDetails()"
                         style="display:inline-block;
                         background:#987344;color:white;
                         padding:12px 18px;border:0;
