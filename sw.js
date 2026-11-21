@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "discover-dartmoor-v15";
+const CACHE_NAME = "discover-dartmoor-v16";
 
 const FILES_TO_CACHE = [
     "./offline-map.svg",
