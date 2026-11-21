@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+
+  <rect width="800" height="600" fill="#f4f1e8"/>
+
+  <text x="400" y="45" text-anchor="middle"
+        font-size="27" font-weight="bold"
+        fill="#19382e">
+    POSTBRIDGE TRAIL
+  </text>
+
+  <text x="400" y="72" text-anchor="middle"
+        font-size="15" fill="#666">
+    Woodland and Moorland Walk
+  </text>
+
+  <!-- Landscape -->
+  <path d="M0 180 Q180 110 350 190 T800 150
+           L800 600 L0 600Z"
+        fill="#dce6d1"/>
+
+  <path d="M0 350 Q180 280 370 360 T800 320
+           L800 600 L0 600Z"
+        fill="#c6d7b8"/>
+
+  <!-- Woodland -->
+  <g fill="#66865d">
+    <circle cx="120" cy="210" r="28"/>
+    <circle cx="170" cy="250" r="25"/>
+    <circle cx="225" cy="195" r="30"/>
+    <circle cx="280" cy="245" r="26"/>
+    <circle cx="110" cy="300" r="25"/>
+    <circle cx="190" cy="320" r="28"/>
+    <circle cx="265" cy="305" r="25"/>
+    <circle cx="580" cy="180" r="27"/>
+    <circle cx="640" cy="220" r="30"/>
+    <circle cx="700" cy="175" r="25"/>
+  </g>
+
+  <!-- Moorland hills -->
+  <path d="M430 300 Q510 190 600 300
+           Q680 220 780 310"
+        fill="none" stroke="#a2b78e"
+        stroke-width="5"/>
+
+  <!-- Illustrative walking route -->
+  <path d="M180 455
+           Q240 400 310 350
+           Q390 300 470 330
+           Q560 370 610 300
+           Q660 390 560 460
+           Q430 520 300 490
+           Q220 485 180 455"
+        fill="none" stroke="#987344"
+        stroke-width="8" stroke-linecap="round"
+        stroke-dasharray="13 10"/>
+
+  <!-- Stops -->
+  <g fill="#19382e" stroke="white" stroke-width="4">
+    <circle cx="180" cy="455" r="17"/>
+    <circle cx="310" cy="350" r="17"/>
+    <circle cx="470" cy="330" r="17"/>
+    <circle cx="610" cy="300" r="17"/>
+    <circle cx="300" cy="490" r="17"/>
+  </g>
+
+  <g fill="white" font-size="16"
+     font-weight="bold" text-anchor="middle">
+    <text x="180" y="461">1</text>
+    <text x="310" y="356">2</text>
+    <text x="470" y="336">3</text>
+    <text x="610" y="306">4</text>
+    <text x="300" y="496">5</text>
+  </g>
+
+  <!-- Labels -->
+  <g fill="#19382e" font-size="17"
+     font-weight="bold">
+    <text x="80" y="495">Postbridge</text>
+    <text x="270" y="315">Bellever Forest</text>
+    <text x="435" y="285">Open Moorland</text>
+    <text x="620" y="270">Bellever Tor</text>
+    <text x="250" y="535">Return</text>
+  </g>
+
+  <!-- North arrow -->
+  <path d="M735 130 L735 85 L720 105 M735 85 L750 105"
+        fill="none" stroke="#19382e"
+        stroke-width="4"/>
+  <text x="735" y="70" text-anchor="middle"
+        font-size="18" font-weight="bold"
+        fill="#19382e">N</text>
+
+  <!-- Legend -->
+  <rect x="35" y="550" width="730" height="35"
+        rx="8" fill="white" opacity="0.9"/>
+  <line x1="55" y1="567" x2="105" y2="567"
+        stroke="#987344" stroke-width="6"
+        stroke-dasharray="10 7"/>
+  <text x="115" y="573" font-size="15"
+        fill="#19382e">
+    Illustrative walking route
+  </text>
+
+</svg>
