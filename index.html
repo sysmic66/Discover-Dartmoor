@@ -2193,7 +2193,7 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
                         ${walk.description}
                     </p>
                   
-                    ${walk.name === "Postbridge Audio Walk" ? `
+${walk.name === "Postbridge Audio Walk" ? `
                     <button onclick="openPostbridgeAudioWalkDetails()"
                         style="display:inline-block;background:#987344;
                         color:white;padding:12px 18px;
@@ -2201,7 +2201,25 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
                         View Walking Guide →
                     </button>
                     ` : ''}
+${walk.name === "Postbridge Trail" ? `
+    <button onclick="openPostbridgeTrailDetails()"
+        style="display:inline-block;
+        background:#987344;color:white;
+        padding:12px 18px;border:0;
+        border-radius:7px;margin-top:10px;">
+        View Walk Guide →
+    </button>
+` : ""}
 
+${walk.name === "East Dart Waterfall Walk" ? `
+    <button onclick="openEastDartWaterfallDetails()"
+        style="display:inline-block;
+        background:#987344;color:white;
+        padding:12px 18px;border:0;
+        border-radius:7px;margin-top:10px;">
+        View Walk Guide →
+    </button>
+` : ""}
                     <a href="https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(walk.origin)}&destination=${encodeURIComponent(walk.destination)}&waypoints=${encodeURIComponent(walk.waypoints.join('|'))}&travelmode=walking"
                         target="_blank"
                         style="display:inline-block;background:#19382e;
