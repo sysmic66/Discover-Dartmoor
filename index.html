@@ -2663,6 +2663,290 @@ function openPostbridgeTrailDetails() {
 
     document.body.appendChild(page);
 }
+    function openEastDartWaterfallDetails() {
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:9999;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+        box-sizing:border-box;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openPostbridgeWalks()"
+            style="padding:12px 20px;
+            background:#19382e;color:white;
+            border:0;border-radius:7px;">
+            ← Back to Walks
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;
+            overflow:hidden;">
+
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/East_Dart_Waterfall_-_geograph.org.uk_-_778023.jpg"
+                alt="East Dart Waterfall"
+                style="width:100%;height:300px;
+                object-fit:cover;">
+
+            <div style="padding:20px 25px 30px;">
+
+                <p style="color:#987344;
+                    letter-spacing:1px;font-size:13px;
+                    font-weight:bold;">
+                    DARTMOOR WALKING ROUTE
+                </p>
+
+                <h2 style="color:#19382e;">
+                    East Dart Waterfall Walk
+                </h2>
+
+                <p>
+                    Discover one of Dartmoor's beautiful hidden
+                    river landscapes on this circular walk from
+                    Postbridge. Enjoy far-reaching views from
+                    Hartland Tor, follow the East Dart River
+                    towards its picturesque waterfall and return
+                    across the open moorland of Broad Down.
+                </p>
+
+                <h3 style="color:#315a48;
+                    margin-top:25px;">
+                    Route Information
+                </h3>
+
+                <p><strong>Distance:</strong> 5 miles (8 km)</p>
+                <p><strong>Difficulty:</strong> Moderate</p>
+                <p><strong>Terrain:</strong> Moorland paths,
+                    uneven ground, riverside tracks and
+                    some boggy sections</p>
+                <p><strong>Starting point:</strong>
+                    Postbridge National Park Visitor Centre</p>
+                <p><strong>Route type:</strong> Circular</p>
+
+                <h3 style="color:#19382e;
+                    margin-top:25px;">
+                    Route Map
+                </h3>
+
+                <img src="./east-dart-waterfall-map.svg"
+                    alt="Illustrative East Dart Waterfall route map"
+                    style="width:100%;border-radius:12px;
+                    border:1px solid #ddd;">
+
+                <p style="font-size:12px;color:#777;">
+                    Illustrative map only. Not to scale and
+                    not suitable for navigation. Follow official
+                    waymarkers and use a current walking map.
+                </p>                <h3 style="color:#19382e;margin-top:25px;">
+                    Guided Stops
+                </h3>
+
+                <div style="background:#e5eadf;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h4 style="color:#19382e;margin-top:0;">
+                        1. Postbridge Visitor Centre
+                    </h4>
+                    <p>
+                        Begin your walk at Postbridge and take
+                        a moment to explore the historic village
+                        and its famous clapper bridge before
+                        heading out onto the moor.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        2. Hartland Tor
+                    </h4>
+                    <p>
+                        Enjoy the open moorland scenery and
+                        views from Hartland Tor. Take care
+                        on the uneven rocky ground.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        3. East Dart River
+                    </h4>
+                    <p>
+                        Follow the route towards the East Dart
+                        Valley, where the river winds through
+                        the rugged Dartmoor landscape.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        4. East Dart Waterfall
+                    </h4>
+                    <p>
+                        Stop to enjoy the waterfall and the
+                        surrounding rocky river scenery.
+                        Take care near the water, particularly
+                        after heavy rainfall.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        5. Broad Down
+                    </h4>
+                    <p>
+                        Continue across the open moorland
+                        around Broad Down, enjoying the
+                        expansive views before following
+                        your planned return route.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        6. Return to Postbridge
+                    </h4>
+                    <p>
+                        Complete the circular walk by returning
+                        towards Postbridge and the starting
+                        point.
+                    </p>
+
+                </div>                <h3 style="color:#19382e;margin-top:25px;">
+                    Walking Instructions
+                </h3>
+
+                <div style="background:#f4f1e8;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h4 style="color:#19382e;margin-top:0;">
+                        1. Leaving Postbridge
+                    </h4>
+                    <p>
+                        Begin at the Postbridge Visitor Centre.
+                        Before setting off, check your walking
+                        map and identify the route towards
+                        Hartland Tor.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        2. Towards Hartland Tor
+                    </h4>
+                    <p>
+                        Follow the established moorland paths
+                        towards Hartland Tor. Expect uneven
+                        and rocky ground as you approach
+                        the higher sections.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        3. Towards the East Dart River
+                    </h4>
+                    <p>
+                        Continue towards the East Dart Valley.
+                        Watch your footing on rough and
+                        potentially boggy sections of the route.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        4. Reaching the Waterfall
+                    </h4>
+                    <p>
+                        Follow your mapped route to the
+                        East Dart Waterfall. Keep a safe
+                        distance from the river edge and
+                        avoid slippery rocks.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        5. Across Broad Down
+                    </h4>
+                    <p>
+                        Continue across the open moorland
+                        towards Broad Down. Visibility can
+                        change quickly, so keep checking
+                        your position.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        6. Returning to Postbridge
+                    </h4>
+                    <p>
+                        Follow your planned return route
+                        towards Postbridge, checking your
+                        map regularly until you reach
+                        the starting point.
+                    </p>
+
+                </div>                <h3 style="color:#19382e;margin-top:25px;">
+                    Walking Safety
+                </h3>
+
+                <div style="background:#fce9df;padding:15px;
+                    border-radius:10px;margin-bottom:12px;">
+
+                    <p>
+                        <strong>River Safety:</strong>
+                        The East Dart can be fast-flowing,
+                        particularly after heavy rainfall.
+                        Keep well away from slippery riverbanks
+                        and never attempt to cross flooded water.
+                    </p>
+
+                    <p>
+                        <strong>Uneven Ground:</strong>
+                        Expect rocky, muddy and boggy sections.
+                        Wear suitable walking boots with good grip.
+                    </p>
+
+                    <p>
+                        <strong>Weather:</strong>
+                        Dartmoor weather can change quickly.
+                        Fog, wind and rain can make navigation
+                        difficult.
+                    </p>
+
+                    <p>
+                        <strong>Navigation:</strong>
+                        Carry a current map and compass.
+                        Do not rely on the illustrative map alone.
+                    </p>
+
+                    <p>
+                        <strong>Preparation:</strong>
+                        Take water, food and suitable clothing.
+                        Check the forecast and daylight hours
+                        before setting off.
+                    </p>
+
+                </div>                <a href="https://www.google.com/maps/dir/?api=1&origin=Postbridge+Car+Park%2C+Dartmoor&destination=Postbridge+Car+Park%2C+Dartmoor&waypoints=Hartland+Tor%2C+Dartmoor%7CEast+Dart+Waterfall%2C+Dartmoor%7CBroad+Down%2C+Dartmoor&travelmode=walking"
+                    target="_blank"
+                    style="display:inline-block;
+                    background:#19382e;color:white;
+                    padding:13px 20px;border-radius:7px;
+                    text-decoration:none;margin-top:15px;">
+                    Open Route in Google Maps →
+                </a>
+
+                <p style="font-size:13px;color:#777;
+                    margin-top:20px;">
+                    This guide provides general walking
+                    information. Check the route, access
+                    conditions and weather before setting off.
+                </p>
+
+                <p style="font-size:12px;color:#777;">
+                    Further information:
+                    <a href="https://www.dartmoor.gov.uk/"
+                        target="_blank">
+                        Dartmoor National Park
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+    }
     function openHistory(id) {
     document.getElementById("attraction")?.remove();
 
