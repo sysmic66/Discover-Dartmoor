@@ -1700,7 +1700,15 @@ ${walk.credit ? `<p style="color:#777;font-size:11px;margin-top:0;">${walk.credi
                         View Walk Guide →
                     </button>
                 ` : ""}
-
+${walk.name === "Bellever Miles Without Stiles" ? `
+    <button onclick="openMilesWithoutStilesDetails()"
+        style="display:inline-block;
+        background:#987344;color:white;
+        padding:12px 18px;border:0;
+        border-radius:7px;margin-top:10px;">
+        View Walk Guide →
+    </button>
+` : ""}
                 <a href="https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(walk.origin)}&destination=${encodeURIComponent(walk.destination)}${walk.waypoint ? '&waypoints=' + encodeURIComponent(walk.waypoint) : ''}&travelmode=walking"
                     target="_blank"
                     style="display:inline-block;background:#19382e;
