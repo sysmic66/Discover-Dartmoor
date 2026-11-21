@@ -2401,7 +2401,268 @@ function openPostbridgeAudioWalkDetails() {
 
     document.body.appendChild(page);
 }
+function openPostbridgeTrailDetails() {
+    document.getElementById("attraction")?.remove();
 
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:9999;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+        box-sizing:border-box;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openPostbridgeWalks()"
+            style="padding:12px 20px;
+            background:#19382e;color:white;
+            border:0;border-radius:7px;">
+            ← Back to Walks
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;
+            overflow:hidden;">
+
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Postbridge,_bridleway_-_geograph.org.uk_-_1249100.jpg"
+                alt="Bridleway near Postbridge"
+                style="width:100%;height:300px;
+                object-fit:cover;">
+
+            <div style="padding:20px 25px 30px;">
+
+                <p style="color:#987344;
+                    letter-spacing:1px;font-size:13px;
+                    font-weight:bold;">
+                    DARTMOOR WALKING ROUTE
+                </p>
+
+                <h2 style="color:#19382e;">
+                    Postbridge Trail
+                </h2>
+
+                <p>
+                    Enjoy a circular walk through the beautiful
+                    woodland and open moorland around Postbridge.
+                    Follow forestry tracks and enjoy views across
+                    Dartmoor, with the opportunity to take a
+                    detour up Bellever Tor.
+                </p>
+
+                <h3 style="color:#315a48;
+                    margin-top:25px;">
+                    Route Information
+                </h3>
+
+                <p><strong>Distance:</strong> 3 miles (4.5 km)</p>
+                <p><strong>Difficulty:</strong> Easy to moderate</p>
+                <p><strong>Terrain:</strong> Forestry tracks,
+                    woodland paths and open moorland</p>
+                <p><strong>Starting point:</strong>
+                    Postbridge Forestry Commission Car Park</p>
+                <p><strong>Route type:</strong> Circular</p>
+
+                <h3 style="color:#19382e;
+                    margin-top:25px;">
+                    Route Map
+                </h3>
+
+                <img src="./postbridge-trail-map.svg"
+                    alt="Illustrative Postbridge Trail route map"
+                    style="width:100%;border-radius:12px;
+                    border:1px solid #ddd;">
+
+                <p style="font-size:12px;color:#777;">
+                    Illustrative map only. Not to scale and
+                    not suitable for navigation. Follow official
+                    waymarkers and use a current walking map.
+                </p>                <h3 style="color:#19382e;margin-top:25px;">
+                    Guided Stops
+                </h3>
+
+                <div style="background:#e5eadf;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h4 style="color:#19382e;margin-top:0;">
+                        1. Postbridge Forestry Car Park
+                    </h4>
+                    <p>
+                        Begin at the Forestry Commission car park.
+                        Get ready for a walk through the woodland
+                        and surrounding Dartmoor countryside.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        2. Into Bellever Forest
+                    </h4>
+                    <p>
+                        Follow the established forestry tracks
+                        through the trees. Enjoy the peaceful
+                        woodland atmosphere and look out for
+                        wildlife along the way.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        3. Views Across the Moor
+                    </h4>
+                    <p>
+                        As the woodland opens out, enjoy views
+                        across the surrounding open moorland.
+                        Take time to appreciate the changing
+                        landscape.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        4. Optional Bellever Tor Detour
+                    </h4>
+                    <p>
+                        If you wish to extend your walk, consider
+                        the detour towards Bellever Tor. The climb
+                        offers wide-ranging views across Dartmoor.
+                        Allow extra time for this option.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        5. Return to Postbridge
+                    </h4>
+                    <p>
+                        Follow your planned circular route back
+                        towards the Forestry Commission car park.
+                    </p>
+
+                </div>                <h3 style="color:#19382e;margin-top:25px;">
+                    Walking Instructions
+                </h3>
+
+                <div style="background:#f4f1e8;padding:16px;
+                    border-radius:10px;margin-top:20px;
+                    margin-bottom:12px;">
+
+                    <h4 style="color:#19382e;margin-top:0;">
+                        1. Leaving the Car Park
+                    </h4>
+                    <p>
+                        Start at Postbridge Forestry Commission
+                        Car Park. Check your route before setting
+                        off and follow the established paths
+                        towards Bellever Forest.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        2. Through the Woodland
+                    </h4>
+                    <p>
+                        Continue along the forestry tracks.
+                        Watch for junctions and follow your
+                        chosen route rather than taking
+                        unmarked shortcuts.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        3. Reaching the Open Moorland
+                    </h4>
+                    <p>
+                        As you leave the trees, take care on
+                        uneven ground. Keep to your planned
+                        route and be aware that paths can
+                        become difficult to follow in poor weather.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        4. Optional Bellever Tor Detour
+                    </h4>
+                    <p>
+                        If taking the detour, allow extra time
+                        and be prepared for a steeper climb
+                        over rougher moorland terrain.
+                    </p>
+
+                    <h4 style="color:#19382e;">
+                        5. Completing the Walk
+                    </h4>
+                    <p>
+                        Follow your planned return route to
+                        the Forestry Commission car park.
+                        Check your position before leaving
+                        the open moorland.
+                    </p>
+
+                </div>                <h3 style="color:#19382e;margin-top:25px;">
+                    Walking Safety
+                </h3>
+
+                <div style="background:#fce9df;padding:15px;
+                    border-radius:10px;margin-bottom:12px;">
+
+                    <p>
+                        <strong>Uneven Ground:</strong>
+                        Forestry tracks and moorland paths can
+                        be rough, muddy or slippery, particularly
+                        after rain.
+                    </p>
+
+                    <p>
+                        <strong>Weather:</strong>
+                        Dartmoor weather can change quickly.
+                        Fog, wind and heavy rain can make
+                        navigation difficult.
+                    </p>
+
+                    <p>
+                        <strong>Footwear:</strong>
+                        Wear suitable walking boots or shoes
+                        with good grip.
+                    </p>
+
+                    <p>
+                        <strong>Navigation:</strong>
+                        Carry a current map and check your route
+                        before setting off. Do not rely on the
+                        illustrative map alone.
+                    </p>
+
+                    <p>
+                        <strong>Bellever Tor Detour:</strong>
+                        The optional detour involves rougher,
+                        steeper ground. Only attempt it if
+                        conditions and your fitness allow.
+                    </p>
+
+                </div>                <a href="https://www.google.com/maps/dir/?api=1&origin=Postbridge+Forestry+Commission+Car+Park%2C+Dartmoor&destination=Postbridge+Forestry+Commission+Car+Park%2C+Dartmoor&waypoints=Bellever+Tor%2C+Dartmoor&travelmode=walking"
+                    target="_blank"
+                    style="display:inline-block;
+                    background:#19382e;color:white;
+                    padding:13px 20px;border-radius:7px;
+                    text-decoration:none;margin-top:15px;">
+                    Open Route in Google Maps →
+                </a>
+
+                <p style="font-size:13px;color:#777;
+                    margin-top:20px;">
+                    This guide provides general walking
+                    information. Check the route, access
+                    conditions and weather before setting off.
+                </p>
+
+                <p style="font-size:12px;color:#777;">
+                    Further information:
+                    <a href="https://www.dartmoor.gov.uk/"
+                        target="_blank">
+                        Dartmoor National Park
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
     function openHistory(id) {
     document.getElementById("attraction")?.remove();
 
