@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+
+  <rect width="800" height="600" fill="#f4f1e8"/>
+
+  <text x="400" y="45" text-anchor="middle"
+        font-size="27" font-weight="bold"
+        fill="#19382e">
+    EAST DART WATERFALL WALK
+  </text>
+
+  <text x="400" y="72" text-anchor="middle"
+        font-size="15" fill="#666">
+    River Valley and Open Moorland
+  </text>
+
+  <!-- Moorland landscape -->
+  <path d="M0 180 Q150 100 300 180
+           T600 150 T800 180
+           L800 600 L0 600Z"
+        fill="#dce6d1"/>
+
+  <path d="M0 370 Q180 290 350 370
+           T800 340 L800 600 L0 600Z"
+        fill="#c6d7b8"/>
+
+  <!-- Hills -->
+  <path d="M60 220 Q160 100 260 220
+           Q360 120 460 220"
+        fill="#a9bd96"/>
+
+  <path d="M480 210 Q600 100 720 220"
+        fill="#a9bd96"/>
+
+  <!-- East Dart River -->
+  <path d="M0 320
+           Q120 270 220 330
+           T420 310
+           T620 350
+           T800 290"
+        fill="none" stroke="#80b8ce"
+        stroke-width="24" stroke-linecap="round"/>
+
+  <path d="M0 320
+           Q120 270 220 330
+           T420 310
+           T620 350
+           T800 290"
+        fill="none" stroke="#d5edf4"
+        stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Waterfall symbol -->
+  <path d="M410 300 L410 340 M425 300 L425 340"
+        stroke="#ffffff" stroke-width="5"
+        stroke-linecap="round"/>
+
+  <!-- Illustrative route -->
+  <path d="M140 470
+           Q210 420 280 370
+           Q330 320 390 310
+           Q440 360 500 400
+           Q590 430 650 350
+           Q690 280 610 220
+           Q500 180 400 220
+           Q270 250 140 470"
+        fill="none" stroke="#987344"
+        stroke-width="8" stroke-linecap="round"
+        stroke-dasharray="13 10"/>
+
+  <!-- Numbered stops -->
+  <g fill="#19382e" stroke="white" stroke-width="4">
+    <circle cx="140" cy="470" r="18"/>
+    <circle cx="280" cy="370" r="18"/>
+    <circle cx="390" cy="310" r="18"/>
+    <circle cx="500" cy="400" r="18"/>
+    <circle cx="650" cy="350" r="18"/>
+    <circle cx="400" cy="220" r="18"/>
+  </g>
+
+  <g fill="white" font-size="16"
+     font-weight="bold" text-anchor="middle">
+    <text x="140" y="476">1</text>
+    <text x="280" y="376">2</text>
+    <text x="390" y="316">3</text>
+    <text x="500" y="406">4</text>
+    <text x="650" y="356">5</text>
+    <text x="400" y="226">6</text>
+  </g>
+
+  <!-- Labels -->
+  <g fill="#19382e" font-size="16"
+     font-weight="bold">
+    <text x="55" y="510">Postbridge</text>
+    <text x="210" y="345">Hartland Tor</text>
+    <text x="330" y="280">East Dart River</text>
+    <text x="515" y="435">Waterfall</text>
+    <text x="665" y="375">Broad Down</text>
+    <text x="420" y="195">Moorland</text>
+  </g>
+
+  <!-- North arrow -->
+  <path d="M735 130 L735 85 L720 105 M735 85 L750 105"
+        fill="none" stroke="#19382e"
+        stroke-width="4"/>
+
+  <text x="735" y="70" text-anchor="middle"
+        font-size="18" font-weight="bold"
+        fill="#19382e">N</text>
+
+  <!-- Legend -->
+  <rect x="35" y="550" width="730" height="35"
+        rx="8" fill="white" opacity="0.9"/>
+
+  <line x1="55" y1="567" x2="105" y2="567"
+        stroke="#987344" stroke-width="6"
+        stroke-dasharray="10 7"/>
+
+  <text x="115" y="573" font-size="15"
+        fill="#19382e">
+    Illustrative walking route
+  </text>
+
+  <line x1="410" y1="567" x2="460" y2="567"
+        stroke="#80b8ce" stroke-width="8"/>
+
+  <text x="470" y="573" font-size="15"
+        fill="#19382e">
+    East Dart River
+  </text>
+
+</svg>
