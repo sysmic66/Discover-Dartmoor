@@ -7,7 +7,7 @@ const FILES_TO_CACHE = [
     "./haytor-quarry-map.svg",
     "./haytor-houndtor-map.svg",
     "./bellever-tor-map.svg",
-    "./haytor-emsworthy-map.svg"
+    "./haytor-emsworthy-map.svg",
 
     "./",
     "./index.html",
