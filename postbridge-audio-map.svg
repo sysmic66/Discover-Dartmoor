@@ -1,0 +1,134 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+
+  <rect width="800" height="600" fill="#f4f1e8"/>
+
+  <text x="400" y="42" text-anchor="middle"
+        font-size="25" font-weight="bold" fill="#19382e">
+    POSTBRIDGE AUDIO WALK
+  </text>
+
+  <text x="400" y="68" text-anchor="middle"
+        font-size="13" fill="#777">
+    Illustrative walking route · Dartmoor
+  </text>
+
+  <!-- Moorland landscape -->
+  <path d="M0 160 Q130 100 250 160 T500 145 T800 155
+           L800 500 L0 500Z" fill="#dce6d1"/>
+
+  <path d="M0 330 Q150 270 300 330 T600 310 T800 325"
+        fill="none" stroke="#c1d3b6" stroke-width="3"/>
+
+  <path d="M0 390 Q180 350 350 390 T700 375"
+        fill="none" stroke="#c1d3b6" stroke-width="3"/>
+
+  <!-- East Dart River -->
+  <path d="M40 180 Q150 220 190 300
+           T330 390 T470 450 T620 420 T800 470"
+        fill="none" stroke="#78a9c1" stroke-width="12"
+        stroke-linecap="round"/>
+
+  <path d="M40 180 Q150 220 190 300
+           T330 390 T470 450 T620 420 T800 470"
+        fill="none" stroke="#b9d9e5" stroke-width="4"
+        stroke-linecap="round"/>
+
+  <!-- Route line -->
+  <path d="M150 180
+           Q240 110 330 155
+           Q440 185 520 245
+           Q600 300 625 375
+           Q500 470 350 430
+           Q230 365 150 180"
+        fill="none" stroke="#19382e" stroke-width="5"
+        stroke-dasharray="10 8" stroke-linecap="round"/>
+
+  <!-- Hartland Tor -->
+  <circle cx="330" cy="155" r="19" fill="#987344"/>
+  <text x="330" y="161" text-anchor="middle"
+        font-size="17" fill="white" font-weight="bold">2</text>
+  <text x="330" y="120" text-anchor="middle"
+        font-size="16" font-weight="bold" fill="#19382e">
+    Hartland Tor
+  </text>
+
+  <!-- Stannon Tor -->
+  <circle cx="520" cy="245" r="19" fill="#987344"/>
+  <text x="520" y="251" text-anchor="middle"
+        font-size="17" fill="white" font-weight="bold">3</text>
+  <text x="555" y="220" font-size="16"
+        font-weight="bold" fill="#19382e">
+    Stannon Tor
+  </text>
+
+  <!-- Waterfall -->
+  <circle cx="625" cy="375" r="19" fill="#287b9b"/>
+  <text x="625" y="381" text-anchor="middle"
+        font-size="17" fill="white" font-weight="bold">4</text>
+  <text x="650" y="355" font-size="15"
+        font-weight="bold" fill="#19382e">
+    East Dart
+  </text>
+  <text x="650" y="374" font-size="15"
+        font-weight="bold" fill="#19382e">
+    Waterfall
+  </text>
+
+  <!-- Cairn -->
+  <circle cx="350" cy="430" r="19" fill="#987344"/>
+  <text x="350" y="436" text-anchor="middle"
+        font-size="17" fill="white" font-weight="bold">5</text>
+  <text x="350" y="468" text-anchor="middle"
+        font-size="15" font-weight="bold" fill="#19382e">
+    Roundypark Cairn
+  </text>
+
+  <!-- Starting point -->
+  <circle cx="150" cy="180" r="21" fill="#19382e"/>
+  <text x="150" y="187" text-anchor="middle"
+        font-size="17" fill="white" font-weight="bold">1</text>
+  <text x="115" y="140" text-anchor="middle"
+        font-size="15" font-weight="bold" fill="#19382e">
+    Postbridge
+  </text>
+  <text x="115" y="157" text-anchor="middle"
+        font-size="12" fill="#555">
+    Visitor Centre
+  </text>
+
+  <!-- Return marker -->
+  <circle cx="150" cy="180" r="29"
+          fill="none" stroke="#987344" stroke-width="2"
+          stroke-dasharray="4 4"/>
+
+  <!-- North arrow -->
+  <path d="M735 115 L735 75 M725 90 L735 75 L745 90"
+        fill="none" stroke="#19382e" stroke-width="3"/>
+  <text x="735" y="65" text-anchor="middle"
+        font-size="15" font-weight="bold" fill="#19382e">N</text>
+
+  <!-- Legend -->
+  <rect x="35" y="510" width="730" height="60"
+        rx="10" fill="#ffffff" stroke="#d5d5cc"/>
+
+  <line x1="60" y1="535" x2="115" y2="535"
+        stroke="#19382e" stroke-width="4"
+        stroke-dasharray="8 6"/>
+
+  <text x="125" y="540" font-size="13" fill="#19382e">
+    Illustrative route
+  </text>
+
+  <circle cx="330" cy="535" r="8" fill="#987344"/>
+  <text x="345" y="540" font-size="13" fill="#19382e">
+    Route stop
+  </text>
+
+  <path d="M490 535 Q510 520 530 535"
+        fill="none" stroke="#78a9c1" stroke-width="5"/>
+  <text x="540" y="540" font-size="13" fill="#19382e">
+    River
+  </text>
+
+</svg>
