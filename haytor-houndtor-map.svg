@@ -11,7 +11,7 @@
   </text>
   <text x="400" y="75" text-anchor="middle"
         font-size="16" fill="#526b57">
-    9 Guided Stops · Illustrated route · Not to scale
+    6 Guided Stops · Illustrated route · Not to scale
   </text>
 
   <path d="M120 450 Q190 390 250 350
@@ -52,18 +52,7 @@
       <circle cx="700" cy="170" r="17" fill="#19382e"/>
       <text x="700" y="175">6</text>
     </g>
-    <g>
-      <circle cx="650" cy="210" r="17" fill="#19382e"/>
-      <text x="650" y="215">7</text>
-    </g>
-    <g>
-      <circle cx="610" cy="250" r="17" fill="#19382e"/>
-      <text x="610" y="255">8</text>
-    </g>
-    <g>
-      <circle cx="550" cy="270" r="17" fill="#19382e"/>
-      <text x="550" y="275">9</text>
-    </g>
+    
   </g>
 
   <g fill="#829b75" opacity="0.8">
