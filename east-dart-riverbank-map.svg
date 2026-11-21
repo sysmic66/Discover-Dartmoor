@@ -1,0 +1,125 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+
+  <rect width="800" height="600" fill="#f4f1e8"/>
+
+  <!-- Woodland background -->
+  <path d="M0 0 H800 V390
+           Q650 350 500 390
+           T200 370 T0 400 Z"
+        fill="#dce6d1"/>
+
+  <!-- Riverside open ground -->
+  <path d="M0 400 Q180 360 350 410
+           T800 390 V600 H0 Z"
+        fill="#e8e5d6"/>
+
+  <!-- Woodland trees -->
+  <g fill="#789477" opacity="0.85">
+    <circle cx="80" cy="90" r="36"/>
+    <circle cx="165" cy="135" r="32"/>
+    <circle cx="260" cy="75" r="38"/>
+    <circle cx="365" cy="125" r="34"/>
+    <circle cx="470" cy="65" r="38"/>
+    <circle cx="575" cy="125" r="34"/>
+    <circle cx="680" cy="75" r="38"/>
+    <circle cx="750" cy="185" r="32"/>
+    <circle cx="100" cy="290" r="32"/>
+    <circle cx="220" cy="330" r="30"/>
+    <circle cx="650" cy="300" r="34"/>
+  </g>
+
+  <!-- East Dart River -->
+  <path d="M800 450
+           Q700 400 620 445
+           T450 460
+           T280 425
+           T100 460
+           T0 435"
+        fill="none"
+        stroke="#83b8c5"
+        stroke-width="48"
+        stroke-linecap="round"/>
+
+  <path d="M800 450
+           Q700 400 620 445
+           T450 460
+           T280 425
+           T100 460
+           T0 435"
+        fill="none"
+        stroke="#c5e1e5"
+        stroke-width="5"
+        stroke-linecap="round"/>
+
+  <!-- Easy access path -->
+  <path d="M150 175
+           Q220 220 290 265
+           T400 345
+           T500 415"
+        fill="none"
+        stroke="#987344"
+        stroke-width="10"
+        stroke-linecap="round"
+        stroke-dasharray="14 12"/>
+
+  <!-- Start marker -->
+  <circle cx="150" cy="175" r="18" fill="#19382e"/>
+  <text x="150" y="182" font-size="18"
+        fill="white" text-anchor="middle"
+        font-weight="bold">S</text>
+
+  <!-- River destination -->
+  <circle cx="500" cy="415" r="18" fill="#19382e"/>
+  <text x="500" y="422" font-size="18"
+        fill="white" text-anchor="middle"
+        font-weight="bold">F</text>
+
+  <!-- Labels -->
+  <g font-family="Arial, sans-serif"
+     fill="#19382e">
+
+    <text x="150" y="120" font-size="22"
+          font-weight="bold" text-anchor="middle">
+      Bellever
+    </text>
+
+    <text x="150" y="145" font-size="17"
+          text-anchor="middle">
+      Village Car Park
+    </text>
+
+    <text x="390" y="55" font-size="25"
+          font-weight="bold" text-anchor="middle">
+      Bellever Forest
+    </text>
+
+    <text x="350" y="300" font-size="19"
+          font-weight="bold" text-anchor="middle">
+      Easy Access Path
+    </text>
+
+    <text x="570" y="520" font-size="24"
+          font-weight="bold" text-anchor="middle">
+      East Dart River
+    </text>
+
+    <text x="500" y="380" font-size="17"
+          font-weight="bold" text-anchor="middle">
+      Riverside
+    </text>
+
+  </g>
+
+  <!-- Map title -->
+  <rect x="160" y="550" width="480" height="40"
+        rx="9" fill="#19382e"/>
+
+  <text x="400" y="577"
+        font-family="Arial, sans-serif"
+        font-size="21" font-weight="bold"
+        fill="white" text-anchor="middle">
+    East Dart Riverbank
+  </text>
+
+</svg>
