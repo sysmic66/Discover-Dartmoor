@@ -3758,20 +3758,95 @@ ${category === "Birds" ? `
 
     </div>
 ` : ""}
-            
             ${category === "Plants and Wildflowers" ? `
-                <div style="background:white;border-radius:12px;overflow:hidden;">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor%20heather.jpg"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <div style="padding:15px;">
-                        <h3 style="color:#19382e;">Moorland Plants and Wildflowers</h3>
-                        <p style="color:#666;">Explore Dartmoor's heather, wildflowers, grasses and distinctive moorland plants.</p>
-                        <span style="color:#987344;font-weight:bold;">MORE SPECIES COMING SOON</span>
-                    </div>
-                </div>
-            ` : ""}
+    <div onclick="openPlantDetails('heather')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Heather%20flowers%20calluna%20vulgaris.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Common Heather</h3>
+            <p style="color:#666;">The familiar purple flowers that colour Dartmoor's open moorland in late summer.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
 
-            
+    <div onclick="openPlantDetails('bilberry')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium%20myrtillus%20-%20Bilberry%2001.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Bilberry</h3>
+            <p style="color:#666;">A low-growing moorland shrub with small leaves and dark blue edible berries.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openPlantDetails('cotton-grass')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eriophorum%20Cotton%20Grass.JPG"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Cotton Grass</h3>
+            <p style="color:#666;">Distinctive white, fluffy seed heads found in Dartmoor's wet bogs and mires.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openPlantDetails('sundew')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Roundleaf%20Sundew%20%28Drosera%20rotundifolia%29.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Round-leaved Sundew</h3>
+            <p style="color:#666;">A fascinating carnivorous plant that catches tiny insects with sticky leaves.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openPlantDetails('bog-asphodel')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bog%20asphodel%20%28Narthecium%20ossifragum%29%20-%20geograph.org.uk%20-%20876004.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Bog Asphodel</h3>
+            <p style="color:#666;">Bright yellow star-shaped flowers that thrive in Dartmoor's wet peat bogs.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openPlantDetails('bluebell')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20bluebell%20Hyacinthoides%20non-scripta.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Bluebell</h3>
+            <p style="color:#666;">A beautiful spring flower that creates carpets of blue in Dartmoor's woodlands.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openPlantDetails('tormentil')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tormentil%20%28Potentilla%20erecta%29%20%288130701865%29.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Tormentil</h3>
+            <p style="color:#666;">A small yellow-flowered plant commonly found in Dartmoor's open grassland and heath.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openPlantDetails('butterfly-orchid')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Greater%20Butterfly-Orchid%20-%20Platanthera%20chlorantha%20%2818299693383%29.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Greater Butterfly-orchid</h3>
+            <p style="color:#666;">An elegant wild orchid found in some of Dartmoor's species-rich grasslands.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+` : ""}
             ${category === "River and Wetland Wildlife" ? `
                 <div style="background:white;border-radius:12px;overflow:hidden;">
                     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/European%20otter%20(Lutra%20lutra).jpg"
@@ -4693,6 +4768,233 @@ function openInsectDetails(id) {
 
     document.body.appendChild(page);
 }
+    function openPlantDetails(id) {
+    const plants = {
+        heather: {
+            name: "Common Heather",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Heather%20flowers%20calluna%20vulgaris.jpg",
+            description: "Common Heather is one of Dartmoor's most recognisable plants. Its purple-pink flowers create colourful carpets across the open moorland, especially in late summer.",
+            identify: "A low-growing evergreen shrub with small, scale-like leaves and clusters of tiny pink or purple bell-shaped flowers.",
+            habitat: "Open moorland, heathland, rocky slopes and areas of acidic soil.",
+            where: "Look across the open heaths around Haytor, Bellever and other areas of higher moorland.",
+            season: "Flowers mainly from July to September, providing an important source of nectar for insects.",
+            facts: [
+                "Heather is also known as Ling.",
+                "It can survive in exposed places where many other plants struggle.",
+                "Its flowers provide nectar for bees and other pollinating insects.",
+                "Heather has been traditionally used for thatching, bedding and fuel."
+            ],
+            advice: "Stay on paths where possible and avoid trampling patches of heather. Look closely at the flowers for visiting bees and other insects."
+        },
+
+        bilberry: {
+            name: "Bilberry",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium%20myrtillus%20-%20Bilberry%2001.jpg",
+            description: "Bilberry is a low-growing shrub found in Dartmoor's heathland and moorland. Its small dark berries are an important seasonal food source for wildlife.",
+            identify: "A small shrub with green, angled stems, oval leaves and small pinkish-green flowers. It produces dark blue berries with a dusty coating.",
+            habitat: "Heathland, open moorland, woodland edges and acidic grassland.",
+            where: "Look among the heather and rough vegetation in suitable areas of open moorland, including parts of Bellever.",
+            season: "Flowers in spring, usually April to May. Berries ripen during summer, generally from July onwards.",
+            facts: [
+                "Bilberry is also known as whortleberry or blaeberry.",
+                "Its berries are eaten by birds and other wildlife.",
+                "The plant spreads through underground stems.",
+                "Bilberry is closely related to the cultivated blueberry."
+            ],
+            advice: "Look for the berries among low vegetation in summer. Avoid picking large quantities and never eat wild berries unless you are certain of their identification."
+        },
+
+        "cotton-grass": {
+            name: "Cotton Grass",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Eriophorum%20Cotton%20Grass.JPG",
+            description: "Cotton Grass is a distinctive plant of Dartmoor's wet bogs and mires. Its fluffy white seed heads can make large areas of wet moorland look almost snow-covered.",
+            identify: "A grass-like plant with narrow leaves and white, cottony seed heads held on upright stems.",
+            habitat: "Wet peat bogs, mires, marshes and other waterlogged ground.",
+            where: "Look in wet areas around Dartmoor's blanket bogs and mires. Keep to safe paths and boardwalks.",
+            season: "The white seed heads are most noticeable from late spring through summer.",
+            facts: [
+                "Despite its name, Cotton Grass is not a true grass.",
+                "The fluffy material helps carry its seeds away on the wind.",
+                "It is well adapted to waterlogged, acidic soils.",
+                "Its presence can indicate important wetland habitat."
+            ],
+            advice: "Never step onto deep or unknown bog ground to get a closer look. Use established paths and boardwalks, and enjoy the white seed heads from a safe distance."
+        },
+
+        sundew: {
+            name: "Round-leaved Sundew",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roundleaf%20Sundew%20%28Drosera%20rotundifolia%29.jpg",
+            description: "Round-leaved Sundew is a fascinating little carnivorous plant found in some of Dartmoor's wet, acidic habitats. It catches tiny insects using sticky droplets on its leaves.",
+            identify: "A small plant with round leaves arranged in a low rosette. Each leaf is covered in fine red tentacles tipped with glistening sticky droplets.",
+            habitat: "Wet peat bogs, acidic mires and damp areas where sphagnum moss grows.",
+            where: "Look carefully in suitable bog habitats, particularly where sphagnum moss is present. The plant is very small and easily overlooked.",
+            season: "Most noticeable during spring and summer, with small white flowers appearing on delicate stems in summer.",
+            facts: [
+                "Sundew is a carnivorous plant.",
+                "Its sticky droplets trap small insects such as midges.",
+                "It obtains extra nutrients from its insect prey because bog soils are nutrient-poor.",
+                "The plant's leaves can slowly curl around captured prey."
+            ],
+            advice: "Look without touching. Sundews are delicate plants and their wetland habitats are easily damaged by trampling."
+        },
+
+        "bog-asphodel": {
+            name: "Bog Asphodel",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Bog%20asphodel%20%28Narthecium%20ossifragum%29%20-%20geograph.org.uk%20-%20876004.jpg",
+            description: "Bog Asphodel brings bright yellow colour to Dartmoor's wet moorland during summer. Its star-shaped flowers stand out against the green and brown colours of the bog.",
+            identify: "An upright plant with narrow, grass-like leaves and a cluster of bright yellow, star-shaped flowers.",
+            habitat: "Wet heathland, peat bogs, acidic mires and waterlogged moorland.",
+            where: "Look in suitable wetland areas across Dartmoor, especially around bogs and damp moorland.",
+            season: "Flowers mainly from June to August.",
+            facts: [
+                "Bog Asphodel is specially adapted to nutrient-poor, acidic conditions.",
+                "Its bright yellow flowers attract pollinating insects.",
+                "The plant can form noticeable patches in suitable wet habitats.",
+                "Its leaves often turn orange or rusty brown as they die back."
+            ],
+            advice: "Observe from firm ground or established boardwalks. Bog habitats are fragile, and the ground can be much deeper and wetter than it appears."
+        },
+
+        bluebell: {
+            name: "Bluebell",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common%20bluebell%20Hyacinthoides%20non-scripta.jpg",
+            description: "The native Bluebell is a much-loved spring wildflower. Its drooping blue flowers can create beautiful displays in Dartmoor's ancient woodlands.",
+            identify: "A plant with narrow leaves and a curved flower stem carrying several drooping, bell-shaped blue-purple flowers.",
+            habitat: "Ancient woodland, woodland edges, hedgerows and shaded grassy banks.",
+            where: "Look in Dartmoor's wooded valleys and ancient woodland areas during spring.",
+            season: "Usually flowers from April to May, depending on the weather and location.",
+            facts: [
+                "The native Bluebell is protected from being uprooted in the wild.",
+                "Its flowers usually hang to one side of the stem.",
+                "Bluebells can take several years to recover after being damaged.",
+                "They provide an early source of nectar for insects."
+            ],
+            advice: "Admire bluebell displays from paths and avoid walking through the flowers. Do not pick or dig up wild bluebells."
+        },
+
+        tormentil: {
+            name: "Tormentil",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Tormentil%20%28Potentilla%20erecta%29%20%288130701865%29.jpg",
+            description: "Tormentil is a small but common wildflower of Dartmoor's open grassland and heathland. Its bright yellow flowers add colour to the moor during the warmer months.",
+            identify: "A low-growing plant with small yellow flowers, usually showing four petals, and leaves divided into several toothed leaflets.",
+            habitat: "Heathland, acidic grassland, open moorland and woodland clearings.",
+            where: "Look among short grasses and heather across suitable areas of open moorland.",
+            season: "Flowers from late spring through summer, often continuing into early autumn.",
+            facts: [
+                "Tormentil flowers usually have four petals rather than five.",
+                "It is a member of the rose family.",
+                "Its roots contain tannins and have a history of traditional use.",
+                "It is well suited to acidic soils."
+            ],
+            advice: "Look closely at the small flowers without picking them. Their four petals are a useful feature when identifying the plant."
+        },
+
+        "butterfly-orchid": {
+            name: "Greater Butterfly-orchid",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Greater%20Butterfly-Orchid%20-%20Platanthera%20chlorantha%20%2818299693383%29.jpg",
+            description: "The Greater Butterfly-orchid is an elegant native wild orchid. Its pale flowers have long, spreading side petals that can resemble the wings of a butterfly.",
+            identify: "A tall, slender orchid with two broad leaves near the base and a spike of pale greenish-white flowers. Each flower has a long nectar spur.",
+            habitat: "Species-rich grassland, woodland edges, open woodland and suitable calcareous or neutral soils.",
+            where: "It is localised and not widespread across Dartmoor. Look only in suitable grassland and woodland habitats, without disturbing the plants.",
+            season: "Usually flowers from June to July.",
+            facts: [
+                "The flowers are adapted to attract night-flying moths.",
+                "Its long nectar spur holds nectar for visiting pollinators.",
+                "It is a native wild orchid found in parts of Britain.",
+                "Orchids depend on relationships with fungi in the soil during their early growth."
+            ],
+            advice: "Wild orchids are easily damaged. Never pick, dig up or trample them, and avoid sharing the locations of particularly sensitive populations."
+        }
+    };
+
+    const plant = plants[id];
+    if (!plant) return;
+
+    const old = document.getElementById('attraction');
+    if (old) old.remove();
+
+    const page = document.createElement('div');
+    page.id = 'attraction';
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+        z-index:9999;
+    `;
+
+    page.innerHTML = `
+        <div style="max-width:850px;margin:auto;
+            background:white;border-radius:14px;padding:20px;">
+
+            <button onclick="document.getElementById('attraction').remove();openWildlifeCategory('Plants and Wildflowers')"
+                style="padding:12px 20px;background:#19382e;
+                color:white;border:0;border-radius:7px;cursor:pointer;">
+                ← Back to Plants and Wildflowers
+            </button>
+
+            <h2 style="color:#19382e;text-align:center;margin-top:20px;">
+                ${plant.name}
+            </h2>
+
+            <img src="${plant.image}"
+                style="width:100%;height:300px;object-fit:contain;
+                background:#f4f1e8;border-radius:12px;margin-top:18px;">
+
+            <p style="color:#555;line-height:1.7;margin-top:18px;">
+                ${plant.description}
+            </p>
+
+            <h3 style="color:#315a48;">Identification</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${plant.identify}
+            </p>
+
+            <h3 style="color:#315a48;">Habitat</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${plant.habitat}
+            </p>
+
+            <h3 style="color:#315a48;">Where to Find Them</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${plant.where}
+            </p>
+
+            <h3 style="color:#315a48;">When to See Them</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${plant.season}
+            </p>
+
+            <div style="background:#e5eadf;padding:18px;
+                border-radius:10px;margin-top:20px;">
+                <h3 style="color:#19382e;margin-top:0;">
+                    Interesting Facts
+                </h3>
+                <ul style="color:#555;line-height:1.8;padding-left:20px;">
+                    ${plant.facts.map(fact => `<li>${fact}</li>`).join('')}
+                </ul>
+            </div>
+
+            <div style="background:#fce9df;padding:18px;
+                border-radius:10px;margin-top:18px;">
+                <h3 style="color:#19382e;margin-top:0;">
+                    Wildlife Watching Advice
+                </h3>
+                <p style="color:#555;line-height:1.7;margin-bottom:0;">
+                    ${plant.advice}
+                </p>
+            </div>
+
+            <p style="font-size:12px;color:#777;margin-top:20px;">
+                Information: Dartmoor National Park Authority and botanical conservation sources.
+            </p>
+
+        </div>
+    `;
+
+    document.body.appendChild(page);
+    }
 const dartmoorPlaces = {
     
 haytor: {
