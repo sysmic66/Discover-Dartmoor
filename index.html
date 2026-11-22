@@ -3504,10 +3504,108 @@ const pubs = {
         photoCredit: "Mike White / Geograph",
         description: "A country pub in Belstone, on the northern edge of Dartmoor."
     }
+
 };
-    
+
+Object.assign(pubs["old-inn"], {
+    address: "Widecombe-in-the-Moor, Newton Abbot, Devon, TQ13 7TA",
+    phone: "01364 621207",
+    website: "https://www.oldinnwidecombe.co.uk/",
+    food: "Freshly prepared pub meals, homemade dishes and a traditional Sunday carvery.",
+    dogs: "Dogs welcome. The pub describes itself as very dog friendly.",
+    outdoorSeating: "Moorland garden with outdoor dining.",
+    openingHours: "Monday to Saturday 11:30am–10pm. Sunday 12pm–6pm. Food service times vary."
+});
+
+Object.assign(pubs["castle-inn"], {
+    address: "Lydford, Okehampton, Devon, EX20 4BH",
+    phone: "01822 820242",
+    website: "https://castleinnlydford.co.uk/",
+    food: "Pub classics and British favourites using fresh local West Country produce. Breakfast, lunch and evening meals.",
+    drinks: "Local ales, lagers and a varied wine list.",
+    dogs: "Dogs welcome throughout the pub and restaurant.",
+    outdoorSeating: "Large garden with seating overlooking the Saxon castle.",
+    parking: "Parking available directly opposite the pub.",
+    openingHours: "Open daily, 8am–11pm. Food service times vary."
+});
+
+Object.assign(pubs["mary-tavy-inn"], {
+    address: "3 Lane Head, Mary Tavy, Tavistock, Devon, PL19 9PN",
+    phone: "01822 810326",
+    website: "https://themarytavyinn.co.uk/",
+    food: "Restaurant serving lunch, evening meals and homemade Sunday roasts.",
+    outdoorSeating: "Garden with views across Dartmoor.",
+    openingHours: "Monday closed. Tuesday to Saturday 12pm–11pm. Sunday 12pm–6:30pm. Check food service times before visiting."
+});
+
+Object.assign(pubs["dartmoor-inn"], {
+    address: "Merrivale, Princetown, Yelverton, Devon, PL20 6ST",
+    phone: "07495 218911",
+    website: "https://dartmoorinnmerrivale.co.uk/",
+    food: "Open-fire cooking featuring grass-fed South West beef, fresh fish from Brixham and seasonal dishes.",
+    dogs: "Well-behaved dogs welcome in the restaurant and guest rooms.",
+    parking: "Free parking outside the inn.",
+    openingHours: "Monday to Saturday 11am–10pm. Sunday 12pm–6pm. Food service times vary."
+});
+
+Object.assign(pubs["walkhampton-inn"], {
+    address: "Walkhampton, Devon, PL20 6JY",
+    phone: "01822 258697",
+    website: "https://walkhamptoninn.co.uk/",
+    food: "Locally sourced pub food, including traditional favourites, pies, fish and chips and changing specials.",
+    drinks: "A selection of ales and ciders.",
+    openingHours: "Daily 12pm–11pm. Food served 12pm–3pm and 5pm–8:30pm."
+});
+
+Object.assign(pubs["ring-of-bells"], {
+    address: "The Village, North Bovey, Newton Abbot, Devon, TQ13 8RB",
+    phone: "01647 440375",
+    food: "British pub and restaurant food, with lunch, dinner and options for different dietary requirements.",
+    drinks: "Local and guest ales, cider, wine and other drinks.",
+    dogs: "Dog friendly.",
+    outdoorSeating: "Outdoor seating available.",
+    openingHours: "Published hours vary by day. Check before visiting."
+});
+
+Object.assign(pubs["kestor-inn"], {
+    address: "Manaton, Newton Abbot, Devon, TQ13 9UF",
+    phone: "01647 221626",
+    website: "https://www.thekestor.com/",
+    food: "Freshly prepared lunches and evening meals, seasonal dishes and a popular Sunday carvery.",
+    drinks: "Local ales and traditional ciders.",
+    dogs: "Dog friendly.",
+    outdoorSeating: "Beer garden.",
+    parking: "Parking available, although spaces can be limited.",
+    openingHours: "Monday to Thursday 12pm–3pm and 5:30pm–10pm. Friday and Saturday open all day. Sunday 12pm–5pm."
+});
+
+Object.assign(pubs["church-house-inn"], {
+    address: "Holne, Newton Abbot, Devon, TQ13 7SJ",
+    phone: "01364 631160",
+    website: "https://www.churchhouseholne.co.uk/",
+    food: "Home-cooked British pub food, handmade pies, grilled steaks and Sunday roasts.",
+    drinks: "Local and guest real ales, ciders, lagers and wine.",
+    dogs: "Dogs welcome in the bar area.",
+    outdoorSeating: "Outdoor seating and garden.",
+    parking: "Free off-street parking.",
+    openingHours: "Monday to Wednesday closed. Thursday 5pm–10pm. Friday and Saturday 12pm–10pm. Sunday 12pm–6pm."
+});
+
+Object.assign(pubs["tors-inn"], {
+    address: "Belstone, Okehampton, Devon, EX20 1QZ",
+    phone: "01837 840689",
+    website: "https://thetorsinn.co.uk/",
+    food: "Traditional pub meals, local produce and Sunday roasts during the winter season.",
+    drinks: "Local ales and cider.",
+    dogs: "Dogs welcome on a lead.",
+    outdoorSeating: "Large beer garden and outdoor bar, with views across Dartmoor.",
+    parking: "Parking available.",
+    openingHours: "Opening and food service times can vary. Check before visiting."
+});
+
 const pub = pubs[id];
 if (!pub) return;
+
 
     const page = document.createElement("section");
     page.id = "attraction";
