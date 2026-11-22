@@ -3572,20 +3572,99 @@ ${category === "Birds" ? `
         </div>
     </div>
 ` : ""}
-
-
             ${category === "Reptiles and Amphibians" ? `
-                <div style="background:white;border-radius:12px;overflow:hidden;">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20lizard.jpg"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <div style="padding:15px;">
-                        <h3 style="color:#19382e;">Dartmoor Reptiles and Amphibians</h3>
-                        <p style="color:#666;">Discover the lizards, snakes, frogs, toads and other amphibians found on Dartmoor.</p>
-                        <span style="color:#987344;font-weight:bold;">SPECIES GUIDES COMING SOON</span>
-                    </div>
-                </div>
-            ` : ""}        
-            
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;">
+
+        <div onclick="openReptileDetails('common-lizard')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common_lizard_%28Zootoca_vivipara%29.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Common Lizard</h3>
+                <p style="color:#666;">A small reptile often seen basking in sunny spots across the moor.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openReptileDetails('adder')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Adder%20-%20vipera%20berus.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Adder</h3>
+                <p style="color:#666;">Britain's only native venomous snake, recognised by its zigzag markings.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openReptileDetails('grass-snake')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Grass%20snake.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Grass Snake</h3>
+                <p style="color:#666;">A non-venomous snake often associated with wet habitats and ponds.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openReptileDetails('slow-worm')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Slow%20worm%20%28Anguis%20fragilis%29.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Slow Worm</h3>
+                <p style="color:#666;">A legless lizard that is often mistaken for a small snake.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openReptileDetails('common-frog')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20frog%20rana%20temporaria.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Common Frog</h3>
+                <p style="color:#666;">A familiar amphibian found in ponds, gardens and damp habitats.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openReptileDetails('common-toad')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20toad%20%28bufo%20bufo%29.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Common Toad</h3>
+                <p style="color:#666;">A stocky amphibian often found in damp woodland and grassland.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openReptileDetails('palmate-newt')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Palmate%20newt.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Palmate Newt</h3>
+                <p style="color:#666;">A small newt that breeds in ponds and other still-water habitats.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openReptileDetails('smooth-newt')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Smooth%20Newt%20%28Lissotriton%20vulgaris%29%20%288618457905%29.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Smooth Newt</h3>
+                <p style="color:#666;">A small amphibian that spends much of the year on land.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+    </div>
+` : ""}
             ${category === "Insects and Butterflies" ? `
                 <div style="background:white;border-radius:12px;overflow:hidden;">
                     <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Small%20pearl-bordered%20fritillary.jpg"
