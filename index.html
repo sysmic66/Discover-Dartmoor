@@ -3129,7 +3129,8 @@ function openWildlifeCategory(category) {
 
             
            ${category === "Mammals" ? `
-    <div style="background:white;border-radius:12px;overflow:hidden;">
+    <div onclick="openMammalDetails('pony')"
+    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor%20ponies.jpg"
             alt="Dartmoor ponies"
             style="width:100%;height:190px;object-fit:cover;">
@@ -3309,7 +3310,113 @@ function openWildlifeCategory(category) {
 
     document.body.appendChild(page);
 }
+function openMammalDetails(id) {
+    const mammals = {
+        pony: {
+            name: "Dartmoor Pony",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor%20ponies.jpg",
+            description: "An iconic part of Dartmoor's landscape, the ponies have roamed the open moorland for thousands of years.",
+            habitat: "Open moorland, heathland, woodland edges and common land.",
+            where: "Ponies can be spotted across many areas of Dartmoor, particularly on the open commons. Bellever Forest is also a good place to look.",
+            season: "Ponies can be seen throughout the year. Foals are usually born between May and August.",
+            facts: [
+                "Ponies have been part of Dartmoor's landscape for at least 4,000 years.",
+                "Most ponies seen roaming the moor are Dartmoor Hill Ponies.",
+                "They are owned by local farmers and commoners, even though they roam freely.",
+                "Their grazing helps maintain important habitats for other wildlife."
+            ],
+            advice: "Enjoy watching ponies from a distance. Never feed or attempt to touch them. Keep dogs under control and take particular care around foals."
+        }
+    };
 
+    const animal = mammals[id];
+    if (!animal) return;
+
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;overflow:hidden;">
+
+            <img src="${animal.image}"
+                alt="${animal.name}"
+                style="width:100%;height:300px;object-fit:cover;">
+
+            <div style="padding:20px 25px 30px;">
+
+                <button onclick="openWildlifeCategory('Mammals')"
+                    style="padding:12px 20px;background:#19382e;
+                    color:white;border:0;border-radius:7px;">
+                    ← Back to Mammals
+                </button>
+
+                <p style="color:#987344;font-weight:bold;
+                    letter-spacing:1px;margin-top:25px;">
+                    DARTMOOR WILDLIFE
+                </p>
+
+                <h2 style="color:#19382e;">${animal.name}</h2>
+
+                <p style="color:#555;line-height:1.7;">
+                    ${animal.description}
+                </p>
+
+                <h3 style="color:#315a48;">Habitat</h3>
+                <p>${animal.habitat}</p>
+
+                <h3 style="color:#315a48;">Where to Spot Them</h3>
+                <p>${animal.where}</p>
+
+                <h3 style="color:#315a48;">When to See Them</h3>
+                <p>${animal.season}</p>
+
+                <div style="background:#e5eadf;padding:16px;
+                    border-radius:10px;margin-top:20px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Interesting Facts
+                    </h3>
+
+                    ${animal.facts.map(fact => `
+                        <p style="line-height:1.6;">• ${fact}</p>
+                    `).join("")}
+
+                </div>
+
+                <div style="background:#fce9df;padding:15px;
+                    border-radius:10px;margin-top:20px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Wildlife Watching Advice
+                    </h3>
+
+                    <p style="line-height:1.6;">
+                        ${animal.advice}
+                    </p>
+
+                </div>
+
+                <p style="font-size:12px;color:#777;margin-top:20px;">
+                    Information: Dartmoor National Park Authority.
+                </p>
+
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
 
 const dartmoorPlaces = {
     
