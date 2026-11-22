@@ -55,6 +55,237 @@ header {
 }
 
 .hero {
+function openMammalDetails(id) {
+    const mammals = {
+
+        pony: {
+            name: "Dartmoor Pony",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor%20ponies.jpg",
+            description: "An iconic part of Dartmoor's landscape, semi-wild ponies have roamed the open moorland for thousands of years.",
+            identify: "Dartmoor Hill Ponies come in a variety of colours, including bay, brown, black, grey and chestnut. They are generally sturdy, compact ponies adapted to life on the open moor.",
+            habitat: "Open moorland, heathland, woodland edges and common land.",
+            where: "Ponies can be spotted across many areas of Dartmoor, particularly on the open commons. Bellever Forest is also a good place to look.",
+            season: "Ponies can be seen throughout the year. Foals are usually born during spring and summer.",
+            facts: [
+                "Ponies have roamed freely on Dartmoor for at least 4,000 years.",
+                "Most ponies seen roaming the moor are semi-wild Dartmoor Hill Ponies.",
+                "They are owned by local farmers and commoners, even though they roam freely.",
+                "Their grazing helps maintain important habitats for other wildlife."
+            ],
+            advice: "Enjoy watching ponies from a distance. Never feed or attempt to touch them. Keep dogs under control and take particular care around foals."
+        },
+
+        "fallow-deer": {
+            name: "Fallow Deer",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Fallow%20Deer.jpg",
+            description: "Fallow deer are elegant, medium-sized deer found in parts of Devon and the wider Dartmoor countryside.",
+            identify: "Fallow deer have a distinctive black-and-white pattern on their rump. Their coats vary from spotted chestnut to pale cream and very dark brown. Males have broad, flattened antlers.",
+            habitat: "Woodland, woodland edges, parkland and nearby open grassland.",
+            where: "Look around quieter wooded areas and woodland edges across the wider Dartmoor countryside. Sightings are not guaranteed.",
+            season: "Can be seen throughout the year. The autumn rut is an interesting time to learn about their behaviour.",
+            facts: [
+                "Fallow deer are smaller than red deer.",
+                "Their coat colour can vary considerably.",
+                "Male fallow deer are known as bucks and females as does.",
+                "Their broad, flattened antlers are called palmate antlers."
+            ],
+            advice: "Watch quietly from a distance, especially during the autumn rut. Avoid approaching deer or disturbing them when they are feeding or resting."
+        },
+
+        "red-deer": {
+            name: "Red Deer",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20deer%20stag.jpg",
+            description: "Red deer are Britain's largest land mammal and one of the most impressive animals found in the British countryside.",
+            identify: "Red deer have a reddish-brown summer coat which becomes greyer in winter. Adult males, known as stags, grow large branching antlers. Females are known as hinds.",
+            habitat: "Woodland, open countryside, heathland and areas of rough grassland.",
+            where: "Look in quieter wooded valleys and areas of suitable countryside across the wider Dartmoor region. Deer are elusive, so sightings can be unpredictable.",
+            season: "Can be seen throughout the year. Autumn is particularly interesting during the rut, when stags compete for access to females.",
+            facts: [
+                "Red deer are Britain's largest land mammal.",
+                "Male red deer grow and shed a new set of antlers each year.",
+                "The autumn breeding season is known as the rut.",
+                "Young red deer are called calves."
+            ],
+            advice: "Keep well away from deer, particularly during the autumn rut. Never approach stags or get between animals. Watch quietly and use binoculars if possible."
+        },
+
+        otter: {
+            name: "European Otter",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/European_Otter.jpg",
+            description: "The European otter is a secretive mammal that lives along Dartmoor's rivers and waterways. Dartmoor is particularly important for otters.",
+            identify: "Otters have long streamlined bodies, short legs, webbed feet, thick brown fur and a powerful tail. Their pale throat and chest can help identify them.",
+            habitat: "Rivers, streams, lakes and wetlands, particularly where there is plenty of food and suitable cover along the banks.",
+            where: "Otters occur throughout the main rivers running off Dartmoor, including the Dart and other river catchments. Look for signs along quiet riverbanks.",
+            season: "Present throughout the year. They can be active at any time, although dawn, dusk and darkness are often good times to look.",
+            facts: [
+                "Otters are excellent swimmers and have webbed feet.",
+                "They feed mainly on fish but also eat other aquatic animals.",
+                "They leave droppings known as spraint to mark their territory.",
+                "Tracks and spraint can be easier to find than the otter itself."
+            ],
+            advice: "Keep your distance and avoid disturbing riverbanks or potential resting places. Never follow an otter or block its route to the water."
+        },
+
+        "red-fox": {
+            name: "Red Fox",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fox.jpg",
+            description: "The red fox is an adaptable mammal that can live in a wide range of Dartmoor habitats, from woodland and farmland to the open countryside.",
+            identify: "Recognisable by its reddish-orange coat, pointed ears, narrow muzzle and long bushy tail, which usually has a pale tip.",
+            habitat: "Woodland, hedgerows, farmland, moorland edges and areas close to human settlements.",
+            where: "Foxes can be found across many parts of Dartmoor. Look for tracks and signs along woodland paths, hedgerows and quieter countryside.",
+            season: "Can be seen throughout the year. Dawn and dusk are often good times to spot them, although foxes may be active during daylight.",
+            facts: [
+                "Foxes have excellent hearing and a strong sense of smell.",
+                "They eat a varied diet including small mammals, birds, insects and fruit.",
+                "A fox's home is known as an earth or den.",
+                "Foxes communicate using a range of calls and scent markings."
+            ],
+            advice: "Observe quietly and never attempt to feed or approach a fox. Keep food waste secure and give any fox you encounter plenty of space."
+        },
+
+        badger: {
+            name: "European Badger",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/European%20Badger%20-%20Meles%20meles%20%2852261502699%29.jpg",
+            description: "The European badger is a familiar but mostly nocturnal mammal found in Dartmoor's woodlands and surrounding countryside.",
+            identify: "Badgers have a stocky body, short legs, grey fur and a distinctive black-and-white striped face.",
+            habitat: "Woodland, hedgerows, scrub and grassland, often close to areas where they can find food and suitable ground for digging.",
+            where: "Look for signs around woodland edges, hedgerows and grassy areas. Badgers are more often detected through their tracks and setts than seen in daylight.",
+            season: "Active throughout the year, although activity can be reduced during very cold winter weather. They usually emerge after dark.",
+            facts: [
+                "Badgers live in underground homes called setts.",
+                "They have a powerful sense of smell.",
+                "Their diet includes earthworms, insects, fruit and other small animals.",
+                "They often follow regular paths between feeding areas and their setts."
+            ],
+            advice: "Never approach or enter a badger sett. Avoid disturbing woodland areas after dark and observe from a quiet, respectful distance."
+        },
+
+        hedgehog: {
+            name: "European Hedgehog",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/European%20Hedgehog.jpg",
+            description: "The European hedgehog is a much-loved British mammal that can be found in suitable gardens, hedgerows and countryside habitats.",
+            identify: "Hedgehogs have a rounded body covered in protective spines, a pointed face and small dark eyes. They often curl into a ball when frightened.",
+            habitat: "Hedgerows, gardens, rough grassland, scrub and areas with plenty of cover.",
+            where: "Look in suitable gardens, village edges, hedgerows and grassy areas around Dartmoor. They are difficult to spot because they are mostly active at night.",
+            season: "Most active during the warmer months, generally spring through autumn. They hibernate during colder periods, although timing varies.",
+            facts: [
+                "A hedgehog has thousands of protective spines.",
+                "Their diet includes beetles, caterpillars, earthworms and other invertebrates.",
+                "They usually forage after dark.",
+                "Hedgehogs need connected habitats and safe routes between gardens and countryside."
+            ],
+            advice: "Never disturb a hibernating hedgehog or handle one unnecessarily. Check long grass and bonfires before disturbing them, and leave gaps in fences to help them move between gardens."
+        },
+
+        bats: {
+            name: "Bats of Dartmoor",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus%20pipistrellus01.jpg",
+            description: "Dartmoor is an important area for bats. Nearly all of Britain's 16 bat species have been recorded in the National Park, including several nationally rare species.",
+            identify: "Bats are flying mammals with leathery wings formed from elongated fingers. They are usually easiest to notice as small shapes flying at dusk. Different species vary in size, shape and flight pattern.",
+            habitat: "Woodlands, hedgerows, rivers, old buildings, tree holes, caves and other sheltered roosting places.",
+            where: "Look around woodland edges, rivers, hedgerows and sheltered areas at dusk. Dartmoor is particularly important for greater horseshoe bats, lesser horseshoe bats and barbastelle bats.",
+            season: "Most visible from spring to autumn, when they emerge after sunset to feed. Activity reduces during colder winter months.",
+            facts: [
+                "Bats use echolocation to navigate and find insects in darkness.",
+                "They are the only mammals capable of true sustained flight.",
+                "Nearly all of Britain's 16 bat species have been recorded on Dartmoor.",
+                "The greater horseshoe, lesser horseshoe and barbastelle bats are particularly important on Dartmoor."
+            ],
+            advice: "Watch from a distance and avoid disturbing roosts. Never handle bats. If you find an injured bat, contact the Bat Conservation Trust for advice."
+        }
+    };
+
+    const animal = mammals[id];
+    if (!animal) return;
+
+    document.getElementById("attraction")?.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;overflow:hidden;">
+
+            <img src="${animal.image}"
+                alt="${animal.name}"
+                style="width:100%;height:300px;object-fit:cover;">
+
+            <div style="padding:20px 25px 30px;">
+
+                <button onclick="openWildlifeCategory('Mammals')"
+                    style="padding:12px 20px;background:#19382e;
+                    color:white;border:0;border-radius:7px;">
+                    ← Back to Mammals
+                </button>
+
+                <p style="color:#987344;font-weight:bold;
+                    letter-spacing:1px;margin-top:25px;">
+                    DARTMOOR WILDLIFE
+                </p>
+
+                <h2 style="color:#19382e;">${animal.name}</h2>
+
+                <p style="color:#555;line-height:1.7;">
+                    ${animal.description}
+                </p>
+
+                <h3 style="color:#315a48;">Identification</h3>
+                <p style="line-height:1.7;">${animal.identify}</p>
+
+                <h3 style="color:#315a48;">Habitat</h3>
+                <p style="line-height:1.7;">${animal.habitat}</p>
+
+                <h3 style="color:#315a48;">Where to Spot Them</h3>
+                <p style="line-height:1.7;">${animal.where}</p>
+
+                <h3 style="color:#315a48;">When to See Them</h3>
+                <p style="line-height:1.7;">${animal.season}</p>
+
+                <div style="background:#e5eadf;padding:16px;
+                    border-radius:10px;margin-top:20px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Interesting Facts
+                    </h3>
+
+                    ${animal.facts.map(fact => `
+                        <p style="line-height:1.6;">• ${fact}</p>
+                    `).join("")}
+
+                </div>
+
+                <div style="background:#fce9df;padding:15px;
+                    border-radius:10px;margin-top:20px;">
+
+                    <h3 style="color:#19382e;margin-top:0;">
+                        Wildlife Watching Advice
+                    </h3>
+
+                    <p style="line-height:1.7;">
+                        ${animal.advice}
+                    </p>
+
+                </div>
+
+                <p style="font-size:12px;color:#777;margin-top:20px;">
+                    Information: Dartmoor National Park Authority and wildlife conservation organisations.
+                </p>
+
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
     min-height: 430px;
     background:
     linear-gradient(90deg, rgba(15,36,28,.82), rgba(15,36,28,.15)),
@@ -3251,17 +3482,97 @@ function openWildlifeCategory(category) {
         </div>
     </div>
                 ` : ""}
-            ${category === "Birds" ? `
-                <div style="background:white;border-radius:12px;overflow:hidden;">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20Buzzard%20by%20caroline%20legg.jpg"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <div style="padding:15px;">
-                        <h3 style="color:#19382e;">Dartmoor Birds</h3>
-                        <p style="color:#666;">Discover the birds of prey, moorland birds and woodland species found across Dartmoor.</p>
-                        <span style="color:#987344;font-weight:bold;">SPECIES GUIDES COMING SOON</span>
-                    </div>
-                </div>
-            ` : ""}
+          
+${category === "Birds" ? `
+    <div onclick="openBirdDetails('skylark')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Skylark%20%28Alauda%20arvensis%29.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Skylark</h3>
+            <p style="color:#666;">A famous moorland bird known for its beautiful song and soaring flight.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openBirdDetails('cuckoo')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20cuckoo.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Cuckoo</h3>
+            <p style="color:#666;">A summer visitor recognised by its distinctive call.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openBirdDetails('ring-ouzel')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ring%20Ouzel.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Ring Ouzel</h3>
+            <p style="color:#666;">A rare upland thrush with a distinctive pale crescent across its chest.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openBirdDetails('red-grouse')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Grouse.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Red Grouse</h3>
+            <p style="color:#666;">A moorland specialist that lives among Dartmoor's heather.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openBirdDetails('snipe')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20Snipe.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Snipe</h3>
+            <p style="color:#666;">A secretive wetland bird with a long bill and remarkable display flight.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openBirdDetails('dipper')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/White-throated%20Dipper.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Dipper</h3>
+            <p style="color:#666;">An amazing river bird that can walk underwater in search of food.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openBirdDetails('buzzard')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20Buzzard%20by%20caroline%20legg.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Buzzard</h3>
+            <p style="color:#666;">A familiar bird of prey often seen soaring above the moorland.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openBirdDetails('nightjar')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/European%20Nightjar.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Nightjar</h3>
+            <p style="color:#666;">A mysterious summer visitor famous for its unusual churring call at dusk.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+` : ""}
+
 
             ${category === "Reptiles and Amphibians" ? `
                 <div style="background:white;border-radius:12px;overflow:hidden;">
@@ -3544,6 +3855,231 @@ function openMammalDetails(id) {
                 </p>
 
             </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
+
+function openBirdDetails(id) {
+    const birds = {
+        skylark: {
+            name: "Skylark",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian%20Skylark%20-%20Kent%2C%20UK.jpg",
+            description: "The skylark is one of Dartmoor's most familiar moorland birds. It is famous for rising high above the ground while delivering a long, beautiful song.",
+            identify: "A small brown bird with streaked feathers, a pale underside and a short crest. Its song is often heard long before the bird is spotted.",
+            habitat: "Open moorland, grassland, heathland and rough fields.",
+            where: "Look across open moorland and grassy areas, particularly where the vegetation is short enough for skylarks to feed and nest.",
+            season: "Present during the breeding season, particularly noticeable from spring through summer when males sing in flight. Some remain in the area during winter.",
+            facts: [
+                "Skylarks can sing continuously while flying high above the ground.",
+                "They build their nests on the ground, hidden among grass and vegetation.",
+                "Dartmoor is an important stronghold for this declining British species."
+            ],
+            advice: "Keep to paths and avoid walking through areas of long grass during the nesting season. Skylark nests are difficult to see and can easily be disturbed."
+        },
+
+        cuckoo: {
+            name: "Cuckoo",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common%20cuckoo.jpg",
+            description: "The cuckoo is a famous summer visitor to Dartmoor. Its unmistakable two-note call is one of the sounds associated with the arrival of spring.",
+            identify: "A slim, grey bird with a long tail, pointed wings and a barred underside. Its flight can resemble that of a small bird of prey.",
+            habitat: "Open moorland, woodland edges, heathland and areas with plenty of suitable host birds.",
+            where: "Listen around woodland edges, open moorland and areas of scrub during spring and early summer. Hearing one is often easier than seeing one.",
+            season: "A summer visitor, generally arriving in spring and leaving for Africa towards the end of summer.",
+            facts: [
+                "Cuckoos lay their eggs in the nests of other bird species.",
+                "The young cuckoo is raised by its unwitting foster parents.",
+                "Its familiar call is usually made by the male."
+            ],
+            advice: "Listen quietly rather than approaching calling birds. Give nesting birds plenty of space and avoid disturbing vegetation."
+        },
+
+        "ring-ouzel": {
+            name: "Ring Ouzel",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ring%20Ouzel.jpg",
+            description: "The ring ouzel is a special and increasingly scarce bird on Dartmoor. It is a mountain-dwelling member of the thrush family and one of the moor's most interesting seasonal visitors.",
+            identify: "A dark thrush-like bird. The male is almost black with a striking pale crescent across its chest. Females are generally browner.",
+            habitat: "Upland moorland, rocky slopes, heather-covered hillsides and areas with scattered rocks and scrub.",
+            where: "Look around suitable high moorland slopes and rocky areas. Sightings are uncommon, so patience and careful observation are needed.",
+            season: "A summer visitor, usually returning to upland breeding areas in spring before migrating south in autumn.",
+            facts: [
+                "The male has a distinctive pale crescent across its breast.",
+                "Ring ouzels migrate to warmer regions for winter.",
+                "Fewer than ten pairs have been recorded breeding on Dartmoor in the National Park's published habitat information."
+            ],
+            advice: "This is a sensitive and declining bird. Keep well away from nesting areas, stay on established paths and use binoculars rather than approaching."
+        },
+
+        "red-grouse": {
+            name: "Red Grouse",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Grouse.jpg",
+            description: "The red grouse is a distinctive moorland bird that lives among Dartmoor's heather. It is specially adapted to life on open upland heathland.",
+            identify: "A stocky, reddish-brown gamebird with short wings, a rounded body and feathered legs. Males have a noticeable red comb above each eye.",
+            habitat: "Heather-covered upland heathland and open moorland.",
+            where: "Look across areas of mature heather on the higher moors. Red grouse are well camouflaged and may be difficult to spot until they move.",
+            season: "Present throughout the year. They are generally easier to notice during the breeding season and when birds move through the heather.",
+            facts: [
+                "Red grouse feed mainly on heather shoots and buds.",
+                "Their feathered legs help protect them in cold upland conditions.",
+                "Dartmoor supports a breeding population of this important moorland species."
+            ],
+            advice: "Observe from a distance and avoid approaching birds or their nests. Keep dogs under close control, particularly during the breeding season."
+        },
+
+        snipe: {
+            name: "Snipe",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common%20Snipe.jpg",
+            description: "The snipe is a secretive wetland bird found in Dartmoor's bogs, mires and damp grasslands. Its unusual display flight makes it particularly fascinating to watch.",
+            identify: "A medium-sized wading bird with mottled brown and buff plumage, short legs and a very long, straight bill.",
+            habitat: "Wet grassland, bogs, valley mires, marshes and damp moorland.",
+            where: "Look around Dartmoor's wetland areas and valley mires. Listen for its distinctive calls and watch for birds rising suddenly from wet grass.",
+            season: "Present throughout the year, with breeding activity in spring and summer. Some birds also move into the area during winter.",
+            facts: [
+                "Its long bill helps it find worms and other small invertebrates in soft ground.",
+                "During its display flight, air passing through its tail feathers can create a distinctive drumming sound.",
+                "Dartmoor's valley mires provide important breeding habitat."
+            ],
+            advice: "Wetland nests are often hidden in vegetation. Keep to paths and boardwalks where available and avoid entering boggy nesting areas."
+        },
+
+        dipper: {
+            name: "Dipper",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/White-throated%20Dipper.jpg",
+            description: "The dipper is a remarkable river bird found along Dartmoor's fast-flowing streams and rivers. It is well adapted to finding food beneath the water.",
+            identify: "A compact, dark brown bird with a distinctive white throat and breast. It is often seen bobbing up and down on rocks beside running water.",
+            habitat: "Fast-flowing rivers, streams, rocky pools and clean waterways.",
+            where: "Look along the East Dart, West Dart and other clear-running rivers. Watch for birds perched on rocks or diving into the water.",
+            season: "Present throughout the year. Spring and summer are particularly interesting for watching breeding behaviour, while winter birds can still be seen along suitable rivers.",
+            facts: [
+                "Dippers can walk along the riverbed underwater using their strong feet.",
+                "They feed on aquatic insects and other small river creatures.",
+                "Their dense feathers help keep them warm in cold water."
+            ],
+            advice: "Watch from the riverbank and avoid approaching nests, which may be hidden close to waterfalls, bridges and riverbanks. Take care on slippery rocks."
+        },
+
+        buzzard: {
+            name: "Buzzard",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common%20Buzzard%20by%20caroline%20legg.jpg",
+            description: "The buzzard is one of Britain's most familiar birds of prey and is frequently seen soaring over Dartmoor's open countryside.",
+            identify: "A broad-winged bird of prey with a rounded tail. Plumage varies from pale brown to very dark brown, often with a lighter breast.",
+            habitat: "Woodland, farmland, open moorland, valleys and areas with scattered trees.",
+            where: "Look upwards over open moorland, woodland edges and valleys. Buzzards often circle high overhead using rising warm air.",
+            season: "Present throughout the year. They are especially noticeable during spring and summer when pairs are active around their territories.",
+            facts: [
+                "Buzzards use rising warm air, called thermals, to soar with little effort.",
+                "They feed on small mammals, birds, carrion and other available prey.",
+                "Their familiar mewing call can often be heard across the countryside."
+            ],
+            advice: "Observe from a distance, particularly around woodland where nests may be located. Never approach or disturb a nest."
+        },
+
+        nightjar: {
+            name: "Nightjar",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/European%20Nightjar.jpg",
+            description: "The nightjar is a mysterious summer visitor to Dartmoor. It is most active around dusk and during the night, when its unusual churring call can be heard across suitable heathland.",
+            identify: "A beautifully camouflaged bird with mottled brown, grey and black feathers, long wings and a small bill. Males have white markings on their wings and tail.",
+            habitat: "Open heathland, woodland clearings, scrub and areas with scattered trees.",
+            where: "Listen around suitable heathland and woodland edges during warm summer evenings. They are much easier to hear than to see.",
+            season: "A summer visitor, arriving in late spring and leaving in autumn to migrate to Africa.",
+            facts: [
+                "Nightjars are mainly active at dusk and during the night.",
+                "They catch moths and other flying insects in flight.",
+                "Their churring call can continue for long periods on summer evenings."
+            ],
+            advice: "Avoid walking through suitable nesting habitat at night. Keep noise and artificial lighting to a minimum and never approach a bird sitting on the ground."
+        }
+    };
+
+    const bird = birds[id];
+    if (!bird) return;
+
+    const oldPage = document.getElementById("attraction");
+    if (oldPage) oldPage.remove();
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+        z-index:9999;
+    `;
+
+    page.innerHTML = `
+        <div style="max-width:850px;margin:auto;background:white;
+            border-radius:14px;padding:20px;">
+
+            <button onclick="document.getElementById('attraction').remove();openWildlifeCategory('Birds')"
+                style="padding:12px 20px;background:#19382e;
+                color:white;border:0;border-radius:7px;cursor:pointer;">
+                ← Back to Birds
+            </button>
+
+            <img src="${bird.image}"
+                alt="${bird.name}"
+                style="width:100%;height:300px;object-fit:cover;
+                border-radius:12px;margin-top:18px;">
+
+            <p style="color:#987344;font-weight:bold;
+                letter-spacing:1px;margin-top:20px;">
+                DARTMOOR WILDLIFE
+            </p>
+
+            <h2 style="color:#19382e;text-align:center;">
+                ${bird.name}
+            </h2>
+
+            <p style="color:#555;line-height:1.7;">
+                ${bird.description}
+            </p>
+
+            <h3 style="color:#315a48;">Identification</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${bird.identify}
+            </p>
+
+            <h3 style="color:#315a48;">Habitat</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${bird.habitat}
+            </p>
+
+            <h3 style="color:#315a48;">Where to Spot Them</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${bird.where}
+            </p>
+
+            <h3 style="color:#315a48;">When to See Them</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${bird.season}
+            </p>
+
+            <div style="background:#e5eadf;padding:18px;
+                border-radius:12px;margin-top:20px;">
+                <h3 style="color:#19382e;margin-top:0;">
+                    Interesting Facts
+                </h3>
+                <ul style="color:#444;line-height:1.8;">
+                    ${bird.facts.map(fact => `<li>${fact}</li>`).join("")}
+                </ul>
+            </div>
+
+            <div style="background:#fce9df;padding:18px;
+                border-radius:12px;margin-top:20px;">
+                <h3 style="color:#19382e;margin-top:0;">
+                    Wildlife Watching Advice
+                </h3>
+                <p style="color:#555;line-height:1.7;">
+                    ${bird.advice}
+                </p>
+            </div>
+
+            <p style="color:#777;font-size:12px;margin-top:25px;">
+                Information: Dartmoor National Park Authority and wildlife conservation organisations.
+            </p>
         </div>
     `;
 
