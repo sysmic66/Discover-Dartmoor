@@ -3665,18 +3665,99 @@ ${category === "Birds" ? `
 
     </div>
 ` : ""}
-            ${category === "Insects and Butterflies" ? `
-                <div style="background:white;border-radius:12px;overflow:hidden;">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Small%20pearl-bordered%20fritillary.jpg"
-                        style="width:100%;height:190px;object-fit:cover;">
-                    <div style="padding:15px;">
-                        <h3 style="color:#19382e;">Butterflies and Insects</h3>
-                        <p style="color:#666;">Discover the colourful butterflies, dragonflies and fascinating insects found across Dartmoor.</p>
-                        <span style="color:#987344;font-weight:bold;">MORE SPECIES COMING SOON</span>
-                    </div>
-                </div>
-            ` : ""}
+        ${category === "Insects and Butterflies" ? `
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;">
 
+        <div onclick="openInsectDetails('marsh-fritillary')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Marsh%20fritillary%20%28Euphydryas%20aurinia%29%20female%20underside%202.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Marsh Fritillary</h3>
+                <p style="color:#666;">A striking orange and yellow butterfly associated with damp grassland.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openInsectDetails('small-pearl-bordered')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Small%20pearl-bordered%20fritillary.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Small Pearl-bordered Fritillary</h3>
+                <p style="color:#666;">A delicate orange butterfly with distinctive pale markings underneath its wings.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openInsectDetails('silver-studded-blue')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Silver-studded%20blue.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Silver-studded Blue</h3>
+                <p style="color:#666;">A small blue butterfly found on suitable heathland and moorland habitats.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openInsectDetails('meadow-brown')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Meadow%20Brown%20%28Maniola%20jurtina%29.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Meadow Brown</h3>
+                <p style="color:#666;">A familiar brown butterfly often seen flying over grassland in summer.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openInsectDetails('red-admiral')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Admiral%20Vanessa%20atalanta.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Red Admiral</h3>
+                <p style="color:#666;">A colourful butterfly with bold red bands across dark wings.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openInsectDetails('emperor-moth')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Emperor%20moth%20Saturnia%20pavonia.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Emperor Moth</h3>
+                <p style="color:#666;">A beautiful moorland moth with large eye-like markings on its wings.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openInsectDetails('six-spot-burnet')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Six-spot%20Burnet%20moth.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Six-spot Burnet Moth</h3>
+                <p style="color:#666;">A day-flying black moth with six bright red spots on each forewing.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+        <div onclick="openInsectDetails('common-darter')"
+            style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20darter%20%28Sympetrum%20striolatum%29.jpg"
+                style="width:100%;height:190px;object-fit:cover;">
+            <div style="padding:15px;">
+                <h3 style="color:#19382e;">Common Darter Dragonfly</h3>
+                <p style="color:#666;">A fast-flying dragonfly often seen around ponds and waterways.</p>
+                <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+            </div>
+        </div>
+
+    </div>
+` : ""}
             
             ${category === "Plants and Wildflowers" ? `
                 <div style="background:white;border-radius:12px;overflow:hidden;">
@@ -4388,7 +4469,230 @@ function openReptileDetails(id) {
 
     document.body.appendChild(page);
 }
+function openInsectDetails(id) {
+    const insects = {
+        "marsh-fritillary": {
+            name: "Marsh Fritillary",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Marsh%20fritillary%20%28Euphydryas%20aurinia%29%20female%20underside%202.jpg",
+            description: "The marsh fritillary is a striking butterfly associated with damp grassland and traditional flower-rich meadows. Dartmoor is an important area for this threatened species.",
+            identify: "An orange, yellow and brown butterfly with a chequered pattern across its wings. The underside has distinctive pale markings.",
+            habitat: "Damp grassland, marshy meadows and rough pasture where its main caterpillar foodplant, devil's-bit scabious, grows.",
+            where: "Look in suitable damp grassland and flower-rich meadows, particularly where devil's-bit scabious is abundant. Always remain on public paths.",
+            season: "Adult butterflies are usually seen from late May into July, depending on weather and location. Caterpillars are present at other times of the year.",
+            facts: [
+                "The marsh fritillary is a threatened butterfly in Britain.",
+                "Its caterpillars feed mainly on devil's-bit scabious.",
+                "Young caterpillars live together in communal webs."
+            ],
+            advice: "Watch from a distance and avoid walking through areas of devil's-bit scabious or caterpillar webs. These butterflies depend on carefully managed grassland, so do not disturb their habitat."
+        },
 
+        "small-pearl-bordered": {
+            name: "Small Pearl-bordered Fritillary",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Small%20pearl-bordered%20fritillary.jpg",
+            description: "The small pearl-bordered fritillary is an attractive orange butterfly found in suitable damp grassland, woodland clearings and moorland habitats.",
+            identify: "A small orange butterfly with black markings on the upper wings. The underside of the hindwings has distinctive pale, pearl-like spots.",
+            habitat: "Damp grassland, heathland edges, woodland clearings and other open places where violets grow.",
+            where: "Look around sunny clearings and damp grassland with plenty of low-growing vegetation. It can be difficult to distinguish from other fritillary butterflies.",
+            season: "Usually seen from May to July, with timing affected by weather and local conditions.",
+            facts: [
+                "The caterpillars feed on violets.",
+                "The pale spots underneath the wings give this butterfly its name.",
+                "It is generally associated with open habitats that are not too heavily shaded."
+            ],
+            advice: "Observe without disturbing the vegetation. Avoid trampling violets and other plants that the caterpillars depend on."
+        },
+
+        "silver-studded-blue": {
+            name: "Silver-studded Blue",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Silver-studded%20blue.jpg",
+            description: "The silver-studded blue is a small butterfly associated with suitable heathland and coastal habitats. Its local populations depend on carefully maintained open ground.",
+            identify: "Males are blue on the upper wings, while females are usually brown. The underside has small black spots and distinctive metallic blue-green markings near the edges.",
+            habitat: "Heathland, open moorland edges and other low-growing vegetation, often where heather and gorse are present.",
+            where: "Look in suitable open heathland with warm, sheltered patches of low vegetation. Local colonies can be quite restricted.",
+            season: "Adults are generally seen during June and July, although timing varies with weather and location.",
+            facts: [
+                "The butterfly gets its name from the metallic-looking spots on the underside of its wings.",
+                "Its caterpillars can be associated with ants.",
+                "It relies on suitable open habitat and can be affected by scrub encroachment."
+            ],
+            advice: "Watch from paths and avoid trampling heathland vegetation. Do not assume every blue butterfly is this species; several blue butterflies can look similar."
+        },
+
+        "meadow-brown": {
+            name: "Meadow Brown",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Meadow%20Brown%20%28Maniola%20jurtina%29.jpg",
+            description: "The meadow brown is one of Britain's familiar grassland butterflies and can be seen flying over suitable grassy habitats during summer.",
+            identify: "Usually brown with an orange patch on the forewing and a small eyespot near the wing tip. Females often have more orange colouring than males.",
+            habitat: "Grassland, meadows, roadside verges, woodland rides and rough grassy areas.",
+            where: "Look over flower-rich meadows, grassy paths and sunny field edges. They often fly low among the grass.",
+            season: "Usually on the wing from June to September, sometimes into October in favourable conditions.",
+            facts: [
+                "The caterpillars feed on grasses.",
+                "Adults often rest with their wings closed when the weather is cool.",
+                "It is a widespread butterfly that can be seen in many different grassy habitats."
+            ],
+            advice: "Take care around long grass and flower-rich verges. Avoid unnecessary trampling and leave wildflowers and grasses undisturbed."
+        },
+
+        "red-admiral": {
+            name: "Red Admiral",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Admiral%20Vanessa%20atalanta.jpg",
+            description: "The red admiral is a striking butterfly that visits gardens, woodland edges, hedgerows and open countryside across Britain.",
+            identify: "A dark, almost black butterfly with bright red bands across the wings and white spots near the tips of the forewings.",
+            habitat: "Gardens, woodland edges, hedgerows, parks, open countryside and places with nectar-rich flowers.",
+            where: "Look around thistles, buddleia, bramble flowers and other nectar sources. They may also feed on fallen fruit.",
+            season: "Most noticeable from spring through autumn. Some adults can remain active during mild winter weather.",
+            facts: [
+                "Red admirals are strong fliers.",
+                "Their caterpillars feed on nettles.",
+                "Many red admirals migrate to Britain, while others may overwinter here during mild conditions."
+            ],
+            advice: "Planting native nectar-rich flowers and allowing some nettles to grow in suitable places can help butterflies. Watch without disturbing caterpillars."
+        },
+
+        "emperor-moth": {
+            name: "Emperor Moth",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Emperor%20moth%20Saturnia%20pavonia.jpg",
+            description: "The emperor moth is one of Britain's most impressive native moths. It is associated with heathland and other open habitats.",
+            identify: "A large, colourful moth with prominent eye-like spots on all four wings. Males are usually orange-brown, while females are larger and greyer.",
+            habitat: "Heathland, moorland, scrub and open habitats where heather, bramble and other suitable caterpillar foodplants grow.",
+            where: "Look in suitable heathland and scrub. Males fly during the day, particularly in sunshine, while females are more often found resting.",
+            season: "Adults are usually seen in spring, particularly from April to May, depending on weather and location.",
+            facts: [
+                "Male emperor moths use their highly sensitive antennae to detect the scent of females.",
+                "The caterpillars change colour as they grow.",
+                "The eye-like wing markings can help deter predators."
+            ],
+            advice: "Watch from paths and avoid disturbing resting moths or caterpillars. Do not handle them, as their delicate wings can be damaged."
+        },
+
+        "six-spot-burnet": {
+            name: "Six-spot Burnet Moth",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Six-spot%20Burnet%20moth.jpg",
+            description: "The six-spot burnet is a day-flying moth that is often seen visiting wildflowers in sunny grassland and meadow habitats.",
+            identify: "A distinctive black or dark metallic-looking moth with six bright red spots on each forewing. The red markings can sometimes vary or merge.",
+            habitat: "Flower-rich grassland, meadows, coastal grassland and open areas where bird's-foot trefoil grows.",
+            where: "Look around sunny grassland and wildflower patches, especially where bird's-foot trefoil is present. Adults often visit thistle and knapweed flowers.",
+            season: "Usually seen from June to August, depending on local conditions and weather.",
+            facts: [
+                "Despite looking like a butterfly, it is a moth that flies during the day.",
+                "Its caterpillars feed mainly on bird's-foot trefoil.",
+                "The bright red markings warn predators that it contains defensive chemicals."
+            ],
+            advice: "Avoid trampling wildflowers and caterpillar foodplants. Observe resting moths without touching their wings."
+        },
+
+        "common-darter": {
+            name: "Common Darter Dragonfly",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common%20darter%20%28Sympetrum%20striolatum%29.jpg",
+            description: "The common darter is a familiar dragonfly that can be seen around ponds, lakes, rivers and other freshwater habitats.",
+            identify: "A relatively small dragonfly with a slender body. Mature males are mainly red, while females and younger individuals are usually yellow-brown.",
+            habitat: "Ponds, lakes, reservoirs, slow-flowing waterways and other still or gently moving freshwater habitats.",
+            where: "Look around sunny pond edges and sheltered waterside spots. Adults often perch on stones, bare ground and vegetation before darting out to catch insects.",
+            season: "Adults are usually seen from July into November, sometimes later during mild weather.",
+            facts: [
+                "Common darters are fast, agile hunters.",
+                "They often return to the same favourite perch after catching prey.",
+                "They feed on flying insects, including mosquitoes and midges."
+            ],
+            advice: "Watch from the water's edge without disturbing vegetation or entering ponds. Avoid catching dragonflies or damaging their breeding habitat."
+        }
+    };
+
+    const insect = insects[id];
+    if (!insect) return;
+
+    const oldPage = document.getElementById('attraction');
+    if (oldPage) oldPage.remove();
+
+    const page = document.createElement('div');
+    page.id = 'attraction';
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+        z-index:9999;
+    `;
+
+    page.innerHTML = `
+        <div style="max-width:850px;margin:auto;background:white;
+            border-radius:12px;padding:20px;">
+
+            <button onclick="document.getElementById('attraction').remove();openWildlifeCategory('Insects and Butterflies')"
+                style="padding:12px 20px;background:#19382e;
+                color:white;border:0;border-radius:7px;cursor:pointer;">
+                ← Back to Insects and Butterflies
+            </button>
+
+            <h2 style="color:#19382e;text-align:center;">
+                ${insect.name}
+            </h2>
+
+            <img src="${insect.image}"
+                alt="${insect.name}"
+                style="width:100%;height:300px;object-fit:contain;
+                background:#f4f1e8;border-radius:12px;margin-top:18px;">
+
+            <p style="color:#555;line-height:1.6;">
+                ${insect.description}
+            </p>
+
+            <h3 style="color:#315a48;">Identification</h3>
+            <p style="color:#555;line-height:1.6;">
+                ${insect.identify}
+            </p>
+
+            <h3 style="color:#315a48;">Habitat</h3>
+            <p style="color:#555;line-height:1.6;">
+                ${insect.habitat}
+            </p>
+
+            <h3 style="color:#315a48;">Where to Spot Them</h3>
+            <p style="color:#555;line-height:1.6;">
+                ${insect.where}
+            </p>
+
+            <h3 style="color:#315a48;">When to See Them</h3>
+            <p style="color:#555;line-height:1.6;">
+                ${insect.season}
+            </p>
+
+            <div style="background:#e5eadf;padding:18px;
+                border-radius:10px;margin-top:20px;">
+
+                <h3 style="color:#19382e;margin-top:0;">
+                    Interesting Facts
+                </h3>
+
+                <ul style="color:#444;line-height:1.7;">
+                    ${insect.facts.map(fact => `<li>${fact}</li>`).join('')}
+                </ul>
+            </div>
+
+            <div style="background:#fce9df;padding:18px;
+                border-radius:10px;margin-top:20px;">
+
+                <h3 style="color:#19382e;margin-top:0;">
+                    Wildlife Watching Advice
+                </h3>
+
+                <p style="color:#555;line-height:1.6;margin-bottom:0;">
+                    ${insect.advice}
+                </p>
+            </div>
+
+            <p style="font-size:12px;color:#777;margin-top:20px;">
+                Information: Butterfly Conservation and wildlife conservation organisations.
+            </p>
+
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
 const dartmoorPlaces = {
     
 haytor: {
