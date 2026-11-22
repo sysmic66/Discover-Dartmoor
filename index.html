@@ -3536,7 +3536,10 @@ if (!pub) return;
 
                     <p style="font-size:12px;color:#777;
                         padding:0 25px;">
-                        Photo: ${pub.photoCredit} ·
+                        Photo: <a href="${pub.photoLink || '#'}"
+    target="_blank" style="color:#777;">
+    ${pub.photoCredit}
+</a> ·
 <a href="https://creativecommons.org/licenses/by-sa/2.0/"
     target="_blank" style="color:#777;">
     CC BY-SA 2.0
