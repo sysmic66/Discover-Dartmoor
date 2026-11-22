@@ -287,6 +287,7 @@ function openMammalDetails(id) {
     document.body.appendChild(page);
 
 }
+position: relative;
 min-height: 430px;
 background:
 linear-gradient(90deg, rgba(15,36,28,.82), rgba(15,36,28,.15)),
@@ -567,6 +568,19 @@ footer strong {
         font-size: 26px;
     }
 }
+    
+.photo-credit {
+    position: absolute;
+    bottom: 12px;
+    right: 18px;
+    font-size: 11px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    padding: 5px 9px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
 </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
@@ -601,6 +615,9 @@ footer strong {
         CLEAR
     </button>
         </div>
+    </div>
+    <div class="photo-credit">
+    Photo: Poppy Gitsham · Pexels
     </div>
 </section>
 
