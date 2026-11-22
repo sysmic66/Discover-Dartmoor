@@ -3145,7 +3145,8 @@ function openWildlifeCategory(category) {
         </div>
     </div>
 
-    <div style="background:white;border-radius:12px;overflow:hidden;">
+    <div onclick="openMammalDetails('fallow-deer')"
+    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fallow%20Deer.jpg"
             alt="Fallow deer"
             style="width:100%;height:190px;object-fit:cover;">
@@ -3159,7 +3160,8 @@ function openWildlifeCategory(category) {
             </span>
         </div>
     </div>
-    <div style="background:white;border-radius:12px;overflow:hidden;">
+    <div onclick="openMammalDetails('red-deer')"
+    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20deer%20stag.jpg"
             alt="Red deer stag"
             style="width:100%;height:190px;object-fit:cover;">
@@ -3173,7 +3175,8 @@ function openWildlifeCategory(category) {
             </span>
         </div>
     </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;">
+        <div onclick="openMammalDetails('otter')"
+    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/European_Otter.jpg"
             alt="European otter"
             style="width:100%;height:190px;object-fit:cover;">
@@ -3187,7 +3190,8 @@ function openWildlifeCategory(category) {
             </span>
         </div>
     </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;">
+        <div onclick="openMammalDetails('red-fox')"
+    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fox.jpg"
             alt="Red fox"
             style="width:100%;height:190px;object-fit:cover;">
@@ -3201,7 +3205,8 @@ function openWildlifeCategory(category) {
             </span>
         </div>
     </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;">
+        <div onclick="openMammalDetails('badger')"
+    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/European%20Badger%20-%20Meles%20meles%20%2852261502699%29.jpg"
             alt="European badger"
             style="width:100%;height:190px;object-fit:cover;">
@@ -3215,7 +3220,8 @@ function openWildlifeCategory(category) {
             </span>
         </div>
     </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;">
+        <div onclick="openMammalDetails('hedgehog')"
+    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/European%20Hedgehog.jpg"
             alt="European hedgehog"
             style="width:100%;height:190px;object-fit:cover;">
@@ -3229,7 +3235,8 @@ function openWildlifeCategory(category) {
             </span>
         </div>
     </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;">
+        <div onclick="openMammalDetails('bats')"
+    style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus%20pipistrellus01.jpg"
             alt="Common pipistrelle bat"
             style="width:100%;height:190px;object-fit:cover;">
@@ -3310,22 +3317,144 @@ function openWildlifeCategory(category) {
 
     document.body.appendChild(page);
 }
+    
 function openMammalDetails(id) {
     const mammals = {
+
         pony: {
             name: "Dartmoor Pony",
             image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor%20ponies.jpg",
-            description: "An iconic part of Dartmoor's landscape, the ponies have roamed the open moorland for thousands of years.",
+            description: "An iconic part of Dartmoor's landscape, semi-wild ponies have roamed the open moorland for thousands of years.",
+            identify: "Dartmoor Hill Ponies come in a variety of colours, including bay, brown, black, grey and chestnut. They are generally sturdy, compact ponies adapted to life on the open moor.",
             habitat: "Open moorland, heathland, woodland edges and common land.",
             where: "Ponies can be spotted across many areas of Dartmoor, particularly on the open commons. Bellever Forest is also a good place to look.",
-            season: "Ponies can be seen throughout the year. Foals are usually born between May and August.",
+            season: "Ponies can be seen throughout the year. Foals are usually born during spring and summer.",
             facts: [
-                "Ponies have been part of Dartmoor's landscape for at least 4,000 years.",
-                "Most ponies seen roaming the moor are Dartmoor Hill Ponies.",
+                "Ponies have roamed freely on Dartmoor for at least 4,000 years.",
+                "Most ponies seen roaming the moor are semi-wild Dartmoor Hill Ponies.",
                 "They are owned by local farmers and commoners, even though they roam freely.",
                 "Their grazing helps maintain important habitats for other wildlife."
             ],
             advice: "Enjoy watching ponies from a distance. Never feed or attempt to touch them. Keep dogs under control and take particular care around foals."
+        },
+
+        "fallow-deer": {
+            name: "Fallow Deer",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Fallow%20Deer.jpg",
+            description: "Fallow deer are elegant, medium-sized deer found in parts of Devon and the wider Dartmoor countryside.",
+            identify: "Fallow deer have a distinctive black-and-white pattern on their rump. Their coats vary from spotted chestnut to pale cream and very dark brown. Males have broad, flattened antlers.",
+            habitat: "Woodland, woodland edges, parkland and nearby open grassland.",
+            where: "Look around quieter wooded areas and woodland edges across the wider Dartmoor countryside. Sightings are not guaranteed.",
+            season: "Can be seen throughout the year. The autumn rut is an interesting time to learn about their behaviour.",
+            facts: [
+                "Fallow deer are smaller than red deer.",
+                "Their coat colour can vary considerably.",
+                "Male fallow deer are known as bucks and females as does.",
+                "Their broad, flattened antlers are called palmate antlers."
+            ],
+            advice: "Watch quietly from a distance, especially during the autumn rut. Avoid approaching deer or disturbing them when they are feeding or resting."
+        },
+
+        "red-deer": {
+            name: "Red Deer",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20deer%20stag.jpg",
+            description: "Red deer are Britain's largest land mammal and one of the most impressive animals found in the British countryside.",
+            identify: "Red deer have a reddish-brown summer coat which becomes greyer in winter. Adult males, known as stags, grow large branching antlers. Females are known as hinds.",
+            habitat: "Woodland, open countryside, heathland and areas of rough grassland.",
+            where: "Look in quieter wooded valleys and areas of suitable countryside across the wider Dartmoor region. Deer are elusive, so sightings can be unpredictable.",
+            season: "Can be seen throughout the year. Autumn is particularly interesting during the rut, when stags compete for access to females.",
+            facts: [
+                "Red deer are Britain's largest land mammal.",
+                "Male red deer grow and shed a new set of antlers each year.",
+                "The autumn breeding season is known as the rut.",
+                "Young red deer are called calves."
+            ],
+            advice: "Keep well away from deer, particularly during the autumn rut. Never approach stags or get between animals. Watch quietly and use binoculars if possible."
+        },
+
+        otter: {
+            name: "European Otter",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/European_Otter.jpg",
+            description: "The European otter is a secretive mammal that lives along Dartmoor's rivers and waterways. Dartmoor is particularly important for otters.",
+            identify: "Otters have long streamlined bodies, short legs, webbed feet, thick brown fur and a powerful tail. Their pale throat and chest can help identify them.",
+            habitat: "Rivers, streams, lakes and wetlands, particularly where there is plenty of food and suitable cover along the banks.",
+            where: "Otters occur throughout the main rivers running off Dartmoor, including the Dart and other river catchments. Look for signs along quiet riverbanks.",
+            season: "Present throughout the year. They can be active at any time, although dawn, dusk and darkness are often good times to look.",
+            facts: [
+                "Otters are excellent swimmers and have webbed feet.",
+                "They feed mainly on fish but also eat other aquatic animals.",
+                "They leave droppings known as spraint to mark their territory.",
+                "Tracks and spraint can be easier to find than the otter itself."
+            ],
+            advice: "Keep your distance and avoid disturbing riverbanks or potential resting places. Never follow an otter or block its route to the water."
+        },
+
+        "red-fox": {
+            name: "Red Fox",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fox.jpg",
+            description: "The red fox is an adaptable mammal that can live in a wide range of Dartmoor habitats, from woodland and farmland to the open countryside.",
+            identify: "Recognisable by its reddish-orange coat, pointed ears, narrow muzzle and long bushy tail, which usually has a pale tip.",
+            habitat: "Woodland, hedgerows, farmland, moorland edges and areas close to human settlements.",
+            where: "Foxes can be found across many parts of Dartmoor. Look for tracks and signs along woodland paths, hedgerows and quieter countryside.",
+            season: "Can be seen throughout the year. Dawn and dusk are often good times to spot them, although foxes may be active during daylight.",
+            facts: [
+                "Foxes have excellent hearing and a strong sense of smell.",
+                "They eat a varied diet including small mammals, birds, insects and fruit.",
+                "A fox's home is known as an earth or den.",
+                "Foxes communicate using a range of calls and scent markings."
+            ],
+            advice: "Observe quietly and never attempt to feed or approach a fox. Keep food waste secure and give any fox you encounter plenty of space."
+        },
+
+        badger: {
+            name: "European Badger",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/European%20Badger%20-%20Meles%20meles%20%2852261502699%29.jpg",
+            description: "The European badger is a familiar but mostly nocturnal mammal found in Dartmoor's woodlands and surrounding countryside.",
+            identify: "Badgers have a stocky body, short legs, grey fur and a distinctive black-and-white striped face.",
+            habitat: "Woodland, hedgerows, scrub and grassland, often close to areas where they can find food and suitable ground for digging.",
+            where: "Look for signs around woodland edges, hedgerows and grassy areas. Badgers are more often detected through their tracks and setts than seen in daylight.",
+            season: "Active throughout the year, although activity can be reduced during very cold winter weather. They usually emerge after dark.",
+            facts: [
+                "Badgers live in underground homes called setts.",
+                "They have a powerful sense of smell.",
+                "Their diet includes earthworms, insects, fruit and other small animals.",
+                "They often follow regular paths between feeding areas and their setts."
+            ],
+            advice: "Never approach or enter a badger sett. Avoid disturbing woodland areas after dark and observe from a quiet, respectful distance."
+        },
+
+        hedgehog: {
+            name: "European Hedgehog",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/European%20Hedgehog.jpg",
+            description: "The European hedgehog is a much-loved British mammal that can be found in suitable gardens, hedgerows and countryside habitats.",
+            identify: "Hedgehogs have a rounded body covered in protective spines, a pointed face and small dark eyes. They often curl into a ball when frightened.",
+            habitat: "Hedgerows, gardens, rough grassland, scrub and areas with plenty of cover.",
+            where: "Look in suitable gardens, village edges, hedgerows and grassy areas around Dartmoor. They are difficult to spot because they are mostly active at night.",
+            season: "Most active during the warmer months, generally spring through autumn. They hibernate during colder periods, although timing varies.",
+            facts: [
+                "A hedgehog has thousands of protective spines.",
+                "Their diet includes beetles, caterpillars, earthworms and other invertebrates.",
+                "They usually forage after dark.",
+                "Hedgehogs need connected habitats and safe routes between gardens and countryside."
+            ],
+            advice: "Never disturb a hibernating hedgehog or handle one unnecessarily. Check long grass and bonfires before disturbing them, and leave gaps in fences to help them move between gardens."
+        },
+
+        bats: {
+            name: "Bats of Dartmoor",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus%20pipistrellus01.jpg",
+            description: "Dartmoor is an important area for bats. Nearly all of Britain's 16 bat species have been recorded in the National Park, including several nationally rare species.",
+            identify: "Bats are flying mammals with leathery wings formed from elongated fingers. They are usually easiest to notice as small shapes flying at dusk. Different species vary in size, shape and flight pattern.",
+            habitat: "Woodlands, hedgerows, rivers, old buildings, tree holes, caves and other sheltered roosting places.",
+            where: "Look around woodland edges, rivers, hedgerows and sheltered areas at dusk. Dartmoor is particularly important for greater horseshoe bats, lesser horseshoe bats and barbastelle bats.",
+            season: "Most visible from spring to autumn, when they emerge after sunset to feed. Activity reduces during colder winter months.",
+            facts: [
+                "Bats use echolocation to navigate and find insects in darkness.",
+                "They are the only mammals capable of true sustained flight.",
+                "Nearly all of Britain's 16 bat species have been recorded on Dartmoor.",
+                "The greater horseshoe, lesser horseshoe and barbastelle bats are particularly important on Dartmoor."
+            ],
+            advice: "Watch from a distance and avoid disturbing roosts. Never handle bats. If you find an injured bat, contact the Bat Conservation Trust for advice."
         }
     };
 
@@ -3372,14 +3501,17 @@ function openMammalDetails(id) {
                     ${animal.description}
                 </p>
 
+                <h3 style="color:#315a48;">Identification</h3>
+                <p style="line-height:1.7;">${animal.identify}</p>
+
                 <h3 style="color:#315a48;">Habitat</h3>
-                <p>${animal.habitat}</p>
+                <p style="line-height:1.7;">${animal.habitat}</p>
 
                 <h3 style="color:#315a48;">Where to Spot Them</h3>
-                <p>${animal.where}</p>
+                <p style="line-height:1.7;">${animal.where}</p>
 
                 <h3 style="color:#315a48;">When to See Them</h3>
-                <p>${animal.season}</p>
+                <p style="line-height:1.7;">${animal.season}</p>
 
                 <div style="background:#e5eadf;padding:16px;
                     border-radius:10px;margin-top:20px;">
@@ -3401,14 +3533,14 @@ function openMammalDetails(id) {
                         Wildlife Watching Advice
                     </h3>
 
-                    <p style="line-height:1.6;">
+                    <p style="line-height:1.7;">
                         ${animal.advice}
                     </p>
 
                 </div>
 
                 <p style="font-size:12px;color:#777;margin-top:20px;">
-                    Information: Dartmoor National Park Authority.
+                    Information: Dartmoor National Park Authority and wildlife conservation organisations.
                 </p>
 
             </div>
@@ -3417,6 +3549,7 @@ function openMammalDetails(id) {
 
     document.body.appendChild(page);
 }
+
 
 const dartmoorPlaces = {
     
