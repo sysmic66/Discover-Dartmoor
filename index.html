@@ -3290,6 +3290,129 @@ function openFoodDrink(id) {
         }
     };
 
+function openPubDetails(id) {
+    document.getElementById("attraction")?.remove();
+
+    const pubs = {
+        "warren-house-inn": {
+            name: "Warren House Inn",
+            location: "Postbridge",
+            description: "A famous traditional moorland inn in the heart of Dartmoor, surrounded by open countryside."
+        },
+        "old-inn": {
+            name: "The Old Inn",
+            location: "Widecombe-in-the-Moor",
+            description: "A historic village inn in the centre of Widecombe, welcoming visitors exploring the surrounding moorland."
+        },
+        "castle-inn": {
+            name: "The Castle Inn",
+            location: "Lydford",
+            description: "A historic village pub close to Lydford Gorge and the western edge of Dartmoor."
+        },
+        "mary-tavy-inn": {
+            name: "The Mary Tavy Inn",
+            location: "Mary Tavy",
+            description: "A traditional country inn near Tavistock, with views towards Dartmoor."
+        },
+        "dartmoor-inn": {
+            name: "Dartmoor Inn",
+            location: "Merrivale",
+            description: "A country inn serving visitors exploring the western side of Dartmoor."
+        },
+        "walkhampton-inn": {
+            name: "The Walkhampton Inn",
+            location: "Walkhampton",
+            description: "A traditional village inn in the Dartmoor village of Walkhampton."
+        },
+        "ring-of-bells": {
+            name: "Ring of Bells Inn",
+            location: "North Bovey",
+            description: "A village inn in the picturesque Dartmoor village of North Bovey."
+        },
+        "kestor-inn": {
+            name: "Kestor Inn",
+            location: "Manaton",
+            description: "A traditional country pub in the village of Manaton, on the eastern side of Dartmoor."
+        },
+        "church-house-inn": {
+            name: "Church House Inn",
+            location: "Holne",
+            description: "A traditional village inn in Holne, surrounded by beautiful Dartmoor countryside."
+        },
+        "tors-inn": {
+            name: "The Tors Inn",
+            location: "Belstone",
+            description: "A country pub in Belstone, on the northern edge of Dartmoor."
+        }
+    };
+
+    const pub = pubs[id];
+    if (!pub) return;
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openFoodDrink('pubs')"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Pubs & Inns
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;overflow:hidden;">
+
+            <div style="padding:25px;">
+
+                <h2 style="color:#19382e;">
+                    ${pub.name}
+                </h2>
+
+                <p style="color:#987344;font-weight:bold;">
+                    ${pub.location}, Dartmoor
+                </p>
+
+                <p>${pub.description}</p>
+
+                <h3 style="color:#315a48;">
+                    About this pub
+                </h3>
+
+                <p>
+                    More information about this business will be added,
+                    including food, drink, facilities and visitor information.
+                </p>
+
+                <h3 style="color:#315a48;">
+                    Location
+                </h3>
+
+                <p>${pub.location}</p>
+
+                <p style="margin-top:20px;">
+                    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pub.name + " " + pub.location + " Dartmoor")}"
+                        target="_blank"
+                        style="color:#315a48;font-weight:bold;">
+                        Get directions →
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
+
     const item = categories[id];
     if (!item) return;
 
@@ -3322,6 +3445,89 @@ function openFoodDrink(id) {
                 <h3 style="color:#315a48;">What to discover</h3>
 
                 <p>${item.details}</p>
+                
+                ${id === "pubs" ? `
+                    <h3 style="color:#315a48;margin-top:25px;">
+                        Explore Dartmoor Pubs & Inns
+                    </h3>
+
+                    <div style="display:grid;
+                        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+                        gap:15px;margin-top:20px;">
+
+                        <div onclick="openPubDetails('warren-house-inn')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">Warren House Inn</h3>
+                            <p style="color:#666;">Postbridge</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                        <div onclick="openPubDetails('old-inn')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">The Old Inn</h3>
+                            <p style="color:#666;">Widecombe-in-the-Moor</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                        <div onclick="openPubDetails('castle-inn')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">The Castle Inn</h3>
+                            <p style="color:#666;">Lydford</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                        <div onclick="openPubDetails('mary-tavy-inn')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">The Mary Tavy Inn</h3>
+                            <p style="color:#666;">Mary Tavy</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                        <div onclick="openPubDetails('dartmoor-inn')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">Dartmoor Inn</h3>
+                            <p style="color:#666;">Merrivale</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                        <div onclick="openPubDetails('walkhampton-inn')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">The Walkhampton Inn</h3>
+                            <p style="color:#666;">Walkhampton</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                        <div onclick="openPubDetails('ring-of-bells')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">Ring of Bells Inn</h3>
+                            <p style="color:#666;">North Bovey</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                        <div onclick="openPubDetails('kestor-inn')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">Kestor Inn</h3>
+                            <p style="color:#666;">Manaton</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                        <div onclick="openPubDetails('church-house-inn')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">Church House Inn</h3>
+                            <p style="color:#666;">Holne</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                        <div onclick="openPubDetails('tors-inn')"
+                            style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+                            <h3 style="color:#19382e;">The Tors Inn</h3>
+                            <p style="color:#666;">Belstone</p>
+                            <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+                        </div>
+
+                    </div>
+                ` : ""}
+
 
                 <p style="margin-top:25px;">
                     <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.search)}"
