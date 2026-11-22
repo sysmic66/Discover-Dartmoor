@@ -3848,16 +3848,94 @@ ${category === "Birds" ? `
     </div>
 ` : ""}
             ${category === "River and Wetland Wildlife" ? `
-                <div style="background:white;border-radius:12px;overflow:hidden;">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/European%20otter%20(Lutra%20lutra).jpg"
-                        style="width:100%;height:190px;object-fit:cover;">
-                                      <div style="padding:15px;">
-                        <h3 style="color:#19382e;">River and Wetland Species</h3>
-                        <p style="color:#666;">Discover the wildlife living in Dartmoor's rivers, streams, ponds and wetlands.</p>
-                        <span style="color:#987344;font-weight:bold;">MORE SPECIES COMING SOON</span>
-                    </div>
-                </div>
-            ` : ""}
+    <div onclick="openRiverWildlifeDetails('otter')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/European%20Otter.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">European Otter</h3>
+            <p style="color:#666;">An elusive river mammal that hunts fish and other aquatic prey along Dartmoor's waterways.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openRiverWildlifeDetails('salmon')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Salmo%20salar.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Atlantic Salmon</h3>
+            <p style="color:#666;">Migratory fish that travel up Dartmoor's rivers to reach their freshwater spawning grounds.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openRiverWildlifeDetails('brown-trout')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Brown%20Trout%20%28Salmo%20trutta%29.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Brown Trout</h3>
+            <p style="color:#666;">A native freshwater fish found in the clear, oxygen-rich streams and rivers of Dartmoor.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openRiverWildlifeDetails('dipper')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/White%20Throated%20Dipper.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Dipper</h3>
+            <p style="color:#666;">A distinctive river bird that walks underwater searching for insect larvae and other food.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openRiverWildlifeDetails('grey-wagtail')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Grey%20wagtail%20%28Motacilla%20cinerea%29.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Grey Wagtail</h3>
+            <p style="color:#666;">A graceful riverbank bird recognised by its long tail and bright yellow underside.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openRiverWildlifeDetails('kingfisher')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common%20Kingfisher-Alcedo%20atthis.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Kingfisher</h3>
+            <p style="color:#666;">A brilliant blue and orange bird that dives into water to catch small fish.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openRiverWildlifeDetails('heron')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Grey%20heron%20%28Ardea%20cinerea%29%20photo.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Grey Heron</h3>
+            <p style="color:#666;">A tall, patient fishing bird often seen standing motionless beside rivers and pools.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+
+    <div onclick="openRiverWildlifeDetails('goosander')"
+        style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Goosander%20%28Mergus%20merganser%29.jpg"
+            style="width:100%;height:190px;object-fit:cover;">
+        <div style="padding:15px;">
+            <h3 style="color:#19382e;">Goosander</h3>
+            <p style="color:#666;">A large diving duck that uses its long, narrow bill to catch fish in rivers and lakes.</p>
+            <span style="color:#987344;font-weight:bold;">DISCOVER MORE →</span>
+        </div>
+    </div>
+` : ""}
 
     `;
 
@@ -4988,6 +5066,233 @@ function openInsectDetails(id) {
 
             <p style="font-size:12px;color:#777;margin-top:20px;">
                 Information: Dartmoor National Park Authority and botanical conservation sources.
+            </p>
+
+        </div>
+    `;
+
+    document.body.appendChild(page);
+    }
+    function openRiverWildlifeDetails(id) {
+    const species = {
+        otter: {
+            name: "European Otter",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/European%20Otter.jpg",
+            description: "The European Otter is one of Dartmoor's most fascinating river mammals. These elusive animals are well adapted to life in and around freshwater, hunting mainly at night and resting in secluded riverside cover.",
+            identify: "A large, streamlined mammal with dark brown fur, a pale throat and chest, a broad muzzle and a thick muscular tail. Otters are excellent swimmers.",
+            habitat: "Rivers, streams, lakes and wetlands, particularly where there is plenty of fish and undisturbed bankside vegetation.",
+            where: "Look for signs along the River Dart, East Dart and other waterways. Otters are difficult to see, but their tracks and droppings may reveal their presence.",
+            season: "Otters are active throughout the year. Dawn and dusk can offer opportunities to spot one, although sightings are never guaranteed.",
+            facts: [
+                "Otters have webbed feet that help them swim.",
+                "Their dense fur traps air to provide insulation in cold water.",
+                "They feed mainly on fish, but also take amphibians and other aquatic prey.",
+                "They use sheltered riverside resting places called holts."
+            ],
+            advice: "Keep your distance and remain quiet. Never approach an otter or block its route to the water. Look for tracks and signs without disturbing riverbanks."
+        },
+
+        salmon: {
+            name: "Atlantic Salmon",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Salmo%20salar.jpg",
+            description: "Atlantic Salmon are remarkable migratory fish that move between the sea and freshwater rivers. Dartmoor's river systems form part of the wider network used by salmon returning to spawn.",
+            identify: "A streamlined silver fish with a dark back, silvery sides and a powerful tail. Adults returning to freshwater often become darker as they approach spawning.",
+            habitat: "Clean, well-oxygenated rivers and streams, especially sections with gravel beds suitable for spawning.",
+            where: "The River Dart and other suitable river systems around Dartmoor support salmon populations. Look from riverbanks rather than entering the water.",
+            season: "Adult salmon return from the sea at different times of year. Spawning generally takes place during autumn and winter.",
+            facts: [
+                "Atlantic Salmon spend part of their lives at sea.",
+                "They return to freshwater rivers to reproduce.",
+                "Females create shallow nests in river gravel called redds.",
+                "Young salmon spend their early lives in freshwater before migrating downstream."
+            ],
+            advice: "Avoid walking through shallow gravel spawning areas. Disturbing the riverbed can damage salmon eggs and young fish."
+        },
+
+        "brown-trout": {
+            name: "Brown Trout",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Brown%20Trout%20%28Salmo%20trutta%29.jpg",
+            description: "Brown Trout are an important part of Dartmoor's freshwater ecosystems. They live in clear streams and rivers, feeding on aquatic insects and other small animals.",
+            identify: "A streamlined fish with a brown or golden body, darker spots and often red spots surrounded by pale rings along its sides.",
+            habitat: "Clear, cool streams and rivers with clean gravel, rocks, pools and plenty of oxygen.",
+            where: "Look into clear stretches of the Dart and other suitable streams. Trout are often found near rocks, pools and areas where currents change.",
+            season: "Present throughout the year. They are often easier to observe in clear water during brighter conditions.",
+            facts: [
+                "Brown Trout are closely related to Atlantic Salmon.",
+                "They feed on aquatic insects, larvae, worms and small fish.",
+                "They often hold position facing into the current while waiting for food.",
+                "Some brown trout populations remain in freshwater throughout their lives."
+            ],
+            advice: "Watch quietly from the bank and avoid casting shadows over shallow water. Never disturb gravel beds where fish may be spawning."
+        },
+
+        dipper: {
+            name: "Dipper",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/White%20Throated%20Dipper.jpg",
+            description: "The Dipper is one of Dartmoor's most distinctive river birds. It is specially adapted to life beside fast-flowing streams and can walk underwater in search of food.",
+            identify: "A compact dark brown bird with a striking white throat and breast. It often bobs up and down while perched on stones beside the water.",
+            habitat: "Fast-flowing rivers and streams with rocky beds and clean, oxygen-rich water.",
+            where: "Look around rocky stretches of the East Dart and other fast-flowing streams, particularly where exposed stones provide resting places.",
+            season: "Dippers can be seen throughout the year. They are often easiest to spot when perched on rocks in open stretches of river.",
+            facts: [
+                "Dippers can walk along the riverbed underwater.",
+                "They feed on aquatic insect larvae and other small river creatures.",
+                "Their wings help them move underwater against the current.",
+                "They are often associated with clean, well-oxygenated streams."
+            ],
+            advice: "Watch from the riverbank and avoid approaching nests or disturbing birds feeding along the water."
+        },
+
+        "grey-wagtail": {
+            name: "Grey Wagtail",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Grey%20wagtail%20%28Motacilla%20cinerea%29.jpg",
+            description: "The Grey Wagtail is a graceful bird often seen beside Dartmoor's rivers and streams. Its bright yellow underside and constantly moving tail make it easy to recognise.",
+            identify: "A slender grey bird with a long tail, yellow underparts and a distinctive white stripe above the eye. Males develop a black throat during the breeding season.",
+            habitat: "Rivers, streams, waterfalls and other waterside habitats, particularly where stones and shallow water provide feeding areas.",
+            where: "Look along the East Dart, around Postbridge and beside other suitable streams and waterfalls.",
+            season: "Can be seen throughout the year. Breeding activity takes place mainly during spring and summer.",
+            facts: [
+                "Grey Wagtails constantly bob their long tails.",
+                "They feed on insects and small invertebrates.",
+                "They often hunt around shallow water and wet rocks.",
+                "Despite its name, the bird has a very noticeable yellow underside."
+            ],
+            advice: "Look for movement along exposed stones and river edges. Keep away from nesting areas during spring and summer."
+        },
+
+        kingfisher: {
+            name: "Kingfisher",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common%20Kingfisher-Alcedo%20atthis.jpg",
+            description: "The Kingfisher is one of Britain's most colourful birds. Its brilliant blue and orange plumage can sometimes be seen flashing past the quieter stretches of Dartmoor's rivers.",
+            identify: "A small bird with bright blue upperparts, orange underparts, a long pointed bill and a large head in proportion to its body.",
+            habitat: "Rivers, streams and still waters with suitable fishing areas and banks where nesting tunnels can be made.",
+            where: "Look along quieter stretches of river, particularly where branches provide low perches above the water.",
+            season: "Kingfishers can be seen throughout the year. They are often noticed when flying low over the water.",
+            facts: [
+                "Kingfishers dive head-first to catch small fish.",
+                "They have excellent eyesight for spotting prey underwater.",
+                "They nest in tunnels dug into suitable riverbanks.",
+                "Their bright blue appearance is produced partly by the way light reflects from their feathers."
+            ],
+            advice: "Stay quiet and still near suitable riverbanks. Avoid approaching nesting banks or disturbing birds that are fishing."
+        },
+
+        heron: {
+            name: "Grey Heron",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Grey%20heron%20%28Ardea%20cinerea%29%20photo.jpg",
+            description: "The Grey Heron is a large, elegant wading bird often seen standing motionless beside Dartmoor's rivers and pools, waiting for an opportunity to catch fish.",
+            identify: "A tall grey bird with long legs, a long pointed yellow bill, a white head and a dark stripe extending from above the eye.",
+            habitat: "Rivers, streams, lakes, ponds, marshes and other shallow-water habitats.",
+            where: "Look along slower stretches of river, pools and wetland edges where shallow water provides feeding opportunities.",
+            season: "Can be seen throughout the year. They are often easiest to spot standing quietly beside the water.",
+            facts: [
+                "Grey Herons can remain completely still while waiting for prey.",
+                "They catch fish using a rapid thrust of their sharp bill.",
+                "They also eat amphibians, small mammals and other animals.",
+                "They nest in groups called heronries, often in tall trees."
+            ],
+            advice: "Use binoculars to watch from a distance. Herons can be easily disturbed while feeding, so avoid approaching too closely."
+        },
+
+        goosander: {
+            name: "Goosander",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Goosander%20%28Mergus%20merganser%29.jpg",
+            description: "The Goosander is a large diving duck that can be found on suitable rivers and lakes. It is a skilled underwater hunter, using its narrow serrated bill to catch fish.",
+            identify: "A large, streamlined diving duck with a long narrow bill. Adult males have a dark green head and mostly white body, while females have a reddish-brown head and grey body.",
+            habitat: "Clear rivers, lakes and reservoirs where fish are available and there are suitable places to rest.",
+            where: "Look on wider, calmer stretches of Dartmoor's rivers and suitable lakes, particularly during the winter months.",
+            season: "Can be seen throughout the year in suitable locations, with winter visitors adding to some local populations.",
+            facts: [
+                "Goosanders are members of the sawbill duck family.",
+                "Their narrow bills have serrated edges that help grip slippery fish.",
+                "They dive underwater to catch their prey.",
+                "They can nest in tree cavities and other sheltered sites."
+            ],
+            advice: "Watch from the bank with binoculars. Avoid disturbing resting birds, particularly during the winter when energy conservation is important."
+        }
+    };
+
+    const animal = species[id];
+    if (!animal) return;
+
+    const old = document.getElementById('attraction');
+    if (old) old.remove();
+
+    const page = document.createElement('div');
+    page.id = 'attraction';
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+        z-index:9999;
+    `;
+
+    page.innerHTML = `
+        <div style="max-width:850px;margin:auto;
+            background:white;border-radius:14px;padding:20px;">
+
+            <button onclick="document.getElementById('attraction').remove();openWildlifeCategory('River and Wetland Wildlife')"
+                style="padding:12px 20px;background:#19382e;
+                color:white;border:0;border-radius:7px;cursor:pointer;">
+                ← Back to River and Wetland Wildlife
+            </button>
+
+            <h2 style="color:#19382e;text-align:center;margin-top:20px;">
+                ${animal.name}
+            </h2>
+
+            <img src="${animal.image}"
+                style="width:100%;height:300px;object-fit:contain;
+                background:#f4f1e8;border-radius:12px;margin-top:18px;">
+
+            <p style="color:#555;line-height:1.7;margin-top:18px;">
+                ${animal.description}
+            </p>
+
+            <h3 style="color:#315a48;">Identification</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${animal.identify}
+            </p>
+
+            <h3 style="color:#315a48;">Habitat</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${animal.habitat}
+            </p>
+
+            <h3 style="color:#315a48;">Where to Spot Them</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${animal.where}
+            </p>
+
+            <h3 style="color:#315a48;">When to See Them</h3>
+            <p style="color:#555;line-height:1.7;">
+                ${animal.season}
+            </p>
+
+            <div style="background:#e5eadf;padding:18px;
+                border-radius:10px;margin-top:20px;">
+                <h3 style="color:#19382e;margin-top:0;">
+                    Interesting Facts
+                </h3>
+                <ul style="color:#555;line-height:1.8;padding-left:20px;">
+                    ${animal.facts.map(fact => `<li>${fact}</li>`).join('')}
+                </ul>
+            </div>
+
+            <div style="background:#fce9df;padding:18px;
+                border-radius:10px;margin-top:18px;">
+                <h3 style="color:#19382e;margin-top:0;">
+                    Wildlife Watching Advice
+                </h3>
+                <p style="color:#555;line-height:1.7;margin-bottom:0;">
+                    ${animal.advice}
+                </p>
+            </div>
+
+            <p style="font-size:12px;color:#777;margin-top:20px;">
+                Information: Dartmoor National Park Authority and wildlife conservation organisations.
             </p>
 
         </div>
