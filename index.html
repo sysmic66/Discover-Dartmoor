@@ -7043,7 +7043,7 @@ function openAttraction(id) {
 }
 function filterPlaces(category) {
     document.querySelectorAll(".place-card").forEach(card => {
-        const categories = card.dataset.category.split(" ");
+        const categories = (card.dataset.category || "").split(" ");
 
         card.style.display =
             category === "all" || categories.includes(category)
@@ -7051,38 +7051,84 @@ function filterPlaces(category) {
                 : "none";
     });
 }
-    function getPlaceCategory(id) {
+
+
+function getPlaceCategory(id) {
     const categories = {
+
         "tors-rocks": [
             "haytor", "houndtor", "bowermansnose",
             "bellevertor", "brentor", "belstonetor",
-            "yestor", "rippon"
+            "yestor", "rippon",
+            "high_willhays", "great_staple_tor",
+            "cox_tor", "great_mis_tor", "leather_tor",
+            "sharpitor", "combestone_tor", "kings_tor",
+            "south_hessary_tor", "dewerstone"
         ],
 
         "water-reservoirs": [
             "postbridge", "burrator", "fernworthy",
             "meldon", "venford", "finglebridge",
             "beckyfalls", "shaughbridge", "spitchwick",
-            "dartmeet"
+            "dartmeet", "canonteign_falls"
         ],
 
         "history": [
-            "castledrogo", "buckfastabbey",
+            "widecombe", "castledrogo", "buckfastabbey",
             "okehamptoncastle", "grimspound",
             "merrivale", "scorhill", "greywethers",
-            "higheruppacott"
+            "higheruppacott", "nuns_cross",
+            "ditsworthy_warren_house", "wheal_betsy",
+            "widgery_cross", "meldon_viaduct",
+            "lydford_castle", "finch_foundry",
+            "dartmoor_prison_museum", "south_devon_railway",
+            "buckland_abbey"
+        ],
+
+        "ancient-sites": [
+            "grimspound", "merrivale", "scorhill",
+            "greywethers", "nine_stones_belstone",
+            "fernworthy_stone_circle", "stalldown_stone_row",
+            "hingston_hill_stone_circle", "rippon"
         ],
 
         "nature": [
-            "widecombe", "wistmanswood",
-            "lydfordgorge", "dewerstone"
+            "wistmanswood", "lydfordgorge",
+            "dewerstone", "hembury_woods",
+            "yarner_wood", "stover_country_park",
+            "parke", "the_garden_house",
+            "beckyfalls", "shaughbridge",
+            "finglebridge", "spitchwick",
+            "dartmeet", "burrator",
+            "river_dart_country_park",
+            "crazywell_pool", "canonteign_falls"
+        ],
+
+        "gardens-attractions": [
+            "the_garden_house", "canonteign_falls",
+            "house_of_marbles", "river_dart_country_park",
+            "dartmoor_zoo", "pennywell_farm",
+            "buckfast_butterfly_farm",
+            "dartmoor_otter_sanctuary",
+            "buckland_abbey", "south_devon_railway"
+        ],
+
+        "family-days": [
+            "stover_country_park", "parke",
+            "the_garden_house", "canonteign_falls",
+            "house_of_marbles", "river_dart_country_park",
+            "dartmoor_zoo", "pennywell_farm",
+            "buckfast_butterfly_farm",
+            "dartmoor_otter_sanctuary",
+            "south_devon_railway", "buckland_abbey"
         ]
     };
 
     return Object.keys(categories)
         .filter(category => categories[category].includes(id))
         .join(" ");
-    }
+}
+
 function openCategory(category) {
 
     document.getElementById("attraction")?.remove();
@@ -8002,9 +8048,10 @@ if (category === "Places to Visit") {
             Places to Visit
         </h2>
 
-        <p style="text-align:center;color:#666;">
-            Discover 30 special places across Dartmoor.
+               <p style="text-align:center;color:#666;">
+            Discover 66 special places across Dartmoor.
         </p>
+
 <div style="display:flex;flex-wrap:wrap;justify-content:center;
     gap:10px;margin:20px auto;">
 
@@ -8032,10 +8079,28 @@ if (category === "Places to Visit") {
         History & Heritage
     </button>
 
+    <button onclick="filterPlaces('ancient-sites')"
+        style="padding:10px 16px;background:#315a48;
+        color:white;border:0;border-radius:20px;">
+        Ancient Sites & Archaeology
+    </button>
+
     <button onclick="filterPlaces('nature')"
         style="padding:10px 16px;background:#315a48;
         color:white;border:0;border-radius:20px;">
         Nature & Woodland
+    </button>
+
+    <button onclick="filterPlaces('gardens-attractions')"
+        style="padding:10px 16px;background:#315a48;
+        color:white;border:0;border-radius:20px;">
+        Gardens & Attractions
+    </button>
+
+    <button onclick="filterPlaces('family-days')"
+        style="padding:10px 16px;background:#315a48;
+        color:white;border:0;border-radius:20px;">
+        Family Days Out
     </button>
 
 </div>
