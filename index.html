@@ -3643,7 +3643,7 @@ ${category === "Birds" ? `
 
         <div onclick="openReptileDetails('palmate-newt')"
             style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Palmate%20newt.jpg"
+            https://commons.wikimedia.org/wiki/Special:FilePath/Palmate%20Newt.jpg
                 style="width:100%;height:190px;object-fit:cover;">
             <div style="padding:15px;">
                 <h3 style="color:#19382e;">Palmate Newt</h3>
@@ -4164,7 +4164,230 @@ function openBirdDetails(id) {
 
     document.body.appendChild(page);
 }
+function openReptileDetails(id) {
+    const reptiles = {
+        "common-lizard": {
+            name: "Common Lizard",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common_lizard_%28Zootoca%20vivipara%29.jpg",
+            description: "The common lizard is one of Britain's most widespread reptiles and can be found in suitable habitats across Dartmoor.",
+            identify: "A small, slender lizard with four legs, a pointed head and a long tail. Its colouring varies from brown and grey to greenish tones, often with darker markings along its back and sides.",
+            habitat: "Heathland, grassland, woodland edges, stone walls and sunny areas with plenty of vegetation for cover.",
+            where: "Look around sunny heathland, rough grass, stone walls and sheltered areas. They may bask on logs, rocks and patches of bare ground.",
+            season: "Most active from spring to early autumn, particularly on warm, sunny days. They shelter during colder winter weather.",
+            facts: [
+                "Common lizards can shed their tails to escape predators.",
+                "Unlike many reptiles, females give birth to live young rather than laying eggs.",
+                "They feed on small insects, spiders and other invertebrates."
+            ],
+            advice: "Watch quietly from a distance and avoid disturbing basking lizards. Never try to catch or handle them, and keep dogs under control around areas where reptiles may be present."
+        },
 
+        adder: {
+            name: "Adder",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Adder%20-%20vipera%20berus.jpg",
+            description: "The adder is Britain's only native venomous snake. It is a shy reptile that prefers to avoid people.",
+            identify: "Usually recognised by the dark zigzag pattern running along its back. Males are often grey or silvery, while females are commonly brown or reddish. Some individuals are very dark.",
+            habitat: "Heathland, open moorland, woodland edges and rough grassland, particularly where there are sunny basking spots and places to hide.",
+            where: "Adders may be found in suitable heathland and moorland habitats. They are well camouflaged and are more likely to be noticed basking on warm, sheltered ground.",
+            season: "They emerge from winter shelter in spring and are most active during the warmer months. They become less active as temperatures fall in autumn.",
+            facts: [
+                "The adder is the UK's only native venomous snake.",
+                "Adders usually avoid people and will retreat if given the opportunity.",
+                "They feed mainly on small mammals, lizards and occasionally amphibians."
+            ],
+            advice: "Keep a safe distance and never attempt to touch or move an adder. Stick to paths where possible, watch where you put your hands and feet, and keep dogs close. If bitten, seek urgent medical attention."
+        },
+
+        "grass-snake": {
+            name: "Grass Snake",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Grass%20snake.jpg",
+            description: "The grass snake is Britain's largest native snake. It is non-venomous and is often associated with ponds, wetlands and other damp habitats.",
+            identify: "Usually olive-green or brown, with dark markings along its body and a distinctive yellow or cream collar behind its head, often edged with black.",
+            habitat: "Wet grassland, ponds, marshes, riverbanks, woodland edges and other areas where amphibians and suitable shelter are available.",
+            where: "Look around ponds, wetland edges and areas of long grass. They are elusive and may be spotted swimming or basking near water.",
+            season: "Most active from spring through to early autumn. They hibernate during the colder months.",
+            facts: [
+                "Grass snakes are excellent swimmers.",
+                "They mainly eat frogs, toads and other amphibians.",
+                "When threatened, they may play dead or release a strong-smelling substance to discourage predators."
+            ],
+            advice: "Observe from a distance and never try to pick one up. Avoid disturbing compost heaps, vegetation piles and other potential hiding places."
+        },
+
+        "slow-worm": {
+            name: "Slow Worm",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Slow%20worm%20%28Anguis%20fragilis%29.jpg",
+            description: "The slow worm is a legless lizard that is often mistaken for a snake. It is harmless to people and is a useful part of Dartmoor's wildlife.",
+            identify: "A smooth, shiny body with no legs. Adults are usually grey, brown or bronze. Males and females can look different, and females may have dark markings along their sides.",
+            habitat: "Grassland, heathland, woodland edges, gardens and other sheltered places with plenty of vegetation and damp hiding spots.",
+            where: "They are difficult to spot because they spend much of their time hidden beneath vegetation, logs, stones and other cover.",
+            season: "Most likely to be active from spring to early autumn. They often shelter underground or beneath cover during colder weather.",
+            facts: [
+                "Despite looking like a snake, the slow worm is actually a lizard.",
+                "It can shed its tail when threatened.",
+                "Its diet includes slugs, snails, worms and other small invertebrates."
+            ],
+            advice: "Never lift logs, stones or other cover just to look for slow worms. If you find one, leave it undisturbed and keep dogs from investigating it."
+        },
+
+        "common-frog": {
+            name: "Common Frog",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common%20frog%20rana%20temporaria.jpg",
+            description: "The common frog is a familiar amphibian found in ponds, wetlands, gardens and damp habitats across Britain.",
+            identify: "Usually brown, olive or greenish in colour, with smooth skin, long hind legs and a dark patch behind each eye. Colour and markings can vary considerably.",
+            habitat: "Ponds, marshes, wet grassland, woodland and gardens. They need freshwater breeding sites and damp places where they can shelter.",
+            where: "Look around ponds, ditches, wet grassland and sheltered areas near water. They may also be found away from ponds when feeding.",
+            season: "Frogs become more active in spring, when they gather at ponds to breed. They can be seen through the warmer months and shelter during winter.",
+            facts: [
+                "Common frogs have long, powerful hind legs for jumping.",
+                "They feed on insects, slugs, worms and other small invertebrates.",
+                "Their skin needs to stay moist, so they often favour damp conditions."
+            ],
+            advice: "Watch quietly around pond edges and avoid disturbing spawn or tadpoles. Do not move frogs or spawn between ponds, as this can spread disease."
+        },
+
+        "common-toad": {
+            name: "Common Toad",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Common%20toad%20%28bufo%20bufo%29.jpg",
+            description: "The common toad is a familiar British amphibian, often found in woodland, grassland and damp areas across Dartmoor.",
+            identify: "A stocky amphibian with dry-looking, warty skin, short legs and prominent raised glands behind the eyes. Colours range from brown and olive to grey.",
+            habitat: "Woodland, grassland, heathland, gardens and damp habitats. Toads return to ponds and other freshwater sites to breed.",
+            where: "Look in damp woodland, beneath natural cover and around ponds during the breeding season. They are often more active after rain and at night.",
+            season: "Most visible during spring breeding migrations. They can be active through the warmer months, usually moving around after dark.",
+            facts: [
+                "Common toads often return to the same breeding ponds each year.",
+                "They mainly feed on slugs, worms, insects and other invertebrates.",
+                "Their skin produces defensive secretions that can deter predators."
+            ],
+            advice: "Take care when driving near ponds and wetlands during spring, when toads may cross roads to reach breeding sites. Never handle toads unnecessarily and wash your hands if you accidentally touch one."
+        },
+
+        "palmate-newt": {
+            name: "Palmate Newt",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Palmate%20Newt.jpg",
+            description: "The palmate newt is a small British amphibian that can be found in suitable ponds and wet habitats, particularly in areas with acidic water.",
+            identify: "Usually olive, brown or yellowish, with a pale underside and dark markings. Breeding males develop a low tail crest and distinctive webbing on their hind feet.",
+            habitat: "Small ponds, pools, heathland and wetland habitats. They can be particularly suited to relatively acidic, nutrient-poor water.",
+            where: "Look around quiet ponds and pools, especially in heathland and moorland habitats. They spend part of the year on land in damp places.",
+            season: "Adults return to ponds to breed during spring. They are generally easier to find in water during the breeding season and spend much of the rest of the year on land.",
+            facts: [
+                "The palmate newt is one of Britain's three native newt species.",
+                "Breeding males develop webbed hind feet and a fine filament at the end of the tail.",
+                "They feed on small aquatic invertebrates and other tiny animals."
+            ],
+            advice: "Observe ponds without entering the water or disturbing vegetation. Never move newts, eggs or pond water between sites, as this can spread disease."
+        },
+
+        "smooth-newt": {
+            name: "Smooth Newt",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Smooth%20Newt%20%28Lissotriton%20vulgaris%29%20%288618457905%29.jpg",
+            description: "The smooth newt is a small amphibian found in ponds and other freshwater habitats. It spends much of the year living on land.",
+            identify: "Usually olive-brown or grey-brown on top, with a pale underside covered in dark spots. Breeding males develop a wavy crest along their back and tail.",
+            habitat: "Ponds, ditches, gardens, woodland edges and damp grassland. They need suitable freshwater habitats for breeding.",
+            where: "Look in ponds during spring, particularly among submerged plants. Outside the breeding season they may shelter beneath logs, stones and vegetation.",
+            season: "Adults usually return to ponds in spring to breed. They spend much of the warmer months on land before becoming less active in colder weather.",
+            facts: [
+                "Smooth newts are one of Britain's three native newt species.",
+                "During the breeding season, males develop a noticeable wavy crest.",
+                "They feed on small insects, worms, slugs and aquatic invertebrates."
+            ],
+            advice: "Watch from the pond edge and avoid disturbing aquatic plants or breeding areas. Do not handle newts or transfer them between ponds."
+        }
+    };
+
+    const reptile = reptiles[id];
+    if (!reptile) return;
+
+    const oldPage = document.getElementById('attraction');
+    if (oldPage) oldPage.remove();
+
+    const page = document.createElement('div');
+    page.id = 'attraction';
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+        z-index:9999;
+    `;
+
+    page.innerHTML = `
+        <div style="max-width:850px;margin:auto;background:white;
+            border-radius:12px;padding:20px;">
+
+            <button onclick="document.getElementById('attraction').remove();openWildlifeCategory('Reptiles and Amphibians')"
+                style="padding:12px 20px;background:#19382e;
+                color:white;border:0;border-radius:7px;cursor:pointer;">
+                ← Back to Reptiles and Amphibians
+            </button>
+
+            <h2 style="color:#19382e;text-align:center;">
+                ${reptile.name}
+            </h2>
+
+            <img src="${reptile.image}"
+                alt="${reptile.name}"
+                style="width:100%;height:300px;object-fit:contain;
+                background:#f4f1e8;border-radius:12px;margin-top:18px;">
+
+            <p style="color:#555;line-height:1.6;">
+                ${reptile.description}
+            </p>
+
+            <h3 style="color:#315a48;">Identification</h3>
+            <p style="color:#555;line-height:1.6;">
+                ${reptile.identify}
+            </p>
+
+            <h3 style="color:#315a48;">Habitat</h3>
+            <p style="color:#555;line-height:1.6;">
+                ${reptile.habitat}
+            </p>
+
+            <h3 style="color:#315a48;">Where to Spot Them</h3>
+            <p style="color:#555;line-height:1.6;">
+                ${reptile.where}
+            </p>
+
+            <h3 style="color:#315a48;">When to See Them</h3>
+            <p style="color:#555;line-height:1.6;">
+                ${reptile.season}
+            </p>
+
+            <div style="background:#e5eadf;padding:18px;
+                border-radius:10px;margin-top:20px;">
+
+                <h3 style="color:#19382e;margin-top:0;">
+                    Interesting Facts
+                </h3>
+
+                <ul style="color:#444;line-height:1.7;">
+                    ${reptile.facts.map(fact => `<li>${fact}</li>`).join('')}
+                </ul>
+            </div>
+
+            <div style="background:#fce9df;padding:18px;
+                border-radius:10px;margin-top:20px;">
+
+                <h3 style="color:#19382e;margin-top:0;">
+                    Wildlife Watching Advice
+                </h3>
+
+                <p style="color:#555;line-height:1.6;margin-bottom:0;">
+                    ${reptile.advice}
+                </p>
+            </div>
+
+            <p style="font-size:12px;color:#777;margin-top:20px;">
+                Information: Amphibian and Reptile Conservation and wildlife conservation organisations.
+            </p>
+
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
 
 const dartmoorPlaces = {
     
