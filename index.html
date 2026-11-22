@@ -3493,8 +3493,9 @@ const pubs = {
         description: "A country pub in Belstone, on the northern edge of Dartmoor."
     }
 };
-
-    if (!pub) return;
+    
+const pub = pubs[id];
+if (!pub) return;
 
     const page = document.createElement("section");
     page.id = "attraction";
