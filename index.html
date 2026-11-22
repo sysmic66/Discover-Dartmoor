@@ -3247,27 +3247,46 @@ function openPostbridgeTrailDetails() {
 
     document.body.appendChild(page);
     }
-    function openFoodDrink(id) {
+    
+function openFoodDrink(id) {
     document.getElementById("attraction")?.remove();
 
     const categories = {
         pubs: {
-            name: "Dartmoor Pubs",
-            description: "Dartmoor is home to traditional country pubs, many with centuries of history. They offer a warm welcome to walkers, visitors and local communities.",
-            details: "Look out for historic village inns, traditional pub food, local ales and welcoming places to relax after exploring the moors.",
-            search: "traditional pubs Dartmoor"
+            name: "Pubs & Inns",
+            description: "Discover traditional country pubs, historic inns and welcoming places to eat and drink across Dartmoor.",
+            details: "Look out for traditional pub food, local ales, beer gardens, historic village inns and welcoming places to relax after exploring the moors.",
+            search: "traditional pubs and inns Dartmoor"
         },
         cafes: {
             name: "Cafés & Tearooms",
-            description: "Take a break from exploring Dartmoor at one of its welcoming cafés or tearooms.",
+            description: "Take a break from exploring Dartmoor at one of its welcoming cafés and tearooms.",
             details: "Discover homemade cakes, cream teas, coffee, light lunches and cosy places to sit and enjoy the surroundings.",
             search: "cafes and tearooms Dartmoor"
         },
+        restaurants: {
+            name: "Restaurants",
+            description: "Discover places to enjoy a meal across Dartmoor, from independent restaurants to countryside dining.",
+            details: "Find restaurants, bistros and places serving locally sourced food, evening meals and special dining experiences.",
+            search: "restaurants Dartmoor Devon"
+        },
         producers: {
-            name: "Local Food Producers",
-            description: "Discover the food and drink produced in and around Dartmoor, from local farms to independent makers.",
-            details: "Look for farm shops, local meat, cheese, preserves, baked goods and other Devon specialities.",
-            search: "local food producers farm shops Dartmoor"
+            name: "Farm Shops & Local Produce",
+            description: "Discover the farms, independent shops and local producers bringing Dartmoor and Devon produce to visitors.",
+            details: "Look for farm shops, local meat, cheese, preserves, bakeries, fresh produce and other Devon specialities.",
+            search: "farm shops and local food producers Dartmoor"
+        },
+        takeaways: {
+            name: "Takeaways & Quick Bites",
+            description: "Find convenient places to grab something to eat while exploring Dartmoor.",
+            details: "Discover fish and chips, sandwich shops, takeaway food, bakeries and places for a quick lunch or snack.",
+            search: "takeaways and quick food Dartmoor"
+        },
+        experiences: {
+            name: "Farm Experiences & Food Attractions",
+            description: "Explore food-related experiences and attractions across Dartmoor and the surrounding countryside.",
+            details: "Discover farm cafés, ice cream farms, food attractions and places where you can enjoy local food and countryside experiences.",
+            search: "farm experiences food attractions Dartmoor"
         }
     };
 
@@ -3315,7 +3334,8 @@ function openPostbridgeTrailDetails() {
     `;
 
     document.body.appendChild(page);
-    }
+}
+
     
 function openWildlifeCategory(category) {
     document.getElementById("attraction")?.remove();
@@ -6133,7 +6153,6 @@ if (category === "Wildlife") {
     return;
 }
 
-              
     if (category === "Food and Drink") {
     page.innerHTML = `
         <button onclick="document.getElementById('attraction').remove()"
@@ -6147,7 +6166,7 @@ if (category === "Wildlife") {
         </h2>
 
         <p style="text-align:center;color:#666;">
-            Discover welcoming pubs, cosy cafés and local Dartmoor produce.
+            Discover welcoming pubs, cafés, restaurants and local food experiences across Dartmoor.
         </p>
 
         <div style="max-width:900px;margin:25px auto;
@@ -6156,11 +6175,11 @@ if (category === "Wildlife") {
 
             <div onclick="openFoodDrink('pubs')"
                 style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700"
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=700"
                     style="width:100%;height:190px;object-fit:cover;">
                 <div style="padding:15px;">
-                    <h3 style="color:#19382e;">Dartmoor Pubs</h3>
-                    <p style="color:#666;">Discover traditional country pubs and welcoming places to eat.</p>
+                    <h3 style="color:#19382e;">Pubs & Inns</h3>
+                    <p style="color:#666;">Discover traditional country pubs, historic inns and welcoming places to eat.</p>
                     <span style="color:#987344;font-weight:bold;">EXPLORE PUBS →</span>
                 </div>
             </div>
@@ -6171,8 +6190,19 @@ if (category === "Wildlife") {
                     style="width:100%;height:190px;object-fit:cover;">
                 <div style="padding:15px;">
                     <h3 style="color:#19382e;">Cafés & Tearooms</h3>
-                    <p style="color:#666;">Find cosy cafés, homemade cakes and afternoon treats.</p>
+                    <p style="color:#666;">Find cosy cafés, homemade cakes, coffee and traditional cream teas.</p>
                     <span style="color:#987344;font-weight:bold;">EXPLORE CAFÉS →</span>
+                </div>
+            </div>
+
+            <div onclick="openFoodDrink('restaurants')"
+                style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700"
+                    style="width:100%;height:190px;object-fit:cover;">
+                <div style="padding:15px;">
+                    <h3 style="color:#19382e;">Restaurants</h3>
+                    <p style="color:#666;">Discover restaurants, bistros and countryside dining across Dartmoor.</p>
+                    <span style="color:#987344;font-weight:bold;">EXPLORE RESTAURANTS →</span>
                 </div>
             </div>
 
@@ -6181,9 +6211,31 @@ if (category === "Wildlife") {
                 <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700"
                     style="width:100%;height:190px;object-fit:cover;">
                 <div style="padding:15px;">
-                    <h3 style="color:#19382e;">Local Food Producers</h3>
-                    <p style="color:#666;">Explore local farms, produce, markets and independent makers.</p>
+                    <h3 style="color:#19382e;">Farm Shops & Local Produce</h3>
+                    <p style="color:#666;">Explore farm shops, local meat, cheese, bakeries and Devon specialities.</p>
                     <span style="color:#987344;font-weight:bold;">DISCOVER LOCAL FOOD →</span>
+                </div>
+            </div>
+
+            <div onclick="openFoodDrink('takeaways')"
+                style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=700"
+                    style="width:100%;height:190px;object-fit:cover;">
+                <div style="padding:15px;">
+                    <h3 style="color:#19382e;">Takeaways & Quick Bites</h3>
+                    <p style="color:#666;">Find fish and chips, sandwiches, bakeries and quick lunch stops.</p>
+                    <span style="color:#987344;font-weight:bold;">FIND QUICK BITES →</span>
+                </div>
+            </div>
+
+            <div onclick="openFoodDrink('experiences')"
+                style="background:white;border-radius:12px;overflow:hidden;cursor:pointer;">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700"
+                    style="width:100%;height:190px;object-fit:cover;">
+                <div style="padding:15px;">
+                    <h3 style="color:#19382e;">Farm Experiences & Food Attractions</h3>
+                    <p style="color:#666;">Discover farm cafés, ice cream farms and countryside food experiences.</p>
+                    <span style="color:#987344;font-weight:bold;">EXPLORE EXPERIENCES →</span>
                 </div>
             </div>
 
@@ -6192,6 +6244,7 @@ if (category === "Wildlife") {
     document.body.appendChild(page);
     return;
     }
+
     if (category === "History and Heritage") {
     page.innerHTML = `
         <button onclick="document.getElementById('attraction').remove()"
