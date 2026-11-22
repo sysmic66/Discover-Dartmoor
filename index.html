@@ -3295,10 +3295,11 @@ function openPubDetails(id) {
 
     const pubs = {
         "warren-house-inn": {
-            name: "Warren House Inn",
-            location: "Postbridge",
-            description: "A famous traditional moorland inn in the heart of Dartmoor, surrounded by open countryside."
-        },
+    name: "Warren House Inn",
+    location: "Postbridge",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
+    description: "A famous traditional moorland inn in the heart of Dartmoor, surrounded by open countryside."
+},
         "old-inn": {
             name: "The Old Inn",
             location: "Widecombe-in-the-Moor",
@@ -3376,7 +3377,17 @@ function openPubDetails(id) {
                 <h2 style="color:#19382e;">
                     ${pub.name}
                 </h2>
+                ${pub.image ? `
+                    <img src="${pub.image}"
+                        alt="${pub.name}"
+                        style="width:100%;max-height:350px;
+                        object-fit:cover;display:block;">
 
+                    <p style="font-size:12px;color:#777;
+                        padding:0 25px;">
+                        Photo: Neil Theasby / Geograph
+                    </p>
+                ` : ""}
                 <p style="color:#987344;font-weight:bold;">
                     ${pub.location}, Dartmoor
                 </p>
