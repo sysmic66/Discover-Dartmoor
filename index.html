@@ -3422,61 +3422,78 @@ function openFoodDrink(id) {
 function openPubDetails(id) {
     document.getElementById("attraction")?.remove();
 
-    const pubs = {
-        "warren-house-inn": {
-            name: "Warren House Inn",
-            location: "Postbridge",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
-            description: "A famous traditional moorland inn in the heart of Dartmoor, surrounded by open countryside."
-        },
-        "old-inn": {
-            name: "The Old Inn",
-            location: "Widecombe-in-the-Moor",
-            description: "A historic village inn in the centre of Widecombe, welcoming visitors exploring the surrounding moorland."
-        },
-        "castle-inn": {
-            name: "The Castle Inn",
-            location: "Lydford",
-            description: "A historic village pub close to Lydford Gorge and the western edge of Dartmoor."
-        },
-        "mary-tavy-inn": {
-            name: "The Mary Tavy Inn",
-            location: "Mary Tavy",
-            description: "A traditional country inn near Tavistock, with views towards Dartmoor."
-        },
-        "dartmoor-inn": {
-            name: "Dartmoor Inn",
-            location: "Merrivale",
-            description: "A country inn serving visitors exploring the western side of Dartmoor."
-        },
-        "walkhampton-inn": {
-            name: "The Walkhampton Inn",
-            location: "Walkhampton",
-            description: "A traditional village inn in the Dartmoor village of Walkhampton."
-        },
-        "ring-of-bells": {
-            name: "Ring of Bells Inn",
-            location: "North Bovey",
-            description: "A village inn in the picturesque Dartmoor village of North Bovey."
-        },
-        "kestor-inn": {
-            name: "Kestor Inn",
-            location: "Manaton",
-            description: "A traditional country pub in the village of Manaton, on the eastern side of Dartmoor."
-        },
-        "church-house-inn": {
-            name: "Church House Inn",
-            location: "Holne",
-            description: "A traditional village inn in Holne, surrounded by beautiful Dartmoor countryside."
-        },
-        "tors-inn": {
-            name: "The Tors Inn",
-            location: "Belstone",
-            description: "A country pub in Belstone, on the northern edge of Dartmoor."
-        }
-    };
+    
+const pubs = {
+    "warren-house-inn": {
+        name: "Warren House Inn",
+        location: "Postbridge",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
+        photoCredit: "Neil Theasby / Geograph",
+        description: "A famous traditional moorland inn in the heart of Dartmoor, surrounded by open countryside."
+    },
+    "old-inn": {
+        name: "The Old Inn",
+        location: "Widecombe-in-the-Moor",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Inn,_Widecombe_on_the_Moor,_Devon_-_geograph.org.uk_-_726587.jpg",
+        photoCredit: "Kevin Gordon / Geograph",
+        description: "A historic village inn in the centre of Widecombe, welcoming visitors exploring the surrounding moorland."
+    },
+    "castle-inn": {
+        name: "The Castle Inn",
+        location: "Lydford",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Lydford,_The_Castle_Inn_-_geograph.org.uk_-_1020386.jpg",
+        photoCredit: "Nigel Cox / Geograph",
+        description: "A historic village pub close to Lydford Gorge and the western edge of Dartmoor."
+    },
+    "mary-tavy-inn": {
+        name: "The Mary Tavy Inn",
+        location: "Mary Tavy",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mary_Tavy_Inn,_Mary_Tavy,_Dartmoor_-_geograph.org.uk_-_3483182.jpg",
+        photoCredit: "Ian S / Geograph",
+        description: "A traditional country inn near Tavistock, with views towards Dartmoor."
+    },
+    "dartmoor-inn": {
+        name: "Dartmoor Inn",
+        location: "Merrivale",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor_Inn,_Merrivale_-_geograph.org.uk_-_212808.jpg",
+        photoCredit: "Derek Harper / Geograph",
+        description: "A country inn serving visitors exploring the western side of Dartmoor."
+    },
+    "walkhampton-inn": {
+        name: "The Walkhampton Inn",
+        location: "Walkhampton",
+        description: "A traditional village inn in the Dartmoor village of Walkhampton."
+    },
+    "ring-of-bells": {
+        name: "Ring of Bells Inn",
+        location: "North Bovey",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ring_of_Bells_-_North_Bovey_-_geograph.org.uk_-_31065.jpg",
+        photoCredit: "Richard Knights / Geograph",
+        description: "A village inn in the picturesque Dartmoor village of North Bovey."
+    },
+    "kestor-inn": {
+        name: "Kestor Inn",
+        location: "Manaton",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kestor_Inn,_Manaton_-_geograph.org.uk_-_16327.jpg",
+        photoCredit: "Mike Crowe / Geograph",
+        description: "A traditional country pub in the village of Manaton, on the eastern side of Dartmoor."
+    },
+    "church-house-inn": {
+        name: "Church House Inn",
+        location: "Holne",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Church_House_Inn,_Holne_-_geograph.org.uk_-_4247012.jpg",
+        photoCredit: "Jeff Collins / Geograph",
+        description: "A traditional village inn in Holne, surrounded by beautiful Dartmoor countryside."
+    },
+    "tors-inn": {
+        name: "The Tors Inn",
+        location: "Belstone",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Tors_Inn,_Belstone_-_geograph.org.uk_-_933903.jpg",
+        photoCredit: "Mike White / Geograph",
+        description: "A country pub in Belstone, on the northern edge of Dartmoor."
+    }
+};
 
-    const pub = pubs[id];
     if (!pub) return;
 
     const page = document.createElement("section");
@@ -3515,7 +3532,11 @@ function openPubDetails(id) {
 
                     <p style="font-size:12px;color:#777;
                         padding:0 25px;">
-                        Photo: Neil Theasby / Geograph
+                        Photo: ${pub.photoCredit} ·
+<a href="https://creativecommons.org/licenses/by-sa/2.0/"
+    target="_blank" style="color:#777;">
+    CC BY-SA 2.0
+</a>
                     </p>
                 ` : ""}
 
