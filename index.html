@@ -3424,13 +3424,22 @@ function openPubDetails(id) {
 
     
 const pubs = {
-    "warren-house-inn": {
-        name: "Warren House Inn",
-        location: "Postbridge",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
-        photoCredit: "Neil Theasby / Geograph",
-        description: "A famous traditional moorland inn in the heart of Dartmoor, surrounded by open countryside."
-    },
+   "warren-house-inn": {
+    name: "Warren House Inn",
+    location: "Postbridge",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
+    photoCredit: "Neil Theasby",
+    description: "A famous traditional moorland inn in the heart of Dartmoor, surrounded by open countryside.",
+    address: "Postbridge, Dartmoor, Devon, PL20 6TA",
+    phone: "01822 880208",
+    website: "https://www.warrenhouseinn.co.uk/",
+    food: "Traditional home-cooked pub food, including pies and locally sourced dishes.",
+    drinks: "Real ales, traditional cider and other refreshments.",
+    dogs: "Dogs welcome in designated areas. Check with the pub before visiting.",
+    outdoorSeating: "Outdoor benches and seating overlooking the surrounding moorland.",
+    parking: "Parking available.",
+    openingHours: "Opening hours and food service times can vary seasonally. Contact the pub before visiting."
+},
     "old-inn": {
         name: "The Old Inn",
         location: "Widecombe-in-the-Moor",
@@ -3551,30 +3560,40 @@ if (!pub) return;
                     ${pub.location}, Dartmoor
                 </p>
 
-                <p>${pub.description}</p>
+                
+<p>${pub.description}</p>
 
-                <h3 style="color:#315a48;">
-                    About this pub
-                </h3>
+<h3 style="color:#315a48;">
+    About this pub
+</h3>
 
-                <p>
-                    More information about this business will be added,
-                    including food, drink, facilities and visitor information.
-                </p>
+${pub.food ? `<p><strong>Food:</strong> ${pub.food}</p>` : ""}
+${pub.drinks ? `<p><strong>Drinks:</strong> ${pub.drinks}</p>` : ""}
+${pub.dogs ? `<p><strong>Dogs:</strong> ${pub.dogs}</p>` : ""}
+${pub.outdoorSeating ? `<p><strong>Outdoor seating:</strong> ${pub.outdoorSeating}</p>` : ""}
+${pub.parking ? `<p><strong>Parking:</strong> ${pub.parking}</p>` : ""}
+${pub.openingHours ? `<p><strong>Opening information:</strong> ${pub.openingHours}</p>` : ""}
 
-                <h3 style="color:#315a48;">
-                    Location
-                </h3>
+${pub.phone || pub.website ? `
+    <h3 style="color:#315a48;">Contact</h3>
+    ${pub.phone ? `<p><strong>Telephone:</strong> <a href="tel:${pub.phone}" style="color:#315a48;">${pub.phone}</a></p>` : ""}
+    ${pub.website ? `<p><strong>Website:</strong> <a href="${pub.website}" target="_blank" style="color:#315a48;">Visit website →</a></p>` : ""}
+` : ""}
 
-                <p>${pub.location}</p>
+<h3 style="color:#315a48;">
+    Location
+</h3>
 
-                <p style="margin-top:20px;">
-                    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pub.name + " " + pub.location + " Dartmoor")}"
-                        target="_blank"
-                        style="color:#315a48;font-weight:bold;">
-                        Get directions →
-                    </a>
-                </p>
+<p>${pub.address || pub.location}</p>
+
+<p style="margin-top:20px;">
+    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pub.address || (pub.name + " " + pub.location + " Dartmoor"))}"
+        target="_blank"
+        style="color:#315a48;font-weight:bold;">
+        Get directions →
+    </a>
+</p>
+
 
             </div>
         </div>
