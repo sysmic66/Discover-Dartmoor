@@ -3512,6 +3512,47 @@ function openFoodDrink(id) {
     <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
 </div>
 
+<div onclick="openPubDetails('rugglestone-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Rugglestone Inn</h3>
+    <p style="color:#666;">Widecombe-in-the-Moor</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('white-hart-moreton')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">White Hart Hotel</h3>
+    <p style="color:#666;">Moretonhampstead</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('chagford-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">The Chagford Inn</h3>
+    <p style="color:#666;">Chagford</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('union-inn-moreton')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Union Inn</h3>
+    <p style="color:#666;">Moretonhampstead</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('oxenham-arms')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Oxenham Arms</h3>
+    <p style="color:#666;">South Zeal</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('bearslake-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Bearslake Inn</h3>
+    <p style="color:#666;">Lake, near Sourton</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
                     </div>
                 ` : ""}
 
@@ -3747,7 +3788,72 @@ const pubs = {
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     licenseName: "CC BY-SA 4.0",
     description: "A beautiful part-thatched historic inn in the centre of Chagford, with origins dating back to the 13th century. Enjoy its traditional character, restaurant, welcoming bar and comfortable rooms."
-}
+},
+    "rugglestone-inn": {
+    name: "Rugglestone Inn",
+    location: "Widecombe-in-the-Moor",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Rugglestone_Inn,_Widecombe_in_the_Moor_-_geograph.org.uk_-_1014401.jpg",
+    photoCredit: "Helen Cox · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_Rugglestone_Inn,_Widecombe_in_the_Moor_-_geograph.org.uk_-_1014401.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A traditional granite country pub on the edge of Widecombe-in-the-Moor, dating from the 18th century and known for its welcoming atmosphere, local food and real ales."
+},
+
+"white-hart-moreton": {
+    name: "White Hart Hotel",
+    location: "Moretonhampstead",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_White_Hart_Hotel,_Moretonhampstead_-_geograph.org.uk_-_939613.jpg",
+    photoCredit: "Trish Steel · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_White_Hart_Hotel,_Moretonhampstead_-_geograph.org.uk_-_939613.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A historic coaching inn dating back to 1639, standing in the heart of Moretonhampstead and forming part of the town's long-standing character."
+},
+
+"chagford-inn": {
+    name: "The Chagford Inn",
+    location: "Chagford",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Chagford_Inn_-_geograph.org.uk_-_6945559.jpg",
+    photoCredit: "Colin Smith · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:Chagford_Inn_-_geograph.org.uk_-_6945559.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A traditional inn on Mill Street in Chagford, offering a friendly place to stop while exploring the historic town and surrounding Dartmoor countryside."
+},
+
+"union-inn-moreton": {
+    name: "Union Inn",
+    location: "Moretonhampstead",
+    image: "",
+    photoCredit: "",
+    photoLink: "",
+    licenseUrl: "",
+    licenseName: "",
+    description: "A historic village pub on Ford Street, believed to date back to the 16th century, with traditional character, local ales and home-cooked food."
+},
+
+"oxenham-arms": {
+    name: "Oxenham Arms",
+    location: "South Zeal",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Oxenham_Arms,_South_Zeal_(geograph_2291518).jpg",
+    photoCredit: "Maigheach-gheal · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_Oxenham_Arms,_South_Zeal_(geograph_2291518).jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A remarkable historic inn in South Zeal, occupying a building with origins as a 12th-century monastic site and surrounded by Dartmoor history."
+},
+
+"bearslake-inn": {
+    name: "Bearslake Inn",
+    location: "Lake, near Sourton",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Bearslake_Inn_on_the_A386_at_Lake_-_geograph.org.uk_-_3483314.jpg",
+    photoCredit: "Ian S · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:Bearslake_Inn_on_the_A386_at_Lake_-_geograph.org.uk_-_3483314.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A characterful traditional inn near Sourton, close to the western edge of Dartmoor, making a good stopping point for walkers and visitors."
+},
 
    
 };
@@ -3982,6 +4088,77 @@ Object.assign(pubs["three-crowns"], {
     outdoorSeating: "Check with pub",
     parking: "No on-site parking for non-residents; public parking nearby",
     openingHours: "Opening hours vary; check the pub's website before visiting"
+});
+Object.assign(pubs["rugglestone-inn"], {
+    address: "Widecombe-in-the-Moor, Devon, TQ13 7TF",
+    phone: "01364 621327",
+    website: "https://www.rugglestoneinn.co.uk/",
+    food: "Traditional pub meals, lunch and dinner",
+    drinks: "Real ales, cider and other drinks",
+    dogs: "Dog friendly",
+    outdoorSeating: "Large sheltered garden beside a stream",
+    parking: "Free off-street parking",
+    openingHours: "Check with the pub before visiting"
+});
+
+Object.assign(pubs["white-hart-moreton"], {
+    address: "The Square, Moretonhampstead, Devon, TQ13 8NF",
+    phone: "01647 440500",
+    website: "https://whitehartdartmoor.co.uk/",
+    food: "Hotel restaurant serving meals",
+    drinks: "Bar serving local drinks",
+    dogs: "Check with the hotel",
+    outdoorSeating: "Check with the hotel",
+    parking: "Nearby pay-and-display car parks",
+    openingHours: "Check the hotel's website for current opening and food times"
+});
+
+Object.assign(pubs["chagford-inn"], {
+    address: "7 Mill Street, Chagford, Devon, TQ13 8AW",
+    phone: "01647 433109",
+    website: "https://www.thechagfordinn.co.uk/",
+    food: "Seasonal gastropub menu using local produce",
+    drinks: "Local ales, wines and other drinks",
+    dogs: "Dog friendly",
+    outdoorSeating: "Courtyard garden and terrace",
+    parking: "Public parking nearby",
+    openingHours: "Sat–Thu 11:30am–3pm and 5:30pm–late; Fri 11:30am–late. Food 12–3pm and 5:30–9pm"
+});
+
+Object.assign(pubs["union-inn-moreton"], {
+    address: "10 Ford Street, Moretonhampstead, Devon, TQ13 8LN",
+    phone: "01647 440199",
+    website: "https://www.theunioninn.co.uk/",
+    food: "Traditional pub food and meals",
+    drinks: "Quality ales and local drinks",
+    dogs: "Check with the pub",
+    outdoorSeating: "Check with the pub",
+    parking: "Public parking in Moretonhampstead",
+    openingHours: "Currently listed as open daily from 11:30am; check website for details"
+});
+
+Object.assign(pubs["oxenham-arms"], {
+    address: "South Zeal, Okehampton, Devon, EX20 2JT",
+    phone: "01837 840244",
+    website: "https://www.theoxenhamarms.com/",
+    food: "Restaurant, bar meals, afternoon teas and Sunday lunches",
+    drinks: "Real ales, wines and spirits",
+    dogs: "Dogs welcome on leads in the bar and gardens",
+    outdoorSeating: "Gardens and outdoor seating",
+    parking: "Free parking at the hotel and village car park",
+    openingHours: "Bars from 12 noon; food 12–2:30pm and 6–8:30pm. Check days before visiting"
+});
+
+Object.assign(pubs["bearslake-inn"], {
+    address: "Lake, Sourton, Okehampton, Devon, EX20 4HQ",
+    phone: "01837 861334",
+    website: "https://bearslakeinn.com/",
+    food: "Restaurant serving locally sourced food and traditional pub meals",
+    drinks: "Local ales, cider, wines and other drinks",
+    dogs: "Dog-friendly accommodation available; check pub dining arrangements",
+    outdoorSeating: "Garden with views towards Sourton Tor",
+    parking: "On-site parking",
+    openingHours: "Check the official website for current restaurant and bar hours"
 });
     
 const pub = pubs[id];
