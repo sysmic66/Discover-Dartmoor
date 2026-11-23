@@ -4093,10 +4093,216 @@ if (id === "pubs") {
 }
 }
 
-const pubCardImages = {
-    "warren-house-inn": "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
 
-    "old-inn": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Inn,_Widecombe_on_the_Moor,_Devon_-_geograph.org.uk_-_726587.jpg"
+const pubCardImages = {
+
+    "warren-house-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
+
+    "old-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Inn,_Widecombe_on_the_Moor,_Devon_-_geograph.org.uk_-_726587.jpg",
+
+    "mary-tavy-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Mary_Tavy_Inn,_Mary_Tavy,_Dartmoor_-_geograph.org.uk_-_3483182.jpg",
+
+    "dartmoor-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor_Inn,_Merrivale_-_geograph.org.uk_-_681047.jpg",
+
+    "ring-of-bells":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Ring_of_Bells_-_North_Bovey_-_geograph.org.uk_-_31065.jpg",
+
+    "kestor-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Kestor_Inn,_Manaton_-_geograph.org.uk_-_16327.jpg",
+
+    "church-house-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Church_House_Inn,_Holne_-_geograph.org.uk_-_4247012.jpg",
+
+    "tors-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Tors_Inn,_Belstone_-_geograph.org.uk_-_933903.jpg",
+    
+    "two-bridges-hotel":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Two_Bridges_Hotel,_Dartmoor_-_geograph.org.uk_-_4799465.jpg",
+
+    "fingle-bridge-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Fingle_Bridge_Inn_-_geograph.org.uk_-_8099876.jpg",
+
+    "plume-of-feathers":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Plume_of_Feathers_Pub_Princetown.jpg",
+
+    "rock-inn-haytor":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Rock_Inn,_Haytor_Vale_-_geograph.org.uk_-_934458.jpg",
+    
+    "prince-of-wales":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Prince_of_Wales,_Princetown_-_geograph.org.uk_-_7098188.jpg",
+
+    "royal-oak-meavy":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Meavy,_The_Royal_Oak_-_geograph.org.uk_-_805947.jpg",
+
+    "forest-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Forest_Inn,_Hexworthy_-_geograph.org.uk_-_2413195.jpg",
+
+    "cleave-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Cleave_at_Lustleigh_-_geograph.org.uk_-_3145258.jpg",
+    
+    "globe-inn-chagford":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Sign_for_the_Globe_Inn,_Chagford_-_geograph.org.uk_-_2001967.jpg",
+
+    "three-crowns":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Three_Crowns,_Chagford_(6205).jpg",
+
+    "rugglestone-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Rugglestone_Inn,_Widecombe_in_the_Moor_-_geograph.org.uk_-_1014401.jpg",
+
+    "white-hart-moreton":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_White_Hart_Hotel,_Moretonhampstead_-_geograph.org.uk_-_939613.jpg",
+
+    "oxenham-arms":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Oxenham_Arms,_South_Zeal_(geograph_2291518).jpg",
+
+    "chagford-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Chagford_Inn_-_geograph.org.uk_-_6945559.jpg",
+    
+    "bearslake-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Bearslake_Inn_on_the_A386_at_Lake_-_geograph.org.uk_-_3483314.jpg",
+
+    "dartmoor-inn-lydford":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Dartmoor_Inn_near_Lydford_-_geograph.org.uk_-_7028634.jpg",
+
+    "peter-tavy-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Tavy_Inn,_Peter_Tavy_-_geograph.org.uk_-_4778249.jpg",
+    
+    "nobody-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_sign_for_the_Nobody_Inn,_Doddiscombsleigh_-_geograph.org.uk_-_1308753.jpg",
+
+    "cromwell-arms":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Bovey_Tracey_-_Cromwell_Arms_-_geograph.org.uk_-_6938244.jpg",
+
+    "bell-inn-bovey":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Bell_Inn_and_Mary_Street_-_geograph.org.uk_-_2393490.jpg",
+
+    "tradesmans-arms":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Tradesmans_Arms,_Scorriton_-_geograph.org.uk_-_1311589.jpg",
+
+    "drake-manor-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Buckland_Monachorum,_by_the_Drake_Manor_Inn_-_geograph.org.uk_-_1958364.jpg",
+    
+    "drewe-arms":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Drewsteignton_-_Drewe_Arms_-_geograph.org.uk_-_6947978.jpg",
+
+    "horse-and-groom":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Horse_and_Groom_public_house,_Bittaford,_Devon_-_geograph.org.uk_-_88314.jpg",
+    
+    "highwayman-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Highwayman_Inn,_Sourton_-_geograph.org.uk_-_3483391.jpg",
+
+    "palk-arms":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Palk_Arms,_Hennock_-_geograph.org.uk_-_6958098.jpg",
+
+    "arundell-arms":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Arundell_Arms,_Lifton_-_geograph.org.uk_-_1597128.jpg",
+    
+    "fox-hounds-lydford":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Fox_and_Hounds_Public_house_near_Bridestowe._-_geograph.org.uk_-_1192540.jpg",
+
+    "northmore-arms":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Beer_garden,_Northmore_Arms,_Wonson_-_geograph.org.uk_-_3100881.jpg",
+
+    "pack-horse-south-brent":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_%22Pack_Horse%22_-_geograph.org.uk_-_1322357.jpg",
+
+    "avon-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Avon_Inn_at_Avonwick_-_geograph.org.uk_-_2218424.jpg",
+    
+    "old-exeter-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Exeter_Inn,_Ashburton_(33444446235).jpg",
+
+    "whod-have-thought-it":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Who'd_Have_Thought_It_-_geograph.org.uk_-_513927.jpg",
+    
+    "dartmoor-lodge":
+        "https://s0.geograph.org.uk/photos/01/46/014681_b1be9d79.jpg",
+    
+    "ship-inn-uggborough":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Ship_Inn,_Ugborough_-_geograph.org.uk_-_233351.jpg",
+
+    "victoria-inn-ashburton":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Inn,_North_Street,_Ashburton_-_geograph.org.uk_-_6553434.jpg",
+
+    "post-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Post_Inn,_Whiddon_Down_-_geograph-2532987.jpg",
+
+    "coppa-dolla-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Coppa_Dolla_-_geograph.org.uk_-_4463305.jpg",
+
+    "pig-and-whistle":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Pig_and_Whistle_public_house_-_geograph.org.uk_-_15302.jpg",
+
+    "dartmoor-halfway-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Dartmoor_Halfway_Inn_on_the_A383_-_geograph.org.uk_-_3485318.jpg",
+
+    "queens-head-tavistock":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Queen's_Head_pub,_West_Street,_Tavistock,_Devon_-_May_2025.jpg",
+
+    "abbey-inn-buckfastleigh":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Abbey_Inn,_Buckfast_-_geograph.org.uk_-_7853456.jpg",
+
+    "artichoke-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Artichoke_Inn,_Christow_(geograph_3216056).jpg",
+    
+    "bedford-hotel":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Bedford_Hotel,_Tavistock_-_geograph.org.uk_-_3462785.jpg",
+    
+    "burrator-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Burrator_Inn,_Dousland_-_geograph.org.uk_-_7431854.jpg",
+
+    "old-thatch-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Cheriton_Bishop-The_Old_Thatch_Inn_-_geograph.org.uk_-_4716071.jpg",
+
+    "devonshire-inn-sticklepath":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Devonshire_Inn,_Sticklepath_-_geograph.org.uk_-_6727894.jpg",
+
+    "dartbridge-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Dartbridge_Inn,_near_Buckfastleigh_-_geograph.org.uk_-_1575153.jpg",
+
+    "kings-arms-buckfastleigh":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_King's_Arms,_Buckfastleigh_-_geograph.org.uk_-_6299997.jpg",
+
+    "union-inn-tavistock":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Union_Inn_-_geograph.org.uk_-_7346979.jpg",
+    
+    "bridford-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Bridford_Inn_-_geograph.org.uk_-_6669971.jpg",
+    
+    "taw-river-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Taw_River_Inn,_Sticklepath_-_geograph.org.uk_-_1092440.jpg",
+
+    "moorland-hotel-haytor":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Moorland_Hotel_and_Inn_-_geograph.org.uk_-_8157056.jpg",
+    
+    "horse-moretonhampstead":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Horse_-_geograph.org.uk_-_5957277.jpg",
+
+    "tavistock-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Tavistock_Inn_-_geograph.org.uk_-_5726868.jpg",
+
+    "new-inn-sampford-courtenay":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_New_Inn,_Sampford_Courtenay_(geograph_3628268).jpg",
+
+    "white-hart-okehampton":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_White_Hart_Hotel,_Okehampton_-_geograph.org.uk_-_5660337.jpg",
+
+    "red-lion-exbourne":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Lion_Inn,_Exbourne_-_geograph.org.uk_-_1876604.jpg",
+
+    "tom-cobley-tavern":
+        "https://s0.geograph.org.uk/photos/44/84/448441_46c5823b.jpg",
+
+    "rock-inn-yelverton":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Rock_Inn_-_geograph.org.uk_-_5823160.jpg",
+    
+    "whitchurch-inn":
+        "https://commons.wikimedia.org/wiki/Special:FilePath/The_Whitchurch_Inn_-_geograph.org.uk_-_1087743.jpg"
+
 };
 
 
@@ -5957,79 +6163,6 @@ Object.assign(pubs["london-inn-horrabridge"], {
 
 });
 
-// BATCH 1 — VERIFIED PUB PHOTOGRAPHS
-
-Object.assign(pubs["warren-house-inn"], {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
-    photoCredit: "Neil Theasby",
-    photoLink: "https://commons.wikimedia.org/wiki/File:%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    licenseName: "CC BY-SA 2.0"
-});
-
-Object.assign(pubs["old-inn"], {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Inn,_Widecombe_-_geograph.org.uk_-_680649.jpg",
-    photoCredit: "Derek Harper",
-    photoLink: "https://commons.wikimedia.org/wiki/File:The_Old_Inn,_Widecombe_-_geograph.org.uk_-_680649.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    licenseName: "CC BY-SA 2.0"
-});
-
-Object.assign(pubs["castle-inn"], {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Lydford,_The_Castle_Inn_-_geograph.org.uk_-_1020386.jpg",
-    photoCredit: "Nigel Cox",
-    photoLink: "https://commons.wikimedia.org/wiki/File:Lydford,_The_Castle_Inn_-_geograph.org.uk_-_1020386.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    licenseName: "CC BY-SA 2.0"
-});
-
-Object.assign(pubs["mary-tavy-inn"], {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mary_Tavy_Inn,_Mary_Tavy,_Dartmoor_-_geograph.org.uk_-_3483182.jpg",
-    photoCredit: "Ian S",
-    photoLink: "https://commons.wikimedia.org/wiki/File:Mary_Tavy_Inn,_Mary_Tavy,_Dartmoor_-_geograph.org.uk_-_3483182.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    licenseName: "CC BY-SA 2.0"
-});
-
-Object.assign(pubs["dartmoor-inn"], {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dartmoor_Inn,_Merrivale_-_geograph.org.uk_-_212808.jpg",
-    photoCredit: "Derek Harper",
-    photoLink: "https://commons.wikimedia.org/wiki/File:Dartmoor_Inn,_Merrivale_-_geograph.org.uk_-_212808.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    licenseName: "CC BY-SA 2.0"
-});
-
-Object.assign(pubs["ring-of-bells"], {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ring_of_Bells_-_North_Bovey_-_geograph.org.uk_-_31065.jpg",
-    photoCredit: "Richard Knights",
-    photoLink: "https://commons.wikimedia.org/wiki/File:Ring_of_Bells_-_North_Bovey_-_geograph.org.uk_-_31065.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    licenseName: "CC BY-SA 2.0"
-});
-
-Object.assign(pubs["kestor-inn"], {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kestor_Inn,_Manaton_-_geograph.org.uk_-_16327.jpg",
-    photoCredit: "Mike Crowe",
-    photoLink: "https://commons.wikimedia.org/wiki/File:Kestor_Inn,_Manaton_-_geograph.org.uk_-_16327.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    licenseName: "CC BY-SA 2.0"
-});
-
-Object.assign(pubs["church-house-inn"], {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Church_House_Inn,_Holne_-_geograph.org.uk_-_4247012.jpg",
-    photoCredit: "Jeff Collins",
-    photoLink: "https://commons.wikimedia.org/wiki/File:The_Church_House_Inn,_Holne_-_geograph.org.uk_-_4247012.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    licenseName: "CC BY-SA 2.0"
-});
-
-Object.assign(pubs["tors-inn"], {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Tors_Inn,_Belstone_-_geograph.org.uk_-_933903.jpg",
-    photoCredit: "Mike White",
-    photoLink: "https://commons.wikimedia.org/wiki/File:The_Tors_Inn,_Belstone_-_geograph.org.uk_-_933903.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    licenseName: "CC BY-SA 2.0"
-});
 
 
 
