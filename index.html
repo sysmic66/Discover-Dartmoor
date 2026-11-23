@@ -3990,6 +3990,40 @@ function openFoodDrink(id) {
 
 document.body.appendChild(page);
 
+if (id === "pubs") {
+    const pubGrid = page.querySelector("#pubGrid");
+
+    if (pubGrid) {
+        pubGrid.querySelectorAll("div[onclick]").forEach(card => {
+            const clickAction = card.getAttribute("onclick");
+            const match = clickAction.match(/openPubDetails\('([^']+)'\)/);
+
+            if (!match) return;
+
+            const pubId = match[1];
+            const imageUrl = pubCardImages[pubId];
+
+            if (!imageUrl) return;
+
+            const image = document.createElement("img");
+            image.src = imageUrl;
+            image.alt = card.querySelector("h3")?.textContent || "Dartmoor pub";
+            image.loading = "lazy";
+
+            image.style.cssText = `
+                width:100%;
+                height:155px;
+                object-fit:cover;
+                display:block;
+                border-radius:9px;
+                margin-bottom:14px;
+            `;
+
+            card.insertBefore(image, card.firstChild);
+        });
+    }
+}
+
 // Set up pub search
 if (id === "pubs") {
 
@@ -4058,6 +4092,12 @@ if (id === "pubs") {
     }
 }
 }
+
+const pubCardImages = {
+    "warren-house-inn": "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
+
+    "old-inn": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Inn,_Widecombe_on_the_Moor,_Devon_-_geograph.org.uk_-_726587.jpg"
+};
 
 
 function openPubDetails(id) {
