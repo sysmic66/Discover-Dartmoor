@@ -3553,6 +3553,48 @@ function openFoodDrink(id) {
     <p style="color:#666;">Lake, near Sourton</p>
     <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
 </div>
+
+<div onclick="openPubDetails('dartmoor-inn-lydford')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Dartmoor Inn</h3>
+    <p style="color:#666;">Lydford</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('peter-tavy-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Peter Tavy Inn</h3>
+    <p style="color:#666;">Peter Tavy</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('nobody-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Nobody Inn</h3>
+    <p style="color:#666;">Doddiscombsleigh</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('cromwell-arms')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Cromwell Arms</h3>
+    <p style="color:#666;">Bovey Tracey</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('cridford-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Cridford Inn</h3>
+    <p style="color:#666;">Trusham</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('bell-inn-bovey')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Bell Inn</h3>
+    <p style="color:#666;">Bovey Tracey</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
                     </div>
                 ` : ""}
 
@@ -3855,6 +3897,71 @@ const pubs = {
     description: "A characterful traditional inn near Sourton, close to the western edge of Dartmoor, making a good stopping point for walkers and visitors."
 },
 
+"dartmoor-inn-lydford": {
+    name: "Dartmoor Inn",
+    location: "Lydford",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Dartmoor_Inn_-_geograph.org.uk_-_2895548.jpg",
+    photoCredit: "Geograph photographer – see source",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_Dartmoor_Inn_-_geograph.org.uk_-_2895548.jpg",
+    licenseUrl: "",
+    licenseName: "See photo licence",
+    description: "A historic country inn near Lydford, on the western edge of Dartmoor, offering a welcoming stop for walkers and visitors exploring the moor."
+},
+
+"peter-tavy-inn": {
+    name: "Peter Tavy Inn",
+    location: "Peter Tavy",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Tavy_Inn_-_geograph.org.uk_-_5705508.jpg",
+    photoCredit: "Geograph photographer – see source",
+    photoLink: "https://commons.wikimedia.org/wiki/File:Peter_Tavy_Inn_-_geograph.org.uk_-_5705508.jpg",
+    licenseUrl: "",
+    licenseName: "See photo licence",
+    description: "A traditional village inn in Peter Tavy, close to Tavistock, known for its characterful setting, pub food and access to nearby Dartmoor walking routes."
+},
+
+"nobody-inn": {
+    name: "Nobody Inn",
+    location: "Doddiscombsleigh",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_sign_for_the_Nobody_Inn,_Doddiscombsleigh_-_geograph.org.uk_-_1308753.jpg",
+    photoCredit: "Trish Steel · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_sign_for_the_Nobody_Inn,_Doddiscombsleigh_-_geograph.org.uk_-_1308753.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A historic country pub in Doddiscombsleigh, dating back to its use as a tavern in 1837, with seasonal dining and a notable selection of drinks."
+},
+
+"cromwell-arms": {
+    name: "Cromwell Arms",
+    location: "Bovey Tracey",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Cromwell_Arms,_Bovey_Tracey_-_geograph.org.uk_-_931016.jpg",
+    photoCredit: "Trish Steel · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_Cromwell_Arms,_Bovey_Tracey_-_geograph.org.uk_-_931016.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A traditional coaching inn in the centre of Bovey Tracey, with a restaurant, country bar and garden, close to the eastern edge of Dartmoor."
+},
+
+"cridford-inn": {
+    name: "Cridford Inn",
+    location: "Trusham",
+    image: "",
+    photoCredit: "",
+    photoLink: "",
+    licenseUrl: "",
+    licenseName: "",
+    description: "A historic country inn in the Teign Valley village of Trusham, with traditional character, food, drinks and accommodation."
+},
+
+"bell-inn-bovey": {
+    name: "Bell Inn",
+    location: "Bovey Tracey",
+    image: "",
+    photoCredit: "",
+    photoLink: "",
+    licenseUrl: "",
+    licenseName: "",
+    description: "A traditional town pub in Bovey Tracey, known for its welcoming atmosphere, selection of drinks and secluded beer garden."
+}
    
 };
 
@@ -4159,6 +4266,78 @@ Object.assign(pubs["bearslake-inn"], {
     outdoorSeating: "Garden with views towards Sourton Tor",
     parking: "On-site parking",
     openingHours: "Check the official website for current restaurant and bar hours"
+});
+
+Object.assign(pubs["dartmoor-inn-lydford"], {
+    address: "Moorside, Lydford, Okehampton, Devon, EX20 4AY",
+    phone: "01822 820221",
+    website: "https://dartmoorinn.com/",
+    food: "Seasonal country dining, lunch and evening meals",
+    drinks: "Local ales, wines, spirits and cocktails",
+    dogs: "Dogs welcome on leads in dining areas",
+    outdoorSeating: "Outdoor terrace",
+    parking: "On-site parking",
+    openingHours: "Mon and Tue closed; Wed–Sat lunch 12–2:30pm and dinner 6–8:30pm; Sun 12–3pm"
+});
+
+Object.assign(pubs["peter-tavy-inn"], {
+    address: "Peter Tavy, Tavistock, Devon, PL19 9NN",
+    phone: "01822 810348",
+    website: "https://petertavyinn.co.uk/",
+    food: "Homemade pub food using fresh local produce",
+    drinks: "Well-kept real ales, cider and other drinks",
+    dogs: "Dogs welcome",
+    outdoorSeating: "Garden and patio",
+    parking: "Good-sized on-site car park",
+    openingHours: "Mon–Fri 12–3pm and 6–11pm; Sat 12–11pm; Sun 12–10:30pm. Food daily 12–2pm and 6:30–9pm"
+});
+
+Object.assign(pubs["nobody-inn"], {
+    address: "Doddiscombsleigh, Exeter, Devon, EX6 7PS",
+    phone: "01647 252394",
+    website: "https://nobodyinn.co.uk/",
+    food: "Seasonal country cooking, homemade pies and evening meals",
+    drinks: "Local ales, wines and an extensive whisky selection",
+    dogs: "Check with the pub about current arrangements",
+    outdoorSeating: "Garden seating",
+    parking: "On-site parking",
+    openingHours: "Mon–Tue 3–7pm; Wed–Sat 12–10:30pm; Sun 12–5pm. Kitchen hours vary"
+});
+
+Object.assign(pubs["cromwell-arms"], {
+    address: "Fore Street, Bovey Tracey, Devon, TQ13 9AE",
+    phone: "01626 688118",
+    website: "https://cromwellarms.co.uk/",
+    food: "Restaurant serving pub classics, daily specials and Sunday meals",
+    drinks: "Cask ales, wines and a wide selection of drinks",
+    dogs: "Dog friendly",
+    outdoorSeating: "Beer garden",
+    parking: "On-site car park",
+    openingHours: "Daily 12 noon–11pm"
+});
+
+Object.assign(pubs["cridford-inn"], {
+    address: "Trusham, Newton Abbot, Devon, TQ13 0NR",
+    phone: "01626 853694",
+    website: "https://thecridfordinn.co.uk/",
+    food: "Restaurant serving seasonal food, lunch and evening meals",
+    drinks: "Real ales, cider, wines and spirits",
+    dogs: "Dog-friendly rooms; check arrangements for the pub",
+    outdoorSeating: "Garden",
+    parking: "Free on-site parking",
+    openingHours: "Mon–Sat 11am–11pm; Sun 12 noon–10:30pm. Food hours vary"
+});
+
+Object.assign(pubs["bell-inn-bovey"], {
+    address: "Town Hall Place, Bovey Tracey, Devon, TQ13 9AA",
+    phone: "01626 833495",
+    website: "https://www.heavitreebrewery.co.uk/pubs/the-bell-inn-2/",
+    food: "Check current food arrangements before visiting",
+    drinks: "Local ales, West Country ciders, wines and spirits",
+    dogs: "Dog friendly",
+    outdoorSeating: "Secluded beer garden",
+    parking: "Parking available; check with the pub",
+    openingHours: "Mon–Thu from 12 noon; Fri–Sat 12 noon–11pm; Sun 11am–11pm"
 });
     
 const pub = pubs[id];
