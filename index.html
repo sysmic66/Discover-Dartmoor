@@ -3350,13 +3350,50 @@ function openFoodDrink(id) {
                 <p>${item.details}</p>
                 
                 ${id === "pubs" ? `
-                    <h3 style="color:#315a48;margin-top:25px;">
-                        Explore Dartmoor Pubs & Inns
-                    </h3>
+       
+<div style="margin-top:30px;padding:22px;
+    background:#19382e;border-radius:14px;color:white;">
 
-                    <div style="display:grid;
-                        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-                        gap:15px;margin-top:20px;">
+    <div style="font-size:12px;letter-spacing:2px;
+        color:#d5bd91;font-weight:bold;margin-bottom:8px;">
+        DISCOVER DARTMOOR
+    </div>
+
+    <h3 style="font-size:25px;margin:0 0 8px;color:white;">
+        Explore Pubs & Inns
+    </h3>
+
+    <p style="font-size:14px;line-height:1.6;
+        color:#e4e9e4;margin:0;">
+        From historic moorland inns to welcoming village pubs,
+        discover somewhere special to stop along the way.
+    </p>
+
+    <div style="margin-top:15px;font-size:13px;color:#d5bd91;">
+        82 places to explore
+    </div>
+</div>
+
+<div style="margin-top:22px;">
+    <input id="pubSearch"
+        type="text"
+        placeholder="Search pubs, inns or villages..."
+        style="width:100%;box-sizing:border-box;
+        padding:15px 17px;border:1px solid #ddd;
+        border-radius:10px;font-size:15px;
+        background:white;outline:none;">
+
+    <p id="pubResultCount"
+        style="font-size:13px;color:#777;margin:12px 2px;">
+        Showing all pubs
+    </p>
+</div>
+
+<div id="pubGrid"
+    style="display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;margin-top:15px;">
+
 
                         <div onclick="openPubDetails('warren-house-inn')"
                             style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
@@ -3951,8 +3988,77 @@ function openFoodDrink(id) {
         </div>
     `;
 
-    document.body.appendChild(page);
+document.body.appendChild(page);
+
+// Set up pub search
+if (id === "pubs") {
+
+    const searchInput = document.getElementById("pubSearch");
+    const resultCount = document.getElementById("pubResultCount");
+    const pubGrid = document.getElementById("pubGrid");
+
+    if (searchInput && resultCount && pubGrid) {
+
+        const pubCards = Array.from(pubGrid.children);
+
+        // Improve the appearance of every pub card
+        pubCards.forEach(card => {
+            card.style.background = "#ffffff";
+            card.style.padding = "20px";
+            card.style.borderRadius = "12px";
+            card.style.border = "1px solid #e8e5dc";
+            card.style.boxShadow = "0 3px 12px rgba(0,0,0,0.04)";
+            card.style.transition = "transform 0.2s, box-shadow 0.2s";
+
+            const heading = card.querySelector("h3");
+            const location = card.querySelector("p");
+            const link = card.querySelector("span");
+
+            if (heading) {
+                heading.style.fontSize = "17px";
+                heading.style.marginTop = "0";
+                heading.style.marginBottom = "8px";
+            }
+
+            if (location) {
+                location.style.fontSize = "14px";
+                location.style.marginBottom = "15px";
+            }
+
+            if (link) {
+                link.style.fontSize = "12px";
+                link.style.letterSpacing = "0.5px";
+            }
+        });
+
+        // Search and filter pub cards
+        searchInput.addEventListener("input", function() {
+
+            const searchTerm = this.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            pubCards.forEach(card => {
+
+                const cardText = card.textContent.toLowerCase();
+                const matches = cardText.includes(searchTerm);
+
+                card.style.display = matches ? "" : "none";
+
+                if (matches) visibleCount++;
+            });
+
+            resultCount.textContent =
+                searchTerm === ""
+                ? "Showing all " + visibleCount + " pubs"
+                : "Showing " + visibleCount + " matching pubs";
+        });
+
+        resultCount.textContent =
+            "Showing all " + pubCards.length + " pubs";
+    }
 }
+}
+
 
 function openPubDetails(id) {
     document.getElementById("attraction")?.remove();
