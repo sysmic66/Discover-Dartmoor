@@ -3595,6 +3595,48 @@ function openFoodDrink(id) {
     <p style="color:#666;">Bovey Tracey</p>
     <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
 </div>
+
+<div onclick="openPubDetails('tradesmans-arms')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Tradesmans Arms</h3>
+    <p style="color:#666;">Scorriton</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('drewe-arms')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Drewe Arms</h3>
+    <p style="color:#666;">Drewsteignton</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('drake-manor-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Drake Manor Inn</h3>
+    <p style="color:#666;">Buckland Monachorum</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('kings-arms-south-zeal')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Kings Arms</h3>
+    <p style="color:#666;">South Zeal</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('cornwood-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Cornwood Inn</h3>
+    <p style="color:#666;">Cornwood</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('horse-and-groom')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Horse & Groom</h3>
+    <p style="color:#666;">Bittaford</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
                     </div>
                 ` : ""}
 
@@ -3961,6 +4003,72 @@ const pubs = {
     licenseUrl: "",
     licenseName: "",
     description: "A traditional town pub in Bovey Tracey, known for its welcoming atmosphere, selection of drinks and secluded beer garden."
+},
+
+"tradesmans-arms": {
+    name: "Tradesmans Arms",
+    location: "Scorriton",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Tradesmans_Arms,_Scorriton_-_geograph.org.uk_-_1311589.jpg",
+    photoCredit: "Trish Steel · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_Tradesmans_Arms,_Scorriton_-_geograph.org.uk_-_1311589.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A traditional Dartmoor village pub in Scorriton, with home-cooked food, real ales and a welcoming atmosphere."
+},
+
+"drewe-arms": {
+    name: "Drewe Arms",
+    location: "Drewsteignton",
+    image: "",
+    photoCredit: "",
+    photoLink: "",
+    licenseUrl: "",
+    licenseName: "",
+    description: "A historic village pub in Drewsteignton, reopened as a community-run pub in 2024 and welcoming walkers exploring the Two Moors Way."
+},
+
+"drake-manor-inn": {
+    name: "Drake Manor Inn",
+    location: "Buckland Monachorum",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Buckland_Monachorum,_by_the_Drake_Manor_Inn_-_geograph.org.uk_-_1958364.jpg",
+    photoCredit: "Martin Bodman · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:Buckland_Monachorum,_by_the_Drake_Manor_Inn_-_geograph.org.uk_-_1958364.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A traditional village inn in Buckland Monachorum, close to the western side of Dartmoor and Buckland Abbey."
+},
+
+"kings-arms-south-zeal": {
+    name: "Kings Arms",
+    location: "South Zeal",
+    image: "",
+    photoCredit: "",
+    photoLink: "",
+    licenseUrl: "",
+    licenseName: "",
+    description: "A historic thatched village pub in South Zeal, with traditional character, food and a selection of drinks."
+},
+
+"cornwood-inn": {
+    name: "Cornwood Inn",
+    location: "Cornwood",
+    image: "",
+    photoCredit: "",
+    photoLink: "",
+    licenseUrl: "",
+    licenseName: "",
+    description: "A traditional community village pub in Cornwood, offering a friendly stopping point south of Dartmoor."
+},
+
+"horse-and-groom": {
+    name: "Horse & Groom",
+    location: "Bittaford",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Horse_and_Groom_public_house,_Bittaford,_Devon_-_geograph.org.uk_-_88314.jpg",
+    photoCredit: "Kevin Hale · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:Horse_and_Groom_public_house,_Bittaford,_Devon_-_geograph.org.uk_-_88314.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A community pub in Bittaford, near the railway viaduct, with real ales, cider and a friendly local atmosphere."
 }
    
 };
@@ -4338,6 +4446,78 @@ Object.assign(pubs["bell-inn-bovey"], {
     outdoorSeating: "Secluded beer garden",
     parking: "Parking available; check with the pub",
     openingHours: "Mon–Thu from 12 noon; Fri–Sat 12 noon–11pm; Sun 11am–11pm"
+});
+
+Object.assign(pubs["tradesmans-arms"], {
+    address: "Scorriton, Buckfastleigh, Devon, TQ11 0JB",
+    phone: "01364 631206",
+    website: "https://www.tradesmansarms-dartmoor.com/",
+    food: "Home-cooked food, lunch and evening meals",
+    drinks: "Real ales, local cider, wines and spirits",
+    dogs: "Dogs welcome on leads",
+    outdoorSeating: "Beer garden overlooking Little Combe Valley",
+    parking: "On-site parking",
+    openingHours: "Mon 6–11pm; Tue–Fri 12–3pm & 6–11pm; Sat–Sun 12–11pm"
+});
+
+Object.assign(pubs["drewe-arms"], {
+    address: "The Square, Drewsteignton, Devon, EX6 6QN",
+    phone: "01647 281377",
+    website: "https://www.drewearms.org/",
+    food: "Locally sourced meals, small plates, mains and Sunday lunch",
+    drinks: "Local real ales, cider and other drinks",
+    dogs: "Check with the pub",
+    outdoorSeating: "Front terrace and rear garden",
+    parking: "Free on-road parking and village hall car park",
+    openingHours: "Mon closed; Tue 4–10pm; Wed–Thu 11am–10pm; Fri–Sat 11am–11pm; Sun 11am–6pm"
+});
+
+Object.assign(pubs["drake-manor-inn"], {
+    address: "The Village, Buckland Monachorum, Yelverton, Devon, PL20 7NA",
+    phone: "01822 853892",
+    website: "https://drakemanorinn.co.uk/",
+    food: "Traditional pub food and restaurant meals",
+    drinks: "Real ales, cider, wines and spirits",
+    dogs: "Check with the pub",
+    outdoorSeating: "Outdoor seating",
+    parking: "On-site parking",
+    openingHours: "Check the official website for current opening and food times"
+});
+
+Object.assign(pubs["kings-arms-south-zeal"], {
+    address: "South Zeal, Okehampton, Devon, EX20 2JP",
+    phone: "01837 840300",
+    website: "",
+    food: "Traditional pub meals and food specials",
+    drinks: "Real ales, cider and other drinks",
+    dogs: "Check with the pub",
+    outdoorSeating: "Garden",
+    parking: "Village parking nearby",
+    openingHours: "Listed as open daily from 12 noon; check before visiting"
+});
+
+Object.assign(pubs["cornwood-inn"], {
+    address: "The Square, Cornwood, Ivybridge, Devon, PL21 9PU",
+    phone: "01752 837289",
+    website: "https://www.cornwood-inn.com/",
+    food: "Traditional pub food and popular Sunday roasts",
+    drinks: "Real ales, local cider and other drinks",
+    dogs: "Check with the pub",
+    outdoorSeating: "Check with the pub",
+    parking: "Village parking nearby",
+    openingHours: "Tue 4–8pm; Wed 4–10pm; Thu 12–11pm; Fri–Sat 12pm–late; Sun 12–9pm. Monday closed"
+});
+
+Object.assign(pubs["horse-and-groom"], {
+    address: "Bittaford, Ivybridge, Devon, PL21 0EL",
+    phone: "01752 892358",
+    website: "",
+    food: "Home-cooked pub food, steaks, burgers and traditional meals",
+    drinks: "Real ales, local cider and other drinks",
+    dogs: "Check with the pub",
+    outdoorSeating: "Check with the pub",
+    parking: "Check with the pub",
+    openingHours: "Tue–Sat 12–11pm; Sun 12–10pm. Monday hours not confirmed"
 });
     
 const pub = pubs[id];
