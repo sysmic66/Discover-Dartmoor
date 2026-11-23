@@ -3470,6 +3470,48 @@ function openFoodDrink(id) {
     <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
 </div>
 
+<div onclick="openPubDetails('forest-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Forest Inn</h3>
+    <p style="color:#666;">Hexworthy</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('plume-of-feathers')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Plume of Feathers</h3>
+    <p style="color:#666;">Princetown</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('rock-inn-haytor')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Rock Inn</h3>
+    <p style="color:#666;">Haytor Vale</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('cleave-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">The Cleave</h3>
+    <p style="color:#666;">Lustleigh</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('globe-inn-chagford')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Globe Inn</h3>
+    <p style="color:#666;">Chagford</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('three-crowns')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Three Crowns</h3>
+    <p style="color:#666;">Chagford</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
                     </div>
                 ` : ""}
 
@@ -3638,8 +3680,74 @@ const pubs = {
     licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
     licenseName: "CC0 1.0",
     description: "A family-run riverside pub beside the River Teign, with outdoor terraces and a popular setting for walkers exploring the Teign Gorge."
-}
+},
 
+
+"forest-inn": {
+    name: "Forest Inn",
+    location: "Hexworthy",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Forest_Inn,_Hexworthy_-_geograph.org.uk_-_2413195.jpg",
+    photoCredit: "Andrew Hackney · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:Forest_Inn,_Hexworthy_-_geograph.org.uk_-_2413195.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A traditional Dartmoor country inn in the remote hamlet of Hexworthy. Enjoy home-cooked food, local drinks and a welcoming atmosphere close to some beautiful moorland walking routes."
+},
+
+"plume-of-feathers": {
+    name: "Plume of Feathers",
+    location: "Princetown",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Plume_of_Feathers_Inn,_Princetown_-_geograph.org.uk_-_3486048.jpg",
+    photoCredit: "Ian S · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_Plume_of_Feathers_Inn,_Princetown_-_geograph.org.uk_-_3486048.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A historic traditional inn in the heart of Princetown, dating back to the 18th century. A popular stopping place for walkers and visitors exploring the central Dartmoor landscape."
+},
+
+"rock-inn-haytor": {
+    name: "Rock Inn",
+    location: "Haytor Vale",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Rock_Inn,_Haytor_Vale_-_geograph.org.uk_-_4702093.jpg",
+    photoCredit: "David Purchase · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_Rock_Inn,_Haytor_Vale_-_geograph.org.uk_-_4702093.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A historic family-run country inn in Haytor Vale, dating from the 1820s. Enjoy its traditional character, welcoming bar and restaurant after exploring nearby Haytor Rocks."
+},
+
+"cleave-inn": {
+    name: "The Cleave",
+    location: "Lustleigh",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Cleave_at_Lustleigh_-_geograph.org.uk_-_3145258.jpg",
+    photoCredit: "Gareth James · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_Cleave_at_Lustleigh_-_geograph.org.uk_-_3145258.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A beautiful thatched village pub dating back to the 15th century, in the heart of Lustleigh. Enjoy traditional surroundings, locally sourced food, real ales and a pretty garden."
+},
+
+"globe-inn-chagford": {
+    name: "Globe Inn",
+    location: "Chagford",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Globe_Inn_at_Chagford_-_geograph.org.uk_-_3068759.jpg",
+    photoCredit: "David Smith · Geograph",
+    photoLink: "https://commons.wikimedia.org/wiki/File:The_Globe_Inn_at_Chagford_-_geograph.org.uk_-_3068759.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0",
+    description: "A traditional country inn on Chagford High Street, offering a welcoming bar, locally sourced home-cooked food and comfortable accommodation close to Dartmoor."
+},
+
+"three-crowns": {
+    name: "Three Crowns",
+    location: "Chagford",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Three_Crowns,_Chagford_(6205).jpg",
+    photoCredit: "Nilfanion · Wikimedia UK",
+    photoLink: "https://commons.wikimedia.org/wiki/File:Three_Crowns,_Chagford_(6205).jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    licenseName: "CC BY-SA 4.0",
+    description: "A beautiful part-thatched historic inn in the centre of Chagford, with origins dating back to the 13th century. Enjoy its traditional character, restaurant, welcoming bar and comfortable rooms."
+}
 
    
 };
@@ -3804,7 +3912,78 @@ Object.assign(pubs["fingle-bridge-inn"], {
     openingHours: "Monday–Thursday 11am–4pm; Friday 11am–4pm and 6pm–9pm; Saturday 11am–9pm; Sunday 11am–5:30pm. Food hours vary."
 });
   
+Object.assign(pubs["forest-inn"], {
+    address: "The Forest Inn, Hexworthy, Princetown, Yelverton, PL20 6SD",
+    phone: "01364 631211",
+    website: "https://forestinndartmoor.co.uk/",
+    food: "Home-cooked pub food, with Sunday roasts",
+    drinks: "Local ales, cider and other drinks",
+    dogs: "Dogs welcome",
+    outdoorSeating: "Garden and outdoor seating",
+    parking: "On-site parking",
+    openingHours: "Mon 12–3pm & 6–10pm; Tue closed; Wed–Fri 12–3pm & 6–10pm; Sat 12–10pm; Sun 12–5pm"
+});
 
+Object.assign(pubs["plume-of-feathers"], {
+    address: "Plymouth Hill, Princetown, Yelverton, PL20 6QQ",
+    phone: "01822 890240",
+    website: "https://plumedartmoor.co.uk/",
+    food: "Pub meals, including lunch and evening food. Check current kitchen times",
+    drinks: "Dartmoor Brewery ales and other drinks",
+    dogs: "Check with pub",
+    outdoorSeating: "Outdoor courtyard",
+    parking: "On-site parking",
+    openingHours: "Currently listed as Wed–Sat 12–11pm; Sun 12–6pm; Mon and Tue closed. Check before visiting"
+});
+
+Object.assign(pubs["rock-inn-haytor"], {
+    address: "Haytor Vale, Dartmoor National Park, Newton Abbot, TQ13 9XP",
+    phone: "01364 661305",
+    website: "https://www.rock-inn.co.uk/",
+    food: "Restaurant serving lunch and evening meals, plus Sunday lunch",
+    drinks: "Local real ales, wines and spirits",
+    dogs: "Dogs welcome in most dining areas; check when booking",
+    outdoorSeating: "Garden and outdoor seating",
+    parking: "Limited parking; roadside parking may be available",
+    openingHours: "Restaurant: Mon–Sat lunch 12–2pm and dinner 6:30–8:30pm; Sun lunch 12–3pm. Check bar hours"
+});
+
+Object.assign(pubs["cleave-inn"], {
+    address: "The Cleave, Lustleigh, Devon, TQ13 9TJ",
+    phone: "01647 277223",
+    website: "https://www.thecleave.co.uk/",
+    food: "Restaurant serving local food, pub classics and Sunday roasts",
+    drinks: "Real ales, local drinks and wines",
+    dogs: "Dogs welcome in the garden and by the log fire",
+    outdoorSeating: "Beer garden",
+    parking: "On-site car park",
+    openingHours: "Mon and Tue closed; Wed–Sat 12–11pm; Sun 12–7pm. Food Wed–Sat 12–2:30pm & 6–8:30pm; Sun 12–3pm"
+});
+
+Object.assign(pubs["globe-inn-chagford"], {
+    address: "9 High Street, Chagford, Devon, TQ13 8AJ",
+    phone: "01647 433485",
+    website: "https://www.theglobeinnchagford.co.uk/",
+    food: "Home-cooked food, Sunday roasts and evening meals",
+    drinks: "Real ales, cider, wines and spirits",
+    dogs: "Dogs welcome in the lounge and public bars",
+    outdoorSeating: "Check with pub",
+    parking: "Public car parking nearby",
+    openingHours: "Mon–Sat 11am–11pm; Sun 12–10:30pm. Food: Mon–Sat 12:30–2:30pm & 6–9pm; Sun 12–3pm"
+});
+
+Object.assign(pubs["three-crowns"], {
+    address: "Three Crowns Inn, High Street, Chagford, Devon, TQ13 8AJ",
+    phone: "01647 433444",
+    website: "https://threecrowns-chagford.co.uk/",
+    food: "Restaurant serving seasonal food",
+    drinks: "Bar serving beers, ciders, wines and cocktails",
+    dogs: "Check with pub regarding dogs in the bar and restaurant",
+    outdoorSeating: "Check with pub",
+    parking: "No on-site parking for non-residents; public parking nearby",
+    openingHours: "Opening hours vary; check the pub's website before visiting"
+});
+    
 const pub = pubs[id];
 if (!pub) return;
 
