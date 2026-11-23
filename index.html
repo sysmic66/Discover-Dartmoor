@@ -3428,6 +3428,48 @@ function openFoodDrink(id) {
                             <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
                         </div>
 
+<div onclick="openPubDetails('east-dart-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">East Dart Inn</h3>
+    <p style="color:#666;">Postbridge</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('two-bridges-hotel')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Two Bridges Hotel</h3>
+    <p style="color:#666;">Two Bridges</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('prince-of-wales')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Prince of Wales</h3>
+    <p style="color:#666;">Princetown</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('royal-oak-meavy')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Royal Oak Inn</h3>
+    <p style="color:#666;">Meavy</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('skylark-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Skylark Inn</h3>
+    <p style="color:#666;">Clearbrook</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
+<div onclick="openPubDetails('fingle-bridge-inn')"
+    style="background:#f6f4ed;padding:18px;border-radius:12px;cursor:pointer;">
+    <h3 style="color:#19382e;">Fingle Bridge Inn</h3>
+    <p style="color:#666;">Drewsteignton – wider Dartmoor area</p>
+    <span style="color:#987344;font-weight:bold;">VIEW PUB →</span>
+</div>
+
                     </div>
                 ` : ""}
 
@@ -3529,8 +3571,45 @@ const pubs = {
         image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Tors_Inn,_Belstone_-_geograph.org.uk_-_933903.jpg",
         photoCredit: "Mike White / Geograph",
         description: "A country pub in Belstone, on the northern edge of Dartmoor."
-    }
+    },
+    
+'east-dart-inn': {
+    name: "East Dart Inn",
+    location: "Postbridge",
+    description: "A historic coaching inn dating back to 1862, close to Postbridge Clapper Bridge. Enjoy a traditional pub atmosphere, local ales and gardens."
+},
 
+'two-bridges-hotel': {
+    name: "Two Bridges Hotel",
+    location: "Two Bridges",
+    description: "A historic hotel and traditional Dartmoor stopping place beside the West Dart River, with a welcoming bar, restaurant and beautiful riverside surroundings."
+},
+
+'prince-of-wales': {
+    name: "Prince of Wales",
+    location: "Princetown",
+    description: "A cosy, family-run traditional pub in the heart of Princetown, offering food, drinks and a dog-friendly welcome to Dartmoor visitors."
+},
+
+'royal-oak-meavy': {
+    name: "Royal Oak Inn",
+    location: "Meavy",
+    description: "A historic village inn facing Meavy village green, next to St Peter's Church. This community-owned pub has a long history in the village."
+},
+
+'skylark-inn': {
+    name: "Skylark Inn",
+    location: "Clearbrook",
+    description: "A traditional country pub in Clearbrook, offering home-cooked food, a welcoming atmosphere and a garden for warmer days."
+},
+
+'fingle-bridge-inn': {
+    name: "Fingle Bridge Inn",
+    location: "Drewsteignton – wider Dartmoor area",
+    description: "A family-run riverside pub beside the River Teign, with outdoor terraces and a popular setting for walkers exploring the Teign Gorge."
+}
+
+   
 };
 
 Object.assign(pubs["old-inn"], {
@@ -3628,6 +3707,71 @@ Object.assign(pubs["tors-inn"], {
     parking: "Parking available.",
     openingHours: "Opening and food service times can vary. Check before visiting."
 });
+
+Object.assign(pubs["east-dart-inn"], {
+    address: "East Dart Inn, Postbridge, Yelverton, Devon, PL20 6TJ",
+    phone: "01822 880213",
+    website: "https://east-dart-inn.co.uk/",
+    food: "Breakfasts, light lunches, pizzas, pub meals, cream teas and Sunday roasts.",
+    drinks: "Local ales, cider, lagers, local gins and other spirits.",
+    dogs: "Dog friendly.",
+    outdoorSeating: "Rear beer garden and large walled front garden.",
+    parking: "Off-street parking, with additional nearby parking.",
+    openingHours: "Listed opening times: Wednesday from 4pm; Thursday to Sunday from 11am. Check ahead, especially in winter."
+});
+
+Object.assign(pubs["two-bridges-hotel"], {
+    address: "Two Bridges Hotel, Two Bridges, Dartmoor, Devon, PL20 6SW",
+    phone: "01822 892300",
+    website: "https://twobridges.co.uk/",
+    food: "Seasonal Devon dining, lunches, Sunday roasts, evening meals and traditional Devon cream teas.",
+    drinks: "Local Dartmoor ales, wines and a selection of other drinks.",
+    dogs: "Well-behaved dogs accepted.",
+    outdoorSeating: "Riverside garden and outdoor terrace.",
+    openingHours: "Dining times listed: lunch 12pm–2:30pm, cream teas and drinks throughout the day, evening meals 6:30pm–8pm. Check ahead before visiting."
+});
+
+Object.assign(pubs["prince-of-wales"], {
+    address: "Prince of Wales, Tavistock Road, Princetown, Devon, PL20 6QF",
+    phone: "01822 890219",
+    website: "https://www.princeofwalesprincetown.pub/",
+    food: "Traditional pub food. Check the website for the current menu.",
+    drinks: "A selection of traditional pub drinks.",
+    dogs: "Dog friendly.",
+    openingHours: "Check the pub website or telephone for current opening times."
+});
+
+Object.assign(pubs["royal-oak-meavy"], {
+    address: "Royal Oak Inn, Meavy, Yelverton, Devon, PL20 6PJ",
+    phone: "01822 851924",
+    website: "https://www.royaloakinn.co.uk/",
+    food: "Traditional pub food and home-cooked meals.",
+    drinks: "Traditional pub drinks, including real ale and cider.",
+    openingHours: "Tenant change announced for late November 2026. Check with the pub or Burrator Parish Council for current arrangements before visiting."
+});
+
+Object.assign(pubs["skylark-inn"], {
+    address: "The Skylark Inn, Clearbrook, Yelverton, Devon, PL20 6JD",
+    phone: "01822 853258",
+    website: "https://www.skylarkinn.co.uk/",
+    food: "Home-cooked meals and a varied pub menu.",
+    drinks: "A selection of beers, wines, spirits and soft drinks.",
+    outdoorSeating: "Pub garden.",
+    parking: "Parking available nearby.",
+    openingHours: "Check the pub website for current opening times."
+}):
+
+Object.assign(pubs["fingle-bridge-inn"], {
+    address: "Fingle Bridge Inn, Drewsteignton, Devon, EX6 6PW",
+    phone: "01647 281287",
+    website: "https://www.finglebridgeinn.co.uk/",
+    food: "Light bites, main meals, cream teas, cakes and Sunday carvery.",
+    drinks: "Riverside bar serving a selection of drinks.",
+    outdoorSeating: "Riverside terraces.",
+    parking: "Parking available at the inn.",
+    openingHours: "Monday–Thursday 11am–4pm; Friday 11am–4pm and 6pm–9pm; Saturday 11am–9pm; Sunday 11am–5:30pm. Food hours vary."
+});
+  
 
 const pub = pubs[id];
 if (!pub) return;
