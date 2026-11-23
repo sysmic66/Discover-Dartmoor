@@ -4945,6 +4945,18 @@ const pubs = {
     description: "A traditional Devon village pub with a large beer garden, covered outdoor seating, freshly prepared food, local cask ales and regular entertainment."
 },
 
+Object.assign(pubs["warren-house-inn"], {
+    address: "Postbridge, Yelverton, Devon, PL20 6TA",
+    phone: "01822 880208",
+    website: "https://www.warrenhouseinn.co.uk/",
+    food: "Traditional homemade pub food, including the famous rabbit pie, steak and ale pie, Dartmoor beef and homemade desserts.",
+    drinks: "Local real ales, traditional cider, lagers and other refreshments.",
+    dogs: "Dogs welcome in most areas of the pub, but not in the dining room. Keep dogs on a lead.",
+    outdoorSeating: "Outdoor benches and picnic tables with spectacular views across Dartmoor.",
+    parking: "Parking available at the pub.",
+    openingHours: "Monday–Thursday 11am–4pm; Friday–Saturday 11am–9pm; Sunday 11am–8pm. Seasonal hours may vary, so check before visiting."
+});
+
    
 };
 
@@ -5906,6 +5918,7 @@ Object.assign(pubs["london-inn-horrabridge"], {
 
 });
 
+// BATCH 1 — VERIFIED PUB PHOTOGRAPHS
 
 Object.assign(pubs["warren-house-inn"], {
     image: "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Warren_House_Inn%22,_Dartmoor_-_geograph.org.uk_-_4546160.jpg",
@@ -5924,15 +5937,19 @@ Object.assign(pubs["old-inn"], {
 });
 
 Object.assign(pubs["castle-inn"], {
-    image: "",
-    photoCredit: "",
-    photoLink: ""
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Lydford,_The_Castle_Inn_-_geograph.org.uk_-_1020386.jpg",
+    photoCredit: "Nigel Cox",
+    photoLink: "https://commons.wikimedia.org/wiki/File:Lydford,_The_Castle_Inn_-_geograph.org.uk_-_1020386.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0"
 });
 
 Object.assign(pubs["mary-tavy-inn"], {
-    image: "",
-    photoCredit: "",
-    photoLink: ""
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mary_Tavy_Inn,_Mary_Tavy,_Dartmoor_-_geograph.org.uk_-_3483182.jpg",
+    photoCredit: "Ian S",
+    photoLink: "https://commons.wikimedia.org/wiki/File:Mary_Tavy_Inn,_Mary_Tavy,_Dartmoor_-_geograph.org.uk_-_3483182.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    licenseName: "CC BY-SA 2.0"
 });
 
 Object.assign(pubs["dartmoor-inn"], {
@@ -5941,12 +5958,6 @@ Object.assign(pubs["dartmoor-inn"], {
     photoLink: "https://commons.wikimedia.org/wiki/File:Dartmoor_Inn,_Merrivale_-_geograph.org.uk_-_212808.jpg",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
     licenseName: "CC BY-SA 2.0"
-});
-
-Object.assign(pubs["walkhampton-inn"], {
-    image: "",
-    photoCredit: "",
-    photoLink: ""
 });
 
 Object.assign(pubs["ring-of-bells"], {
@@ -5980,6 +5991,8 @@ Object.assign(pubs["tors-inn"], {
     licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
     licenseName: "CC BY-SA 2.0"
 });
+
+
 
 const pub = pubs[id];
 if (!pub) return;
