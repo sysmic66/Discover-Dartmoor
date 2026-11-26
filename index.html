@@ -3994,6 +3994,9 @@ function openFoodDrink(id) {
                         </div>
 
                         <div onclick="openCafeDetails('fox-tor-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fox_Tor_Cafe,_Princetown_-_geograph.org.uk_-_1102269.jpg"
+     alt="Fox Tor Café"
+     style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
                             <h3>Fox Tor Café</h3>
                             <p>Princetown</p>
                             <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
@@ -4006,6 +4009,9 @@ function openFoodDrink(id) {
                         </div>
 
                         <div onclick="openCafeDetails('waterfall-tea-room')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lydford_Gorge_-_tearoom_-_geograph.org.uk_-_8162162.jpg"
+     alt="Waterfall Tea Room"
+     style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
                             <h3>Waterfall Tea Room</h3>
                             <p>Lydford Gorge</p>
                             <span style="color:#987344; font-weight:bold;">VIEW TEA ROOM →</span>
@@ -4020,7 +4026,17 @@ function openFoodDrink(id) {
                         <div onclick="openCafeDetails('stone-lane-tea-room')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
                             <h3>Stone Lane Gardens Tea Room</h3>
                             <p>Chagford</p>
-                            <span style="color:#987344; font-weight:bold;">VIEW TEA ROOM →</span>
+                            <span style="co${cafe.image ? `
+    <img src="${cafe.image}"
+         alt="${cafe.name}"
+         style="width:100%; max-height:320px; object-fit:cover;
+         border-radius:10px; margin-bottom:18px;">
+
+    <p style="font-size:12px; color:#666; margin-bottom:18px;">
+        Photo: <a href="${cafe.photoLink}" target="_blank" rel="noopener">
+        ${cafe.photoCredit}</a>
+        · ${cafe.photoLicense}
+    </p>
                         </div>
 
                     </div>
