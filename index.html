@@ -3979,6 +3979,52 @@ function openFoodDrink(id) {
 
 
                 <p style="margin-top:25px;">
+                    ${id === "cafes" ? `
+                    <div style="background:#19382e; color:#f6f4ed; padding:18px; border-radius:12px; margin-top:20px;">
+                        <h2 style="margin:0 0 8px;">Cafés & Tearooms</h2>
+                        <p style="margin:0;">Discover welcoming cafés, homemade cakes, cream teas and places to stop for a bite to eat across Dartmoor.</p>
+                    </div>
+
+                    <div id="cafeGrid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:15px; margin-top:18px;">
+
+                        <div onclick="openCafeDetails('cafe-on-the-green')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+                            <h3>The Café on the Green</h3>
+                            <p>Widecombe-in-the-Moor</p>
+                            <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+                        </div>
+
+                        <div onclick="openCafeDetails('fox-tor-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+                            <h3>Fox Tor Café</h3>
+                            <p>Princetown</p>
+                            <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+                        </div>
+
+                        <div onclick="openCafeDetails('holne-tearoom')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+                            <h3>Holne Tearoom</h3>
+                            <p>Holne</p>
+                            <span style="color:#987344; font-weight:bold;">VIEW TEAROOM →</span>
+                        </div>
+
+                        <div onclick="openCafeDetails('waterfall-tea-room')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+                            <h3>Waterfall Tea Room</h3>
+                            <p>Lydford Gorge</p>
+                            <span style="color:#987344; font-weight:bold;">VIEW TEA ROOM →</span>
+                        </div>
+
+                        <div onclick="openCafeDetails('old-forge-caffe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+                            <h3>The Old Forge Caffè</h3>
+                            <p>Chagford</p>
+                            <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+                        </div>
+
+                        <div onclick="openCafeDetails('stone-lane-tea-room')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+                            <h3>Stone Lane Gardens Tea Room</h3>
+                            <p>Chagford</p>
+                            <span style="color:#987344; font-weight:bold;">VIEW TEA ROOM →</span>
+                        </div>
+
+                    </div>
+                ` : ""}
                     <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.search)}"
                         target="_blank" style="color:#315a48;">
                         Find places on Google Maps →
@@ -6263,6 +6309,149 @@ ${pub.phone || pub.website ? `
     document.body.appendChild(page);
 }
 
+function openCafeDetails(id) {
+    document.getElementById("attraction")?.remove();
+
+    const cafes = {
+        "cafe-on-the-green": {
+            name: "The Café on the Green",
+            location: "Widecombe-in-the-Moor",
+            description: "A welcoming village café in the heart of Widecombe, serving breakfast, lunches, homemade cakes, cream teas and refreshments.",
+            address: "Widecombe-in-the-Moor, Devon, TQ13 7TA",
+            phone: "01364 621720",
+            website: "https://www.thecafeonthegreen.co.uk/",
+            food: "Breakfast, lunches, homemade cakes and cream teas.",
+            drinks: "Coffee, tea and other refreshments.",
+            dogs: "Dog friendly.",
+            openingHours: "Published hours are Tuesday–Sunday, 10am–4pm. Closed Mondays. Check the website before travelling."
+        },
+
+        "fox-tor-cafe": {
+            name: "Fox Tor Café",
+            location: "Princetown",
+            description: "A popular stopping point for walkers and visitors exploring the high moor, with homemade cakes, scones and refreshments.",
+            address: "Two Bridges Road, Princetown, Devon, PL20 6QS",
+            phone: "01822 890238",
+            website: "https://www.ourdartmoor.co.uk/directory/fox-tor-cafe",
+            food: "Breakfast, lunches, homemade cakes and scones.",
+            outdoorSeating: "Tea garden and covered outdoor seating.",
+            openingHours: "Reported as Tuesday–Sunday, closed Mondays. Check before visiting."
+        },
+
+        "holne-tearoom": {
+            name: "Holne Tearoom",
+            location: "Holne",
+            description: "A village tearoom offering a relaxing stop for refreshments while exploring the southern Dartmoor countryside.",
+            address: "Holne, Devon",
+            food: "Check locally for the current menu and availability.",
+            openingHours: "Opening times have not been confirmed. Check before travelling."
+        },
+
+        "waterfall-tea-room": {
+            name: "Waterfall Tea Room",
+            location: "Lydford Gorge",
+            description: "A National Trust tea room at the entrance to Lydford Gorge, ideal for refreshments before or after exploring the gorge.",
+            address: "Lydford Gorge, Lydford, Devon",
+            website: "https://www.nationaltrust.org.uk/visit/devon/lydford-gorge",
+            food: "Light refreshments, snacks, bakes, cream teas and savoury options.",
+            outdoorSeating: "Indoor and outdoor seating.",
+            dogs: "Dogs are welcome in the gorge on a short lead. Check tea room arrangements.",
+            openingHours: "Seasonal opening. Winter 2026 hours are listed as Friday–Sunday, 10am–2:30pm, until 13 December. Check the National Trust website."
+        },
+
+        "old-forge-caffe": {
+            name: "The Old Forge Caffè",
+            location: "Chagford",
+            description: "A café and restaurant in Chagford offering a place to stop for breakfast, brunch, lunch or afternoon refreshments.",
+            address: "6 The Square, Chagford, Devon, TQ13 8AB",
+            phone: "01647 433226",
+            food: "Breakfast, brunch, lunch and cream teas.",
+            openingHours: "Check directly for current opening and food service times."
+        },
+
+        "stone-lane-tea-room": {
+            name: "Stone Lane Gardens Tea Room",
+            location: "Chagford",
+            description: "A seasonal tea room within Stone Lane Gardens, providing a peaceful place to enjoy refreshments surrounded by the garden setting.",
+            address: "Stone Farm, Chagford, Devon, TQ13 8JU",
+            phone: "01647 231311",
+            website: "https://stonelanegardens.com/tea-room/",
+            food: "Cream teas, cakes, light lunches and hot and cold drinks.",
+            openingHours: "Seasonal opening. Check the gardens' website before visiting."
+        }
+    };
+
+    const cafe = cafes[id];
+    if (!cafe) return;
+
+    const page = document.createElement("section");
+    page.id = "attraction";
+
+    page.style.cssText = `
+        position:fixed;
+        inset:0;
+        z-index:100;
+        background:#f6f4ed;
+        overflow-y:auto;
+        padding:25px;
+    `;
+
+    page.innerHTML = `
+        <button onclick="openFoodDrink('cafes')"
+            style="padding:12px 20px;background:#19382e;
+            color:white;border:0;border-radius:7px;">
+            ← Back to Cafés & Tearooms
+        </button>
+
+        <div style="max-width:850px;margin:25px auto;
+            background:white;border-radius:14px;overflow:hidden;">
+
+            <div style="padding:25px;">
+
+                <h2 style="color:#19382e;">
+                    ${cafe.name}
+                </h2>
+
+                <p style="color:#987344;font-weight:bold;">
+                    ${cafe.location}, Dartmoor
+                </p>
+
+                <p>${cafe.description}</p>
+
+                <h3 style="color:#315a48;">
+                    About this café
+                </h3>
+
+                ${cafe.food ? `<p><strong>Food:</strong> ${cafe.food}</p>` : ""}
+                ${cafe.drinks ? `<p><strong>Drinks:</strong> ${cafe.drinks}</p>` : ""}
+                ${cafe.dogs ? `<p><strong>Dogs:</strong> ${cafe.dogs}</p>` : ""}
+                ${cafe.outdoorSeating ? `<p><strong>Outdoor seating:</strong> ${cafe.outdoorSeating}</p>` : ""}
+                ${cafe.openingHours ? `<p><strong>Opening information:</strong> ${cafe.openingHours}</p>` : ""}
+
+                ${cafe.phone || cafe.website ? `
+                    <h3 style="color:#315a48;">Contact</h3>
+                    ${cafe.phone ? `<p><strong>Telephone:</strong> <a href="tel:${cafe.phone}" style="color:#315a48;">${cafe.phone}</a></p>` : ""}
+                    ${cafe.website ? `<p><strong>Website / information:</strong> <a href="${cafe.website}" target="_blank" rel="noopener" style="color:#315a48;">Visit website →</a></p>` : ""}
+                ` : ""}
+
+                <h3 style="color:#315a48;">Location</h3>
+
+                <p>${cafe.address}</p>
+
+                <p style="margin-top:20px;">
+                    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cafe.name + " " + cafe.address)}"
+                        target="_blank" rel="noopener"
+                        style="color:#315a48;font-weight:bold;">
+                        Get directions →
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(page);
+}
     
 function openWildlifeCategory(category) {
     document.getElementById("attraction")?.remove();
