@@ -4028,6 +4028,32 @@ function openFoodDrink(id) {
                             <p>Chagford</p>
                       <span style="color:#987344; font-weight:bold;">VIEW TEA ROOM →</span>
                         </div>
+                        <div onclick="openCafeDetails('home-farm-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <img src="https://s0.geograph.org.uk/geophotos/06/52/89/6528977_1604a61d.jpg"
+         alt="Home Farm Café"
+         style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
+    <h3>Home Farm Café</h3>
+    <p>Parke, Bovey Tracey</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+
+<div onclick="openCafeDetails('central-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Central_Cafe,_10_The_Square,_Moretonhampstead_-_geograph.org.uk_-_6375465.jpg"
+         alt="Central Café"
+         style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
+    <h3>Central Café</h3>
+    <p>Moretonhampstead</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+
+<div onclick="openCafeDetails('old-police-station-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Police_Station_Cafe,_Princetown_-_geograph.org.uk_-_5707692.jpg"
+         alt="The Old Police Station Café"
+         style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
+    <h3>The Old Police Station Café</h3>
+    <p>Princetown</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
 
                     </div>
                 ` : ""}
@@ -6392,7 +6418,46 @@ photoLicense: "CC BY-SA 2.0",
             phone: "01647 231311",
             website: "https://stonelanegardens.com/tea-room/",
             food: "Cream teas, cakes, light lunches and hot and cold drinks.",
-            openingHours: "Seasonal opening. Check the gardens' website before visiting."
+                        openingHours: "Seasonal opening. Check the gardens' website before visiting."
+        },
+
+        "home-farm-cafe": {
+            name: "Home Farm Café",
+            location: "Parke, Bovey Tracey",
+            image: "https://s0.geograph.org.uk/geophotos/06/52/89/6528977_1604a61d.jpg",
+            photoCredit: "Derek Harper / Geograph",
+            photoLink: "https://www.geograph.org.uk/photo/6528977",
+            photoLicense: "CC BY-SA 2.0",
+            description: "An independent café on the beautiful Parke estate, serving locally sourced food, brunch, lunches, cakes and refreshments.",
+            address: "Parke, Bovey Tracey, Devon, TQ13 9JQ",
+            phone: "01626 830016",
+            website: "https://homefarmcafe.co.uk/",
+            food: "Brunch, changing lunch menu, cakes and scones.",
+            drinks: "Coffee, tea and refreshments.",
+            dogs: "Dogs welcome outside and in The Long Room.",
+            openingHours: "Winter 10am–4pm daily; summer 10am–5pm. Check the website."
+        },
+
+        "central-cafe": {
+            name: "Central Café",
+            location: "Moretonhampstead",
+            description: "A local café in the centre of Moretonhampstead, offering a convenient stop for refreshments.",
+            address: "10–11 The Square, Moretonhampstead, Devon",
+            phone: "01647 440520",
+            food: "Check locally for the current menu.",
+            openingHours: "Please check locally for current opening times."
+        },
+
+        "old-police-station-cafe": {
+            name: "The Old Police Station Café",
+            location: "Princetown",
+            description: "A family-run café and takeaway in the heart of Princetown, popular with visitors exploring Dartmoor.",
+            address: "Tavistock Road, Princetown, Devon, PL20 6QF",
+            phone: "01822 890415",
+            website: "https://theoldpolicestation.uk/",
+            food: "Breakfasts, traditional meals, fish and chips and takeaway food.",
+            dogs: "Dogs welcome.",
+            openingHours: "Open seven days a week. Check directly for current hours."
         }
     };
 
