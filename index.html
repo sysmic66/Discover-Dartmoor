@@ -4037,22 +4037,39 @@ function openFoodDrink(id) {
     <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
 </div>
 
-<div onclick="openCafeDetails('central-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Central_Cafe,_10_The_Square,_Moretonhampstead_-_geograph.org.uk_-_6375465.jpg"
-         alt="Central Café"
-         style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
+<div onclick="openCafeDetails('central-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; ">
     <h3>Central Café</h3>
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Central_Cafe,_10_The_Square,_Moretonhampstead_-_geograph.org.uk_-_6375465.jpg"
+     alt="Central Café"
+     style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
     <p>Moretonhampstead</p>
     <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
 </div>
 
 <div onclick="openCafeDetails('old-police-station-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Police_Station_Cafe,_Princetown_-_geograph.org.uk_-_5707692.jpg"
-         alt="The Old Police Station Café"
-         style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
     <h3>The Old Police Station Café</h3>
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Police_Station_Cafe,_Princetown_-_geograph.org.uk_-_5707692.jpg"
+     alt="The Old Police Station Café"
+     style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:12px;">
     <p>Princetown</p>
     <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+<div onclick="openCafeDetails('perfect-waves-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <h3>Perfect Waves Café</h3>
+    <p>Endsleigh, Ivybridge</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+
+<div onclick="openCafeDetails('canonteign-kitchen')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <h3>Canonteign Kitchen</h3>
+    <p>Canonteign Falls</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+
+<div onclick="openCafeDetails('east-dart-inn')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <h3>East Dart Inn</h3>
+    <p>Postbridge</p>
+    <span style="color:#987344; font-weight:bold;">VIEW INN →</span>
 </div>
 
                     </div>
@@ -6441,6 +6458,10 @@ photoLicense: "CC BY-SA 2.0",
         "central-cafe": {
             name: "Central Café",
             location: "Moretonhampstead",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Cafe,_10_The_Square,_Moretonhampstead_-_geograph.org.uk_-_6375465.jpg",
+photoCredit: "Roger A Smith / Geograph",
+photoLink: "https://www.geograph.org.uk/photo/6375465",
+photoLicense: "CC BY-SA 2.0",
             description: "A local café in the centre of Moretonhampstead, offering a convenient stop for refreshments.",
             address: "10–11 The Square, Moretonhampstead, Devon",
             phone: "01647 440520",
@@ -6451,6 +6472,10 @@ photoLicense: "CC BY-SA 2.0",
         "old-police-station-cafe": {
             name: "The Old Police Station Café",
             location: "Princetown",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Police_Station_Cafe,_Princetown_-_geograph.org.uk_-_5707692.jpg",
+photoCredit: "Eirian Evans / Geograph",
+photoLink: "https://www.geograph.org.uk/photo/5707692",
+photoLicense: "CC BY-SA 2.0",
             description: "A family-run café and takeaway in the heart of Princetown, popular with visitors exploring Dartmoor.",
             address: "Tavistock Road, Princetown, Devon, PL20 6QF",
             phone: "01822 890415",
@@ -6458,6 +6483,47 @@ photoLicense: "CC BY-SA 2.0",
             food: "Breakfasts, traditional meals, fish and chips and takeaway food.",
             dogs: "Dogs welcome.",
             openingHours: "Open seven days a week. Check directly for current hours."
+        }
+    };
+                openingHours: "Open seven days a week. Check directly for current hours."
+        },
+
+        "perfect-waves-cafe": {
+            name: "Perfect Waves Café",
+            location: "Endsleigh, Ivybridge",
+            description: "A welcoming café at the Owens Organic Coffee Roastery, serving freshly roasted coffee, local cakes, pastries and light meals.",
+            address: "The Roastery, Endsleigh, Ivybridge, Devon, PL21 9JL",
+            phone: "01752 897124",
+            website: "https://owenscoffee.com/pages/perfect-waves-cafe-at-the-roastery",
+            food: "Cakes, pastries, light meals and cream teas.",
+            drinks: "Organic coffee and a range of teas.",
+            dogs: "Dog friendly.",
+            openingHours: "Monday–Saturday 8:30am–4pm; Sunday 10am–3pm. Check for holiday changes."
+        },
+
+        "canonteign-kitchen": {
+            name: "Canonteign Kitchen",
+            location: "Canonteign Falls, Lower Ashton",
+            description: "A lakeside café within the Canonteign Falls estate, with homemade food and lovely views across the lakes.",
+            address: "Canonteign Falls, Lower Ashton, Devon, EX6 7RH",
+            phone: "01647 252434",
+            website: "https://www.canonteignfalls.co.uk/canonteign-kitchen/",
+            food: "Breakfasts, lunches, homemade cakes, cream teas and afternoon teas.",
+            drinks: "Barista coffee, tea and refreshments.",
+            dogs: "Dogs welcome on leads.",
+            openingHours: "Opening times vary with the season and school holidays. Check the Canonteign Falls website before visiting."
+        },
+
+        "east-dart-inn": {
+            name: "East Dart Inn",
+            location: "Postbridge",
+            description: "A historic Dartmoor coaching inn with a welcoming bar, locally sourced food and a garden where visitors can enjoy a Devon cream tea.",
+            address: "East Dart Inn, Postbridge, Yelverton, Devon, PL20 6TJ",
+            phone: "01822 880213",
+            website: "https://east-dart-inn.co.uk/",
+            food: "Locally sourced meals, breakfasts and cream teas.",
+            dogs: "Dog friendly.",
+            openingHours: "Winter hours vary. Check the inn's website before visiting."
         }
     };
 
