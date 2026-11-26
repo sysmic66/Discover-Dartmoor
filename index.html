@@ -6316,6 +6316,7 @@ function openCafeDetails(id) {
         "cafe-on-the-green": {
             name: "The Café on the Green",
             location: "Widecombe-in-the-Moor",
+            
             description: "A welcoming village café in the heart of Widecombe, serving breakfast, lunches, homemade cakes, cream teas and refreshments.",
             address: "Widecombe-in-the-Moor, Devon, TQ13 7TA",
             phone: "01364 621720",
@@ -6329,6 +6330,10 @@ function openCafeDetails(id) {
         "fox-tor-cafe": {
             name: "Fox Tor Café",
             location: "Princetown",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Fox_Tor_Cafe,_Princetown_-_geograph.org.uk_-_1102269.jpg",
+photoCredit: "Andrew Hackney / Geograph",
+photoLink: "https://www.geograph.org.uk/photo/1102269",
+photoLicense: "CC BY-SA 2.0",
             description: "A popular stopping point for walkers and visitors exploring the high moor, with homemade cakes, scones and refreshments.",
             address: "Two Bridges Road, Princetown, Devon, PL20 6QS",
             phone: "01822 890238",
@@ -6350,6 +6355,10 @@ function openCafeDetails(id) {
         "waterfall-tea-room": {
             name: "Waterfall Tea Room",
             location: "Lydford Gorge",
+            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Lydford_Gorge_-_tearoom_-_geograph.org.uk_-_8162162.jpg",
+photoCredit: "Chris Allen / Geograph",
+photoLink: "https://www.geograph.org.uk/photo/8162162",
+photoLicense: "CC BY-SA 2.0",
             description: "A National Trust tea room at the entrance to Lydford Gorge, ideal for refreshments before or after exploring the gorge.",
             address: "Lydford Gorge, Lydford, Devon",
             website: "https://www.nationaltrust.org.uk/visit/devon/lydford-gorge",
@@ -6407,7 +6416,18 @@ function openCafeDetails(id) {
             background:white;border-radius:14px;overflow:hidden;">
 
             <div style="padding:25px;">
+${cafe.image ? `
+    <img src="${cafe.image}"
+         alt="${cafe.name}"
+         style="width:100%; max-height:320px; object-fit:cover;
+         border-radius:10px; margin-bottom:18px;">
 
+    <p style="font-size:12px; color:#666; margin-bottom:18px;">
+        Photo: <a href="${cafe.photoLink}" target="_blank" rel="noopener">
+        ${cafe.photoCredit}</a>
+        · ${cafe.photoLicense}
+    </p>
+` : ""}
                 <h2 style="color:#19382e;">
                     ${cafe.name}
                 </h2>
