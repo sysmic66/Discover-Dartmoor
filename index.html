@@ -4071,6 +4071,61 @@ function openFoodDrink(id) {
     <p>Postbridge</p>
     <span style="color:#987344; font-weight:bold;">VIEW INN →</span>
 </div>
+<div onclick="openCafeDetails('baskervilles')" class="place-card">
+    <div class="place-card-image">
+        <img src="https://www.baskervilleestate.co.uk/" alt="Baskervilles Ice Cream Parlour">
+    </div>
+    <div class="place-card-content">
+        <h3>Baskervilles Ice Cream Parlour</h3>
+        <p>Moretonhampstead</p>
+        <span>VIEW CAFE →</span>
+    </div>
+    <div onclick="openCafeDetails('hippo-dartmoor')" class="place-card">
+    <div class="place-card-image">
+        <img src="IMAGE_PLACEHOLDER" alt="Hippo Dartmoor café">
+    </div>
+    <div class="place-card-content">
+        <h3>Hippo Dartmoor</h3>
+        <p>Moretonhampstead</p>
+        <span>VIEW CAFE →</span>
+    </div>
+    <div onclick="openCafeDetails('north-street-books-tearooms')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <h3>North Street Books & Tearooms</h3>
+    <p>Ashburton</p>
+    <span style="color:#987344; font-weight:bold;">VIEW TEAROOM →</span>
+</div>
+
+<div onclick="openCafeDetails('bulliver-cafe')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <h3>Bulliver Café</h3>
+    <p>Ashburton</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+
+<div onclick="openCafeDetails('orchard-kitchen')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <h3>The Orchard Kitchen Café</h3>
+    <p>Dean Prior, Buckfastleigh</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+
+<div onclick="openCafeDetails('wills-coffee-shop')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <h3>Will's Coffee Shop</h3>
+    <p>Ashburton</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+
+<div onclick="openCafeDetails('its-a-beautiful-thing')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <h3>It's A Beautiful Thing</h3>
+    <p>Ashburton</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+
+<div onclick="openCafeDetails('old-library-ashburton')" style="background:#f6f4ed; padding:18px; border-radius:12px; cursor:pointer;">
+    <h3>The Old Library Restaurant & Café</h3>
+    <p>Ashburton</p>
+    <span style="color:#987344; font-weight:bold;">VIEW CAFÉ →</span>
+</div>
+</div>
+</div>
 
                     </div>
                 ` : ""}
@@ -6522,7 +6577,95 @@ photoLicense: "CC BY-SA 2.0",
             food: "Locally sourced meals, breakfasts and cream teas.",
             dogs: "Dog friendly.",
             openingHours: "Winter hours vary. Check the inn's website before visiting."
+        },
+            "baskervilles": {
+            name: "Baskervilles Ice Cream Parlour & Coffee Shop",
+            location: "Moretonhampstead",
+            description: "A welcoming ice cream parlour and coffee shop in the heart of Moretonhampstead, serving a wide choice of ice creams alongside coffee, cakes and light refreshments.",
+            address: "2–4 Ford Street, Moretonhampstead, Devon, TQ13 8LN",
+            phone: "01647 440788",
+            website: "https://www.baskervilleestate.co.uk/",
+            food: "A wide choice of ice creams, including vegan options and sorbets, plus cakes and light refreshments.",
+            drinks: "Local hand-roasted organic coffee, tea and hot chocolate.",
+            dogs: "Dog-friendly, with ice lollies available for dogs.",
+            openingHours: "Open daily, 10am–4pm. Check the website for updates."
+            },
+                "hippo-dartmoor": {
+            name: "Hippo Dartmoor",
+            location: "Moretonhampstead",
+            description: "A relaxed café and bistro in Moretonhampstead, known for its creative atmosphere and welcoming setting.",
+            address: "1 Cross Street, Moretonhampstead, Devon, TQ13 8NL",
+            phone: "01647 279482",
+            website: "https://www.hippodartmoor.co.uk/",
+            food: "Breakfast, brunch, lunches, cakes and light meals.",
+            drinks: "Coffee, tea and other refreshments.",
+            openingHours: "Tuesday–Saturday, 9am–4pm. Kitchen closes at 3pm. Check before visiting."
+                },
+                "north-street-books-tearooms": {
+            name: "North Street Books & Tearooms",
+            location: "Ashburton",
+            description: "An independent bookshop and tearoom combining a browse through the shelves with homemade cakes and a pot of tea.",
+            address: "North Street, Ashburton, Devon",
+            food: "Homemade and locally supplied cakes.",
+            drinks: "Speciality teas and refreshments.",
+            website: "https://ourdartmoor.co.uk/directory/north-street-books-tearooms"
+        },
+
+        "bulliver-cafe": {
+            name: "Bulliver Café",
+            location: "Ashburton",
+            description: "A welcoming café in Ashburton's historic old engine shed, serving locally sourced coffee and freshly baked cakes.",
+            address: "The Engine House, Chuley Road, Ashburton, Devon, TQ13 7DH",
+            phone: "07497 595889",
+            website: "https://www.bullivercafeashburton.co.uk/",
+            food: "Homemade cakes and light lunches.",
+            drinks: "Speciality coffee and hot and cold drinks."
+        },
+
+        "orchard-kitchen": {
+            name: "The Orchard Kitchen Café",
+            location: "Dean Prior, near Buckfastleigh",
+            description: "An award-winning café at Dean Forge, serving handmade dishes and seasonal food using ingredients from the South West.",
+            address: "Dean Forge, Dean Prior, Buckfastleigh, Devon, TQ11 0LS",
+            phone: "01364 582026",
+            website: "https://www.deanforge.co.uk/orchard-kitchen-cafe",
+            food: "Breakfast, brunch, lunch, homemade cakes and seasonal specials.",
+            drinks: "Freshly roasted local coffee and other refreshments.",
+            openingHours: "Monday–Saturday, 9am–4pm. Last food orders 3pm. Closed Sunday."
+        },
+
+        "wills-coffee-shop": {
+            name: "Will's Coffee Shop",
+            location: "Ashburton",
+            description: "An independent Ashburton coffee shop serving freshly brewed coffee, cakes and light lunches.",
+            phone: "07393 195622",
+            website: "https://willscoffeeshop.co.uk/",
+            food: "Cakes and light lunches.",
+            drinks: "Freshly brewed coffee and other refreshments."
+        },
+
+        "its-a-beautiful-thing": {
+            name: "It's A Beautiful Thing",
+            location: "Ashburton",
+            description: "An inclusive community coffee shop supporting opportunities for young people with additional needs, serving artisan coffee, fresh cakes and local produce.",
+            address: "56A East Street, Ashburton, Devon, TQ13 7AX",
+            phone: "07886 289669",
+            website: "https://itsabeautifulthingashburton.co.uk/",
+            food: "Fresh cakes, light bites and locally sourced produce.",
+            drinks: "Artisan coffee and refreshments."
+        },
+
+        "old-library-ashburton": {
+            name: "The Old Library Restaurant & Café",
+            location: "Ashburton",
+            description: "A popular independent restaurant and daytime café in the heart of Ashburton, serving freshly prepared breakfasts, brunches and lunches.",
+            address: "The Old Library, North Street, Ashburton, Devon, TQ13 7QH",
+            phone: "01364 652896",
+            website: "https://www.theoldlibraryrestaurant.co.uk/",
+            food: "Breakfast, brunch, sandwiches, salads and freshly prepared lunches.",
+            openingHours: "Tuesday–Saturday, 9am–3pm. Food served until 2pm. Closed Sunday and Monday."
         }
+
     };
 
     const cafe = cafes[id];
